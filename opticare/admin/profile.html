@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile - OptiCare Admin</title>
+  <meta name="description" content="OptiCare admin profile.">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/google-fonts.css">
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../assets/css/flatpickr.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/dark.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/flatpickr-dark.css">
+  <style>
+    #sidebarBackdrop { position: fixed; inset: 0; background: rgba(11, 23, 45, 0.5); z-index: 1044; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
+    .sidebar-open #sidebarBackdrop { opacity: 1; visibility: visible; }
+    .profile-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+    .profile-cover { height: 140px; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); }
+    .profile-avatar-wrap { margin-top: -48px; padding: 0 1.75rem; }
+    .profile-avatar-wrap .avatar { width: 96px; height: 96px; border: 4px solid var(--surface); }
+    .stat-chip { border: 1px solid var(--border); border-radius: var(--radius); padding: .9rem 1.1rem; text-align: center; }
+  </style>
+</head>
+<body class="admin-body">
+
+  <div class="admin-wrapper">
+    <!-- ======= Sidebar ======= -->
+    <aside class="admin-sidebar" aria-label="Admin sidebar">
+      <div class="sidebar-head">
+        <a class="site-logo-text text-decoration-none" href="../index.html"><i class="bi bi-eye-fill me-1" style="color:var(--secondary)"></i>Opti<span>Care</span></a>
+        <button type="button" class="sidebar-toggle-inner" data-sidebar-toggle aria-label="Toggle sidebar"><i class="bi bi-arrow-left-right"></i></button>
+      </div>
+      <div class="sidebar-scroll">
+        <div class="sidebar-section">
+          <span class="sidebar-label">Overview</span>
+          <ul class="sidebar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="reports.html"><i class="bi bi-bar-chart-line"></i> Reports</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-section">
+          <span class="sidebar-label">Catalog</span>
+          <ul class="sidebar-nav">
+            <li class="nav-item"><a class="nav-link" href="products.html"><i class="bi bi-eyeglasses"></i> Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="product-add.html"><i class="bi bi-plus-square"></i> Add Product</a></li>
+            <li class="nav-item"><a class="nav-link" href="categories.html"><i class="bi bi-grid"></i> Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="coupons.html"><i class="bi bi-ticket-perforated"></i> Coupons</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-section">
+          <span class="sidebar-label">Sales</span>
+          <ul class="sidebar-nav">
+            <li class="nav-item"><a class="nav-link" href="orders.html"><i class="bi bi-receipt"></i> Orders</a></li>
+            <li class="nav-item"><a class="nav-link" href="reviews.html"><i class="bi bi-star"></i> Reviews</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-section">
+          <span class="sidebar-label">People</span>
+          <ul class="sidebar-nav">
+            <li class="nav-item"><a class="nav-link" href="customers.html"><i class="bi bi-people"></i> Customers</a></li>
+            <li class="nav-item"><a class="nav-link" href="users.html"><i class="bi bi-person-gear"></i> Users</a></li>
+            <li class="nav-item"><a class="nav-link" href="messages.html"><i class="bi bi-envelope"></i> Messages <span class="nav-count warn">3</span></a></li>
+          </ul>
+        </div>
+        <div class="sidebar-section">
+          <span class="sidebar-label">Eye Care</span>
+          <ul class="sidebar-nav">
+            <li class="nav-item"><a class="nav-link" href="appointments.html"><i class="bi bi-calendar2-check"></i> Appointments</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html"><i class="bi bi-briefcase"></i> Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="testimonials.html"><i class="bi bi-chat-quote"></i> Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html"><i class="bi bi-newspaper"></i> Blog</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-section">
+          <span class="sidebar-label">Account</span>
+          <ul class="sidebar-nav">
+            <li class="nav-item"><a class="nav-link" href="settings.html"><i class="bi bi-gear"></i> Settings</a></li>
+            <li class="nav-item"><a class="nav-link active" href="profile.html"><i class="bi bi-person"></i> Profile</a></li>
+            <li class="nav-item"><a class="nav-link logout-link" href="../login.html"><i class="bi bi-box-arrow-right"></i> Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ======= Main ======= -->
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <div class="topbar-left">
+          <button type="button" class="nav-icon-btn" data-sidebar-toggle aria-label="Toggle sidebar"><i class="bi bi-layout-text-window-reverse"></i></button>
+          <div>
+            <h1 class="admin-title mb-0">My Profile</h1>
+            <small class="text-muted">Manage your personal information</small>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <button type="button" class="nav-icon-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars"></i></button>
+          <div class="dropdown">
+            <button class="nav-icon-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+              <i class="bi bi-bell"></i><span class="badge-dot" style="position:absolute;top:8px;inset-inline-end:8px;width:8px;height:8px;border-radius:50%;background:var(--danger);display:inline-block"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end dropdown-notify shadow">
+              <div class="notify-head"><h6>Notifications</h6><span class="badge badge-soft-primary">5 new</span></div>
+              <div class="notify-list">
+                <div class="notify-item"><span class="notify-icon bg-soft-primary text-primary"><i class="bi bi-calendar2-check"></i></span><div class="flex-grow-1"><p>New appointment booked for tomorrow.</p><small>2 min ago</small></div><span class="notify-dot"></span></div>
+                <div class="notify-item"><span class="notify-icon bg-soft-success text-success"><i class="bi bi-bag-check"></i></span><div class="flex-grow-1"><p>Order #1042 has been completed.</p><small>24 min ago</small></div><span class="notify-dot"></span></div>
+                <div class="notify-item"><span class="notify-icon bg-soft-warning text-warning"><i class="bi bi-star"></i></span><div class="flex-grow-1"><p>New review awaiting moderation.</p><small>1 hr ago</small></div><span class="notify-dot"></span></div>
+                <div class="notify-item"><span class="notify-icon bg-soft-danger text-danger"><i class="bi bi-receipt"></i></span><div class="flex-grow-1"><p>Payment failed for order #1038.</p><small>3 hrs ago</small></div></div>
+                <div class="notify-item"><span class="notify-icon bg-soft-teal text-secondary"><i class="bi bi-envelope"></i></span><div class="flex-grow-1"><p>3 new contact messages received.</p><small>5 hrs ago</small></div></div>
+              </div>
+              <div class="p-3 border-top text-center"><a href="#" class="fw-semibold text-primary small">View all notifications</a></div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center gap-2 text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false" role="button">
+              <img src="../assets/images/team/team-1.jpg" alt="Admin avatar" class="avatar">
+              <div class="d-none d-md-block">
+                <strong class="d-block text-body" style="font-size:.85rem">Dr. Meera Nair</strong>
+                <small class="text-muted">Administrator</small>
+              </div>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i> My Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i> Settings</a></li>
+              <li><a class="dropdown-item" href="../index.html"><i class="bi bi-globe me-2"></i> View Website</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="../login.html"><i class="bi bi-box-arrow-right me-2"></i> Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main class="admin-content">
+        <div class="profile-card mb-4">
+          <div class="profile-cover"></div>
+          <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 pb-4">
+            <div class="profile-avatar-wrap d-flex align-items-end gap-3">
+              <img src="../assets/images/team/team-1.jpg" alt="Dr. Meera Nair" class="avatar">
+              <div class="pb-1">
+                <h4 class="mb-1">Dr. Meera Nair</h4>
+                <span class="text-muted">Administrator Â· OptiCare Optical Store</span>
+              </div>
+            </div>
+            <div class="d-flex gap-2 pe-3">
+              <input type="file" id="profileUploadInput" hidden accept="image/*">
+              <button type="button" class="btn btn-outline-primary btn-sm" data-upload data-upload-input="profileUploadInput" data-upload-preview="profileUploadInput"><i class="bi bi-camera me-1"></i> Change Photo</button>
+              <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editProfileModal"><i class="bi bi-pencil me-1"></i> Edit Profile</button>
+            </div>
+          </div>
+          <div class="row g-3 px-3 pb-4">
+            <div class="col-6 col-lg-3"><div class="stat-chip"><h5 class="mb-1">5+ yrs</h5><small class="text-muted">Experience</small></div></div>
+            <div class="col-6 col-lg-3"><div class="stat-chip"><h5 class="mb-1">1,240</h5><small class="text-muted">Patients</small></div></div>
+            <div class="col-6 col-lg-3"><div class="stat-chip"><h5 class="mb-1">42</h5><small class="text-muted">Blog Posts</small></div></div>
+            <div class="col-6 col-lg-3"><div class="stat-chip"><h5 class="mb-1">4.9</h5><small class="text-muted">Rating</small></div></div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-xl-7">
+            <div class="chart-box">
+              <div class="chart-head"><div><h5>About</h5></div></div>
+              <p class="text-muted">Senior optometrist and head of the OptiCare clinical team. Dr. Meera Nair has over five years of experience in comprehensive eye care, specialty contact lens fittings and pediatric vision. She is passionate about making quality eye care accessible to everyone.</p>
+              <ul class="list-unstyled d-flex flex-column gap-2 mt-4 mb-0">
+                <li><i class="bi bi-envelope me-2 text-primary"></i> meera@opticare.example</li>
+                <li><i class="bi bi-telephone me-2 text-primary"></i> +1 (555) 123-4567</li>
+                <li><i class="bi bi-geo-alt me-2 text-primary"></i> 24 Vision Avenue, New York, NY</li>
+                <li><i class="bi bi-briefcase me-2 text-primary"></i> Optometrist Â· OD, FAAO</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-5">
+            <div class="chart-box">
+              <div class="chart-head"><div><h5>Recent Activity</h5></div></div>
+              <ul class="dash-timeline">
+                <li class="tl-success"><strong>Booked</strong><small>Comprehensive eye test for Neha Gupta · Today, 10:24 AM</small></li>
+                <li class="tl-primary"><strong>Published a new blog post</strong><small>"How Often Should You Get an Eye Exam?" · Aug 12, 2026</small></li>
+                <li class="tl-warning"><strong>Completed contact lens fitting</strong><small>For Ravi Kumar · Aug 10, 2026</small></li>
+                <li class="tl-info"><strong>Reviewed 12 product reviews</strong><small>Pending items moderated · Aug 08, 2026</small></li>
+                <li class="tl-danger"><strong>Refunded order #1029</strong><small>Processed on · Aug 05, 2026</small></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="text-center py-4 small text-muted">Â© 2026 OptiCare Admin. All Rights Reserved.</footer>
+    </div>
+  </div>
+
+  <div id="sidebarBackdrop" aria-hidden="true"></div>
+
+  <!-- ======= Edit Profile Modal ======= -->
+  <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label" for="pfName">Full Name</label><input type="text" class="form-control" id="pfName" value="Dr. Meera Nair"></div>
+            <div class="col-md-6"><label class="form-label" for="pfRole">Role</label><input type="text" class="form-control" id="pfRole" value="Administrator"></div>
+            <div class="col-md-6"><label class="form-label" for="pfEmail">Email</label><input type="email" class="form-control" id="pfEmail" value="meera@opticare.example"></div>
+            <div class="col-md-6"><label class="form-label" for="pfPhone">Phone</label><input type="tel" class="form-control" id="pfPhone" value="+1 (555) 123-4567"></div>
+            <div class="col-12"><label class="form-label" for="pfBio">About</label><textarea class="form-control" id="pfBio" rows="3">Senior optometrist and head of the OptiCare clinical team.</textarea></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/chart.umd.min.js"></script>
+  <script src="../assets/js/flatpickr.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

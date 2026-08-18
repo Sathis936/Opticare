@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wishlist - OptiCare</title>
+  <meta name="description" content="Your OptiCare wishlist. Save your favourite frames and eyewear for later.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/google-fonts.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/minimal-navbar.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/flatpickr-dark.css">
+</head>
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div class="topbar">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="topbar-contact d-flex align-items-center">
+          <span class="topbar-item"><i class="bi bi-telephone-fill"></i> +91 98765 43210</span>
+          <span class="topbar-sep"></span>
+          <span class="topbar-item"><i class="bi bi-envelope-fill"></i> support@opticare.com</span>
+          <span class="topbar-sep d-none d-md-inline-block"></span>
+          <span class="topbar-item d-none d-lg-inline-flex"><i class="bi bi-clock-fill"></i> Mon - Sat: 9:00 AM - 8:00 PM</span>
+        </div>
+        <div class="topbar-actions"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="site-logo" href="index.html" aria-label="OptiCare home">
+          <img src="assets/images/logo/logo.png" alt="OptiCare logo">
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li class="dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link" href="services.html">Services</a></li>
+            <li class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="frames.html">Frames</a></li>
+                <li><a class="dropdown-item" href="lenses.html">Lenses</a></li>
+                <li><a class="dropdown-item" href="contact-lenses.html">Contact Lenses</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link" href="blog.html">Blog</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button type="button" class="nav-icon-btn d-none d-sm-inline-flex" data-search-open aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <a href="wishlist.html" class="nav-icon-btn d-none d-md-inline-flex active" aria-label="Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="count" data-wish-count>0</span>
+          </a>
+          <a href="cart.html" class="nav-icon-btn cart-btn d-none d-md-inline-flex" aria-label="Cart">
+            <i class="bi bi-bag"></i>
+            <span class="count cart-count" data-cart-count>0</span>
+          </a>
+          <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-theme-toggle aria-label="Toggle dark mode">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction">
+            <i class="bi bi-globe2"></i>
+          </button>
+          <div class="dropdown nav-login-drop d-none d-md-inline-flex">
+            <button type="button" class="nav-icon-btn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account">
+              <i class="bi bi-person"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="admin/index.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-primary nav-cta d-none d-xl-inline-flex" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="#offcanvasNav" aria-label="Open menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="search-pop" id="searchPop" role="search">
+      <div class="container">
+        <form class="position-relative">
+          <input type="search" class="search-input" placeholder="Search frames, lenses, services, articles..." aria-label="Search">
+          <button type="button" class="btn-close position-absolute top-50 end-0 translate-middle-y" data-search-close aria-label="Close search"></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======= Mobile Offcanvas Nav ======= -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+    <div class="offcanvas-header">
+      <a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo"></a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="offcanvas-nav" aria-label="Mobile navigation">
+        <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+        <a class="nav-link" href="about.html"><i class="bi bi-info-circle"></i> About</a>
+        <a class="nav-link" href="services.html"><i class="bi bi-grid"></i> Services</a>
+        <span class="offcanvas-section-label">Products</span>
+        <a class="nav-link" href="frames.html"><i class="bi bi-eyeglasses"></i> Frames</a>
+        <a class="nav-link" href="lenses.html"><i class="bi bi-circle-half"></i> Lenses</a>
+        <a class="nav-link" href="contact-lenses.html"><i class="bi bi-phone"></i> Contact Lenses</a>
+        <a class="nav-link" href="pricing.html"><i class="bi bi-tags"></i> Pricing</a>
+        <a class="nav-link" href="blog.html"><i class="bi bi-newspaper"></i> Blog</a>
+        <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+        <hr class="my-3">
+        <a class="nav-link" href="wishlist.html"><i class="bi bi-heart"></i> Wishlist <span data-wish-count class="ms-auto badge bg-primary rounded-pill">0</span></a>
+        <a class="nav-link" href="cart.html"><i class="bi bi-bag"></i> Cart <span data-cart-count class="ms-auto badge bg-primary rounded-pill">0</span></a>
+        <hr class="my-3">
+        <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+        <a class="nav-link" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <!-- ======= Page Hero ======= -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><i class="bi bi-heart"></i> Your Favourites</span>
+        <h1 class="page-title">Wishlist</h1>
+        <p class="page-lead">Frames and eyewear you've saved for later.</p>
+        <nav class="breadcrumb-wrap" aria-label="Breadcrumb">
+          <ol class="breadcrumb-custom">
+            <li><a href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+            <li class="active" aria-current="page">Wishlist</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ======= Wishlist Content ======= -->
+    <section class="section">
+      <div class="container">
+        <!-- Empty state -->
+        <div id="wishEmpty" class="text-center py-5 d-none">
+          <span class="icon-box icon-box--lg icon-box--empty mx-auto mb-4"><i class="bi bi-heart"></i></span>
+          <h3 class="mt-3">Your Wishlist is Empty</h3>
+          <p class="text-muted mb-4">Save your favourite frames and eyewear here. Browse our collection to find something you love.</p>
+          <a href="frames.html" class="btn btn-primary btn-lg"><i class="bi bi-eyeglasses"></i> Explore Frames</a>
+        </div>
+
+        <!-- Wishlist with items -->
+        <div id="wishContent" class="d-none">
+          <div class="row g-4" id="wishGrid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-col">
+          <div class="footer-brand"><a href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
+          <p>Your trusted destination for professional eye care and quality eyewear.</p>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt"></i> <span>42 Vision Park, Connaught Place, New Delhi 110001</span></li>
+            <li><i class="bi bi-telephone"></i> <span>+91 98765 43210</span></li>
+            <li><i class="bi bi-envelope"></i> <span>support@opticare.com</span></li>
+            <li><i class="bi bi-clock"></i> <span>Mon - Sat: 9:00 AM - 8:00 PM</span></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="frames.html"><i class="bi bi-chevron-right"></i> Frames</a></li>
+            <li><a href="lenses.html"><i class="bi bi-chevron-right"></i> Lenses</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-col">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
+            <li><a href="contact-lenses.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Frame Fitting</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+            <li><a href="eye-test-booking.html"><i class="bi bi-chevron-right"></i> Book Eye Test</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-col">
+          <h5>Newsletter</h5>
+          <p>Get eye-care tips, offers and new collection alerts.</p>
+          <form class="newsletter-form" data-newsletter novalidate>
+            <input type="email" class="form-control" placeholder="Email address" aria-label="Email address" required>
+            <button type="submit" class="btn btn-primary">Subscribe <i class="bi bi-send"></i></button>
+          </form>
+          <div class="newsletter-success" data-newsletter-success>Thank you for subscribing!</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner d-flex align-items-center justify-content-between flex-wrap gap-2">
+          <p class="mb-0">&copy; 2026 OptiCare. All Rights Reserved.</p>
+          <div class="d-flex gap-3">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+          <div class="payment-icons d-flex gap-2">
+            <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+            <i class="bi bi-credit-card" aria-hidden="true"></i>
+            <i class="bi bi-paypal" aria-hidden="true"></i>
+            <i class="bi bi-cash-coin" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/flatpickr.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      if (!window.OptiStore) return;
+      var grid = document.getElementById("wishGrid");
+      var emptyEl = document.getElementById("wishEmpty");
+      var contentEl = document.getElementById("wishContent");
+
+      function render() {
+        var products = OptiStore.getWishlistProducts();
+        if (!products.length) {
+          emptyEl.classList.remove("d-none");
+          contentEl.classList.add("d-none");
+          return;
+        }
+        emptyEl.classList.add("d-none");
+        contentEl.classList.remove("d-none");
+        grid.innerHTML = "";
+        products.forEach(function (p) {
+          var col = document.createElement("div");
+          col.className = "col-sm-6 col-lg-4 col-xl-3";
+          var stars = "";
+          for (var i = 0; i < 5; i++) {
+            stars += i < Math.floor(p.rating) ? '<i class="bi bi-star-fill"></i>' : (p.rating % 1 >= 0.5 && i === Math.floor(p.rating)) ? '<i class="bi bi-star-half"></i>' : '<i class="bi bi-star"></i>';
+          }
+          col.innerHTML =
+            '<div class="product-card">' +
+              '<div class="product-media">' +
+                '<img src="' + p.image + '" alt="' + p.name + '" loading="lazy">' +
+                '<button type="button" class="product-wish active" data-wishlist="' + p.id + '" aria-label="Remove from wishlist"><i class="bi bi-heart-fill"></i></button>' +
+              '</div>' +
+              '<div class="product-body">' +
+                '<span class="product-cat">' + p.category + '</span>' +
+                '<h4><a href="frame-details.html">' + p.name + '</a></h4>' +
+                '<div class="product-rating"><span class="stars">' + stars + '</span> ' + p.rating + '</div>' +
+                '<div class="product-price"><span class="price">$' + p.price + '</span></div>' +
+                '<div class="product-actions">' +
+                  '<a href="frame-details.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i> View</a>' +
+                  '<button type="button" class="btn btn-primary btn-sm" data-add-cart="' + p.id + '"><i class="bi bi-bag-plus"></i> Add to Cart</button>' +
+                  '<button type="button" class="btn btn-outline-danger btn-sm" data-remove-wish="' + p.id + '"><i class="bi bi-trash"></i> Remove</button>' +
+                '</div>' +
+              '</div>' +
+            '</div>';
+          grid.appendChild(col);
+        });
+      }
+
+      render();
+
+      grid.addEventListener("click", function (e) {
+        var wishBtn = e.target.closest("[data-wishlist]");
+        var removeBtn = e.target.closest("[data-remove-wish]");
+        if (wishBtn || removeBtn) {
+          var id = (wishBtn || removeBtn).getAttribute("data-wishlist") || (removeBtn && removeBtn.getAttribute("data-remove-wish"));
+          if (id) {
+            OptiStore.toggleWishlist(id);
+            OptiStore.updateWishlistBadge();
+            render();
+            if (window.OptiCareToast) OptiCareToast("Removed from wishlist", "neutral");
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

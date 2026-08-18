@@ -1,0 +1,255 @@
+/* ============================================================
+   OptiCare - rtl.css  (RTL Mode)
+   Loaded when <html dir="rtl">. Pairs with Bootstrap RTL.
+   ============================================================ */
+
+html[dir="rtl"] body {
+  text-align: start;
+}
+
+/* ---------- general directional icon flips ---------- */
+html[dir="rtl"] .service-card .link-arrow i,
+html[dir="rtl"] .blog-card .link-arrow i,
+html[dir="rtl"] .footer-links a i {
+  transform: rotate(180deg);
+}
+
+html[dir="rtl"] .service-card:hover .link-arrow i,
+html[dir="rtl"] .blog-card:hover .link-arrow i,
+html[dir="rtl"] .footer-links a:hover i {
+  transform: rotate(180deg) translateX(3px);
+}
+
+html[dir="rtl"] .carousel-control-prev-icon,
+html[dir="rtl"] .carousel-control-next-icon {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .swiper-button-prev::after,
+html[dir="rtl"] .swiper-button-next::after {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .breadcrumb-custom li + li::before {
+  content: "\f284";
+}
+
+html[dir="rtl"] .footer-links a:hover,
+html[dir="rtl"] .blog-sidebar-cat a:hover {
+  transform: translateX(-4px);
+}
+
+html[dir="rtl"] .link-arrow i {
+  transform: rotate(180deg);
+}
+
+html[dir="rtl"] .link-arrow:hover i {
+  transform: rotate(180deg) translateX(3px);
+}
+
+/* hero */
+html[dir="rtl"] .hero-floating--1 {
+  inset-inline-start: auto;
+  inset-inline-end: -30px;
+}
+
+html[dir="rtl"] .hero-floating--2 {
+  inset-inline-end: auto;
+  inset-inline-start: -16px;
+}
+
+@media (max-width: 1199.98px) {
+  html[dir="rtl"] .hero-floating--1 {
+    inset-inline-end: -8px;
+  }
+  html[dir="rtl"] .hero-floating--2 {
+    inset-inline-start: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  html[dir="rtl"] .hero-floating--1 {
+    inset-inline-end: 10px;
+  }
+  html[dir="rtl"] .hero-floating--2 {
+    inset-inline-start: 10px;
+  }
+}
+
+/* process connector */
+html[dir="rtl"] .process-step:not(:last-child)::after {
+  inset-inline-start: auto;
+  inset-inline-end: calc(50% + 60px);
+}
+
+/* timeline */
+html[dir="rtl"] .timeline {
+  padding-inline-start: 0;
+  padding-inline-end: 34px;
+}
+
+html[dir="rtl"] .timeline::before {
+  inset-inline-start: auto;
+  inset-inline-end: 10px;
+}
+
+html[dir="rtl"] .timeline-item::before {
+  inset-inline-start: auto;
+  inset-inline-end: -34px;
+}
+
+@media (max-width: 575.98px) {
+  html[dir="rtl"] .timeline {
+    padding-inline-end: 30px;
+  }
+  html[dir="rtl"] .timeline-item::before {
+    inset-inline-end: -30px;
+  }
+}
+
+/* team socials */
+html[dir="rtl"] .team-card .team-socials {
+  transform: translate(50%, 20px);
+}
+
+html[dir="rtl"] .team-card:hover .team-socials {
+  transform: translate(50%, 0);
+}
+
+/* category card arrow */
+html[dir="rtl"] .category-card .arrow i {
+  transform: rotate(180deg);
+}
+
+/* pricing */
+html[dir="rtl"] .pricing-card--featured,
+html[dir="rtl"] .pricing-card--featured:hover {
+  transform: translateY(0);
+}
+
+html[dir="rtl"] .plan-popular {
+  transform: translateX(50%);
+}
+
+/* testimonials quote mark */
+html[dir="rtl"] .testimonial-card::before {
+  inset-inline-end: auto;
+  inset-inline-start: 24px;
+  transform: scaleX(-1);
+}
+
+/* admin sidebar (fixed on the right in RTL) */
+html[dir="rtl"] .admin-sidebar {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+html[dir="rtl"] .admin-main {
+  margin-inline-start: 0;
+  margin-inline-end: var(--sidebar-w);
+}
+
+html[dir="rtl"] .admin-body.sidebar-collapsed .admin-sidebar {
+  margin-inline-start: 0;
+  margin-inline-end: calc(var(--sidebar-w) * -1);
+}
+
+html[dir="rtl"] .admin-body.sidebar-collapsed .admin-main {
+  margin-inline-end: 0;
+}
+
+@media (max-width: 991.98px) {
+  html[dir="rtl"] .admin-sidebar {
+    transform: translateX(100%);
+  }
+  html[dir="rtl"] .admin-body.sidebar-open .admin-sidebar {
+    transform: translateX(0);
+  }
+  html[dir="rtl"] .admin-main {
+    margin-inline-end: 0;
+  }
+}
+
+/* sidebars with slide-in animations */
+html[dir="rtl"] .back-to-top {
+  inset-inline-end: auto;
+  inset-inline-start: 26px;
+}
+
+@media (max-width: 575.98px) {
+  html[dir="rtl"] .back-to-top {
+    inset-inline-start: 18px;
+  }
+}
+
+/* post nav */
+html[dir="rtl"] .post-nav a:last-child {
+  text-align: start;
+}
+
+html[dir="rtl"] .post-nav small i {
+  transform: rotate(180deg);
+}
+
+/* icons inside buttons - flip directional icons */
+html[dir="rtl"] .btn i.bi-arrow-right,
+html[dir="rtl"] .btn i.bi-arrow-left,
+html[dir="rtl"] .btn i.bi-arrow-right-circle,
+html[dir="rtl"] .btn i.bi-arrow-left-circle,
+html[dir="rtl"] .btn i.bi-skip-forward,
+html[dir="rtl"] .btn i.bi-skip-backward,
+html[dir="rtl"] .btn i.bi-chevron-right,
+html[dir="rtl"] .btn i.bi-chevron-left {
+  transform: scaleX(-1);
+}
+
+/* text-start / text-end overrides to logical for RTL pages */
+html[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+/* steps connector */
+html[dir="rtl"] .step-connector {
+  order: 0;
+}
+
+/* pagination admin */
+html[dir="rtl"] .pagination-admin a i,
+html[dir="rtl"] .pagination-admin button i,
+html[dir="rtl"] .pagination-custom li a i,
+html[dir="rtl"] .pagination-custom li button i {
+  transform: scaleX(-1);
+}
+
+/* toast placement */
+html[dir="rtl"] .toast-container {
+  right: auto;
+  left: 0;
+}
+
+/* table text alignment */
+html[dir="rtl"] .table {
+  text-align: start;
+}
+
+/* blockquote */
+html[dir="rtl"] .article-content blockquote {
+  border-inline-start: 0;
+  border-inline-end: 4px solid var(--primary);
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+/* newsletter form */
+html[dir="rtl"] .newsletter-form .btn i {
+  transform: scaleX(-1);
+}
+
+/* search input icon already logical via inset-inline-start */
+
+/* floating animation transform conflicts (floatY uses translateY only) - fine */
+
+/* slider navigation positions swap handled by swiper rtl auto */

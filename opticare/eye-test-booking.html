@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book an Eye Test - OptiCare</title>
+  <meta name="description" content="Book your eye test or contact lens consultation at OptiCare in under a minute. Choose a service, date and time slot.">
+  <link rel="canonical" href="https://www.opticare.com/eye-test-booking">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/google-fonts.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/flatpickr-dark.css">
+</head>
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div class="topbar">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="topbar-contact d-flex align-items-center">
+          <span class="topbar-item"><i class="bi bi-telephone-fill"></i> +91 98765 43210</span>
+          <span class="topbar-sep"></span>
+          <span class="topbar-item"><i class="bi bi-envelope-fill"></i> support@opticare.com</span>
+          <span class="topbar-sep d-none d-md-inline-block"></span>
+          <span class="topbar-item d-none d-lg-inline-flex"><i class="bi bi-clock-fill"></i> Mon - Sat: 9:00 AM - 8:00 PM</span>
+        </div>
+        <div class="topbar-actions">
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="site-logo" href="index.html" aria-label="OptiCare home">
+          <img src="assets/images/logo/logo.png" alt="OptiCare logo">
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li class="dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link" href="services.html">Services</a></li>
+                      <li class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="frames.html">Frames</a></li>
+              <li><a class="dropdown-item" href="lenses.html">Lenses</a></li>
+              <li><a class="dropdown-item" href="contact-lenses.html">Contact Lenses</a></li>
+            </ul>
+          </li>
+            <li><a class="nav-link" href="blog.html">Blog</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+                    <div class="nav-actions">
+        <!-- Search -->
+        <button type="button" class="nav-icon-btn d-none d-sm-inline-flex" data-search-open aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
+        <!-- Wishlist -->
+        <a href="wishlist.html" class="nav-icon-btn d-none d-md-inline-flex" aria-label="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="count" data-wish-count>0</span>
+        </a>
+        <!-- Cart -->
+        <a href="cart.html" class="nav-icon-btn cart-btn d-none d-md-inline-flex" aria-label="Cart">
+          <i class="bi bi-bag"></i>
+          <span class="count cart-count" data-cart-count>0</span>
+        </a>
+        <!-- Dark / Light Mode -->
+        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-theme-toggle aria-label="Toggle dark mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <!-- RTL / LTR -->
+        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction">
+          <i class="bi bi-globe2"></i>
+        </button>
+        <!-- Account Dropdown -->
+        <div class="dropdown nav-login-drop d-none d-md-inline-flex">
+          <button type="button" class="nav-icon-btn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account">
+            <i class="bi bi-person"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
+            <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="admin/index.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
+          </ul>
+        </div>
+        <!-- Book Eye Test -->
+        <a class="btn btn-primary nav-cta d-none d-xl-inline-flex" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="#offcanvasNav" aria-label="Open menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+      </div>
+    </div>
+    <div class="search-pop" id="searchPop" role="search">
+      <div class="container">
+        <form class="position-relative">
+          <input type="search" class="search-input" placeholder="Search frames, lenses, services, articles..." aria-label="Search">
+          <button type="button" class="btn-close position-absolute top-50 end-0 translate-middle-y" data-search-close aria-label="Close search"></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======= Mobile Offcanvas Nav ======= -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+    <div class="offcanvas-header">
+      <a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo"></a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="offcanvas-nav" aria-label="Mobile navigation">
+        <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+        <a class="nav-link" href="about.html"><i class="bi bi-info-circle"></i> About</a>
+        <a class="nav-link" href="services.html"><i class="bi bi-grid"></i> Services</a>
+        <span class="offcanvas-section-label">Products</span>
+        <a class="nav-link" href="frames.html"><i class="bi bi-eyeglasses"></i> Frames</a>
+        <a class="nav-link" href="lenses.html"><i class="bi bi-circle-half"></i> Lenses</a>
+        <a class="nav-link" href="contact-lenses.html"><i class="bi bi-phone"></i> Contact Lenses</a>
+        <a class="nav-link" href="pricing.html"><i class="bi bi-tags"></i> Pricing</a>
+        <a class="nav-link" href="blog.html"><i class="bi bi-newspaper"></i> Blog</a>
+        <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+        <a class="nav-link" href="wishlist.html"><i class="bi bi-heart"></i> Wishlist</a>
+        <a class="nav-link" href="cart.html"><i class="bi bi-bag"></i> Cart</a>
+        <hr class="my-3">
+        <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+        <a class="nav-link active" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <!-- ======= Page Hero ======= -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><i class="bi bi-calendar2-check"></i> Booking</span>
+        <h1 class="page-title">Book Your Eye Test</h1>
+        <p class="page-lead">Choose a service, pick a time and we'll take care of the rest.</p>
+        <nav class="breadcrumb-wrap" aria-label="Breadcrumb">
+          <ol class="breadcrumb-custom">
+            <li><a href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+            <li class="active" aria-current="page">Book Eye Test</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ======= Booking Wizard ======= -->
+    <section class="section">
+      <div class="container">
+        <div class="booking-wrap">
+          <div class="row g-0">
+            <div class="col-lg-4">
+              <div class="booking-side">
+                <h3>How It Works</h3>
+                <p>Four quick steps and you're booked. We'll confirm by phone and email.</p>
+                <ul class="info-list">
+                  <li><i class="bi bi-calendar3"></i> <span>Available Mon - Sat, 9:00 AM - 8:00 PM</span></li>
+                  <li><i class="bi bi-stopwatch"></i> <span>Average exam time: 30 - 45 minutes</span></li>
+                  <li><i class="bi bi-cash-stack"></i> <span>Pay at the clinic — no online payment needed</span></li>
+                  <li><i class="bi bi-arrow-repeat"></i> <span>Free rescheduling up to 24 hours before</span></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 mt-4">
+                  <span class="icon-box" style="background:rgba(255,255,255,.14);color:#fff"><i class="bi bi-headset"></i></span>
+                  <div><small class="d-block text-white-50">Need help booking?</small><a href="tel:+919876543210" class="text-white fw-bold">+91 98765 43210</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div id="bookingWizard">
+                <!-- Progress -->
+                <div class="steps-indicator">
+                  <div class="step-dot active"><span class="dot">1</span><span class="dot-label">Details</span></div>
+                  <div class="step-connector"></div>
+                  <div class="step-dot"><span class="dot">2</span><span class="dot-label">Service</span></div>
+                  <div class="step-connector"></div>
+                  <div class="step-dot"><span class="dot">3</span><span class="dot-label">Date</span></div>
+                  <div class="step-connector"></div>
+                  <div class="step-dot"><span class="dot">4</span><span class="dot-label">Time</span></div>
+                  <div class="step-connector"></div>
+                  <div class="step-dot"><span class="dot">5</span><span class="dot-label">Confirm</span></div>
+                </div>
+
+                <!-- Body -->
+                <div class="booking-body">
+                  <h2 class="booking-title"><span id="currentStepLabel">Your Details</span></h2>
+                  <p class="booking-subtitle">Complete the steps below to book your appointment.</p>
+
+                  <!-- Step 1: Details -->
+                  <div class="booking-step active" data-step-title="Your Details">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label class="form-label" for="bkFirst">First Name</label>
+                        <input type="text" id="bkFirst" class="form-control" placeholder="Enter first name" data-error="required">
+                        <div class="field-error" id="error-bkFirst"></div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="bkLast">Last Name</label>
+                        <input type="text" id="bkLast" class="form-control" placeholder="Enter last name" data-error="required">
+                        <div class="field-error" id="error-bkLast"></div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="bkEmail">Email Address</label>
+                        <input type="email" id="bkEmail" class="form-control" placeholder="you@example.com" data-error="required,email">
+                        <div class="field-error" id="error-bkEmail"></div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="bkPhone">Phone Number</label>
+                        <input type="tel" id="bkPhone" class="form-control" placeholder="+91 98765 43210" data-error="required,phone">
+                        <div class="field-error" id="error-bkPhone"></div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="bkDob">Date of Birth <span class="text-muted">(optional)</span></label>
+                        <input type="text" id="bkDob" class="form-control" placeholder="YYYY-MM-DD">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Step 2: Service -->
+                  <div class="booking-step" data-step-title="Select a Service">
+                    <div class="d-flex flex-column gap-3" data-service-group>
+                      <div class="service-select-card">
+                        <span class="radio-custom"></span>
+                        <div class="flex-grow-1">
+                          <h4>Comprehensive Eye Examination</h4>
+                          <p>Full exam, retinal imaging and written report.</p>
+                        </div>
+                        <span class="service-price">$79</span>
+                        <input type="radio" name="bk-service" value="Comprehensive Eye Examination" class="d-none">
+                      </div>
+                      <div class="service-select-card">
+                        <span class="radio-custom"></span>
+                        <div class="flex-grow-1">
+                          <h4>Contact Lens Fitting</h4>
+                          <p>Trial lenses, training and aftercare included.</p>
+                        </div>
+                        <span class="service-price">$99</span>
+                        <input type="radio" name="bk-service" value="Contact Lens Fitting" class="d-none">
+                      </div>
+                      <div class="service-select-card">
+                        <span class="radio-custom"></span>
+                        <div class="flex-grow-1">
+                          <h4>Vision Testing Only</h4>
+                          <p>Computerised refraction and prescription update.</p>
+                        </div>
+                        <span class="service-price">$49</span>
+                        <input type="radio" name="bk-service" value="Vision Testing Only" class="d-none">
+                      </div>
+                      <div class="service-select-card">
+                        <span class="radio-custom"></span>
+                        <div class="flex-grow-1">
+                          <h4>Dry Eye Assessment</h4>
+                          <p>Specialist diagnosis and personalised care plan.</p>
+                        </div>
+                        <span class="service-price">$69</span>
+                        <input type="radio" name="bk-service" value="Dry Eye Assessment" class="d-none">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Step 3: Date -->
+                  <div class="booking-step" data-step-title="Pick a Date">
+                    <div class="row g-3">
+                      <div class="col-md-7">
+                        <label class="form-label" for="bkDate">Appointment Date</label>
+                        <div class="position-relative">
+                          <input type="text" id="bkDate" class="form-control" placeholder="Select a date" data-error="required">
+                          <i class="bi bi-calendar3 position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+                        </div>
+                        <div class="field-error" id="error-bkDate"></div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="card rounded-card p-3 h-100">
+                          <h6 class="mb-1">Good to know</h6>
+                          <p class="small mb-0">Appointments are available Monday to Saturday. Please arrive 10 minutes early.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Step 4: Time -->
+                  <div class="booking-step" data-step-title="Choose a Time">
+                    <label class="form-label">Available Time Slots</label>
+                    <div class="row g-2 mb-4" data-time-group>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">09:00 AM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">09:30 AM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot disabled">10:00 AM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">10:30 AM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">11:00 AM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">11:30 AM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">12:00 PM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot disabled">12:30 PM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">02:00 PM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">02:30 PM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">03:00 PM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">03:30 PM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">04:00 PM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">04:30 PM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot disabled">05:00 PM</div></div>
+                      <div class="col-6 col-sm-4 col-lg-3"><div class="time-slot">05:30 PM</div></div>
+                    </div>
+                    <div class="row g-3">
+                      <div class="col-md-7">
+                        <label class="form-label" for="bkOptometrist">Preferred Optometrist</label>
+                        <select id="bkOptometrist" class="form-select">
+                          <option value="">First available</option>
+                          <option value="Dr. Ananya Iyer">Dr. Ananya Iyer</option>
+                          <option value="Dr. Rohan Deshpande">Dr. Rohan Deshpande</option>
+                          <option value="Dr. Meera Krishnan">Dr. Meera Krishnan</option>
+                          <option value="Dr. Arvind Menon">Dr. Arvind Menon</option>
+                        </select>
+                      </div>
+                      <div class="col-md-5">
+                        <label class="form-label" for="bkNotes">Notes <span class="text-muted">(optional)</span></label>
+                        <textarea id="bkNotes" class="form-control" rows="3" placeholder="Anything we should know?"></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Step 5: Confirm -->
+                  <div class="booking-step" data-step-title="Confirm &amp; Book">
+                    <div class="card rounded-card p-4" id="bookingSummary">
+                      <h6 class="mb-3"><i class="bi bi-receipt text-primary me-2"></i>Booking Summary</h6>
+                      <ul class="list-unstyled mb-0 confirm-summary">
+                        <li><span>Name</span><span id="sum-name">-</span></li>
+                        <li><span>Email</span><span id="sum-email">-</span></li>
+                        <li><span>Phone</span><span id="sum-phone">-</span></li>
+                        <li><span>Date of Birth</span><span id="sum-dob">-</span></li>
+                        <li><span>Service</span><span id="sum-service">-</span></li>
+                        <li><span>Date</span><span id="sum-date">-</span></li>
+                        <li><span>Time</span><span id="sum-time">-</span></li>
+                        <li><span>Optometrist</span><span id="sum-optometrist">First available</span></li>
+                        <li><span>Notes</span><span id="sum-notes">None</span></li>
+                      </ul>
+                    </div>
+                    <div class="alert alert-warning mt-3 mb-0">
+                      <i class="bi bi-info-circle me-2"></i>This confirms a booking request. Our team will call you to verify the appointment.
+                    </div>
+                  </div>
+
+                  <!-- Success -->
+                  <div class="booking-success" id="bookingSuccess">
+                    <span class="success-ring"><i class="bi bi-check-lg"></i></span>
+                    <h3>Booking Confirmed!</h3>
+                    <p class="text-muted">Your appointment request has been received.</p>
+                    <div class="confirm-summary">
+                      <ul class="list-unstyled mb-0">
+                        <li><span>Name</span><span id="successName">-</span></li>
+                        <li><span>Appointment</span><span id="successDate">-</span></li>
+                      </ul>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary mt-4" id="bookingAgain"><i class="bi bi-plus-circle"></i> Book Another Appointment</button>
+                  </div>
+
+                  <!-- Nav -->
+                  <div class="booking-nav">
+                    <button type="button" class="btn btn-outline-primary" id="bookingPrev" style="visibility:hidden"><i class="bi bi-arrow-left"></i> Previous</button>
+                    <button type="button" class="btn btn-primary" id="bookingNext">Next <i class="bi bi-arrow-right"></i></button>
+                    <button type="button" class="btn btn-primary" id="bookingConfirm" style="display:none"><i class="bi bi-check-lg"></i> Confirm Booking</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-col">
+          <div class="footer-brand"><a href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
+          <p>Your trusted destination for professional eye care and quality eyewear.</p>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt"></i> <span>42 Vision Park, Connaught Place, New Delhi 110001</span></li>
+            <li><i class="bi bi-telephone"></i> <span>+91 98765 43210</span></li>
+            <li><i class="bi bi-envelope"></i> <span>support@opticare.com</span></li>
+            <li><i class="bi bi-clock"></i> <span>Mon - Sat: 9:00 AM - 8:00 PM</span></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="frames.html"><i class="bi bi-chevron-right"></i> Frames</a></li>
+            <li><a href="lenses.html"><i class="bi bi-chevron-right"></i> Lenses</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-col">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
+            <li><a href="contact-lenses.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Frame Fitting</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+            <li><a href="eye-test-booking.html"><i class="bi bi-chevron-right"></i> Book Eye Test</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-col">
+          <h5>Newsletter</h5>
+          <p>Get eye-care tips, offers and new collection alerts.</p>
+          <form class="newsletter-form" data-newsletter novalidate>
+            <input type="email" class="form-control" placeholder="Email address" aria-label="Email address" required>
+            <button type="submit" class="btn btn-primary">Subscribe <i class="bi bi-send"></i></button>
+          </form>
+          <div class="newsletter-success" data-newsletter-success>Thank you for subscribing!</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner d-flex align-items-center justify-content-between flex-wrap gap-2">
+          <p class="mb-0">© 2026 OptiCare. All Rights Reserved.</p>
+          <div class="d-flex gap-3">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+          <div class="payment-icons d-flex gap-2">
+            <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+            <i class="bi bi-credit-card" aria-hidden="true"></i>
+            <i class="bi bi-paypal" aria-hidden="true"></i>
+            <i class="bi bi-cash-coin" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/flatpickr.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>
+
+
+

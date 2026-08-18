@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OptiCare - Documentation</title>
+  <meta name="description" content="OptiCare HTML template documentation.">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --secondary: #6ee7f5;
+      --dark: #0b172d;
+      --text: #3c4757;
+      --muted: #6b7a90;
+      --border: #e6ebf2;
+      --bg: #f6f9fc;
+      --card: #ffffff;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(11, 23, 45, 0.07);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .doc-layout { display: grid; grid-template-columns: 280px 1fr; gap: 2rem; max-width: 1280px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    .doc-sidebar { position: sticky; top: 1.5rem; align-self: start; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem 1.25rem; max-height: calc(100vh - 3rem); overflow: auto; }
+    .doc-sidebar h6 { margin: 1.1rem 0 .5rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+    .doc-sidebar h6:first-child { margin-top: 0; }
+    .doc-sidebar ul { list-style: none; margin: 0; padding: 0; }
+    .doc-sidebar a { display: block; padding: .3rem .6rem; border-radius: 8px; color: var(--text); font-size: .9rem; }
+    .doc-sidebar a:hover { background: #eef4ff; text-decoration: none; }
+    .doc-sidebar a.active { background: var(--primary); color: #fff; }
+    .doc-main { min-width: 0; }
+    .doc-hero { background: linear-gradient(135deg, var(--primary) 0%, #0b172d 100%); color: #fff; border-radius: var(--radius); padding: 2.5rem; margin-bottom: 2rem; }
+    .doc-hero h1 { margin: 0 0 .4rem; font-size: 2rem; }
+    .doc-hero p { margin: 0; opacity: .9; }
+    .doc-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 2rem; margin-bottom: 2rem; }
+    .doc-card h2 { margin: 0 0 .5rem; color: var(--dark); font-size: 1.35rem; }
+    .doc-card h3 { margin: 1.6rem 0 .5rem; color: var(--dark); font-size: 1.05rem; }
+    .doc-card h2 + p, .doc-card h3 + p { margin-top: 0; }
+    .doc-card p { margin: .5rem 0; }
+    .doc-card ul, .doc-card ol { margin: .5rem 0; padding-left: 1.4rem; }
+    .doc-card li { margin: .3rem 0; }
+    code { background: #eef2f7; border-radius: 6px; padding: .15rem .45rem; font-family: Consolas, monospace; font-size: .86em; color: #b02a2a; }
+    pre { background: #0b172d; color: #dce7f5; border-radius: 10px; padding: 1.1rem 1.25rem; overflow: auto; font-family: Consolas, monospace; font-size: .86rem; line-height: 1.6; }
+    pre code { background: none; color: inherit; padding: 0; }
+    table { width: 100%; border-collapse: collapse; margin: .8rem 0; font-size: .9rem; }
+    th, td { text-align: left; padding: .6rem .8rem; border: 1px solid var(--border); }
+    th { background: #f2f6fb; color: var(--dark); font-weight: 600; }
+    tr:nth-child(even) td { background: #fafcfe; }
+    .badge { display: inline-block; background: #eef4ff; color: var(--primary); border-radius: 20px; padding: .1rem .6rem; font-size: .72rem; font-weight: 600; }
+    .badge.green { background: #e7f7ef; color: #198754; }
+    .badge.amber { background: #fff4e0; color: #b45309; }
+    .note { border-inline-start: 4px solid var(--primary); background: #f2f7ff; border-radius: 8px; padding: .8rem 1rem; margin: .8rem 0; font-size: .9rem; }
+    .note.warn { border-inline-start-color: #f59e0b; background: #fff8eb; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 992px) { .doc-layout { grid-template-columns: 1fr; } .doc-sidebar { position: static; } }
+  </style>
+</head>
+<body>
+
+  <div class="doc-layout">
+    <aside class="doc-sidebar">
+      <h6>Getting Started</h6>
+      <ul>
+        <li><a href="#overview" class="active">Overview</a></li>
+        <li><a href="#structure">File Structure</a></li>
+        <li><a href="#install">Installation</a></li>
+      </ul>
+      <h6>Pages</h6>
+      <ul>
+        <li><a href="#pages-frontend">Frontend Pages</a></li>
+        <li><a href="#pages-admin">Admin Pages</a></li>
+      </ul>
+      <h6>Customization</h6>
+      <ul>
+        <li><a href="#css">CSS &amp; Themes</a></li>
+        <li><a href="#dark-rtl">Dark Mode &amp; RTL</a></li>
+        <li><a href="#colors">Brand Colors</a></li>
+      </ul>
+      <h6>JavaScript Hooks</h6>
+      <ul>
+        <li><a href="#js-main">main.js</a></li>
+        <li><a href="#js-theme">theme.js</a></li>
+        <li><a href="#js-filter">filter.js (Shop)</a></li>
+        <li><a href="#js-booking">booking.js (Wizard)</a></li>
+        <li><a href="#js-dashboard">dashboard.js (Admin)</a></li>
+      </ul>
+      <h6>Admin</h6>
+      <ul>
+        <li><a href="#admin-shell">Admin Shell</a></li>
+        <li><a href="#admin-tables">Data Tables</a></li>
+        <li><a href="#admin-more">More Controls</a></li>
+      </ul>
+      <h6>Resources</h6>
+      <ul>
+        <li><a href="#credits">Credits</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </aside>
+
+    <div class="doc-main">
+
+      <div class="doc-hero">
+        <h1>OptiCare — Documentation</h1>
+        <p>Optical Store &amp; Eye Care HTML Template · Bootstrap 5 · Vanilla JS</p>
+      </div>
+
+      <section class="doc-card" id="overview">
+        <h2>Overview</h2>
+        <p>OptiCare is a clean, modern and fully responsive HTML template built for optical stores, opticians and eye-care clinics. It ships with <strong>24 frontend pages</strong> and <strong>17 admin dashboard pages</strong>, and is built entirely with HTML5, Bootstrap 5, vanilla JavaScript and pure CSS — no build tools or backend required.</p>
+        <p>Open any <code>.html</code> file directly in your browser or serve the folder with any static server.</p>
+        <h3>Key Features</h3>
+        <ul>
+          <li>24 frontend pages + 17 admin pages</li>
+          <li>Bootstrap 5.3 grid, components &amp; utilities</li>
+          <li>Dark / Light mode with localStorage persistence</li>
+          <li>RTL / LTR direction switcher</li>
+          <li>Fully responsive (320px &rarr; 1920px)</li>
+          <li>WAI-ARIA friendly, semantic markup</li>
+          <li>Chart.js dashboards &amp; reports</li>
+          <li>Swiper.js sliders, Flatpickr date pickers</li>
+          <li>No jQuery, no external dependencies except the bundled libraries</li>
+        </ul>
+      </section>
+
+      <section class="doc-card" id="structure">
+        <h2>File Structure</h2>
+        <pre><code>opticare/
+├── index.html                 # Home page
+├── home-2.html                # Home page (alternative layout)
+├── about.html                 # About us
+├── team.html                  # Our team
+├── testimonials.html          # Client testimonials
+├── services.html              # Services listing
+├── service-details.html       # Single service
+├── frames.html                # Shop: frames (filter + sort + pagination)
+├── frame-details.html         # Shop: single frame
+├── lenses.html                # Shop: lenses
+├── contact-lenses.html        # Shop: contact lenses
+├── eye-test-booking.html      # Multi-step booking wizard
+├── pricing.html               # Pricing plans
+├── faq.html                   # FAQ accordions
+├── blog.html                  # Blog grid
+├── blog-list.html             # Blog list
+├── blog-details.html          # Single post
+├── contact.html               # Contact page
+├── login.html                 # Sign in
+├── register.html              # Sign up
+├── forgot-password.html       # Password reset
+├── 404.html                   # Error 404
+├── coming-soon.html           # Coming soon (countdown)
+├── maintenance.html           # Maintenance mode
+│
+├── admin/
+│   ├── index.html             # Dashboard (charts + stats)
+│   ├── reports.html           # Reports &amp; analytics
+│   ├── products.html          # Product list
+│   ├── product-add.html       # Add product form
+│   ├── categories.html        # Categories
+│   ├── coupons.html           # Coupons
+│   ├── orders.html            # Orders
+│   ├── reviews.html           # Reviews + rating summary
+│   ├── customers.html         # Customers
+│   ├── users.html             # Staff users
+│   ├── messages.html          # Inbox
+│   ├── appointments.html      # Eye test bookings
+│   ├── services.html          # Services
+│   ├── testimonials.html      # Testimonials
+│   ├── blog.html              # Blog posts
+│   ├── settings.html          # Store settings
+│   └── profile.html           # User profile
+│
+├── assets/
+│   ├── css/
+│   │   ├── bootstrap.min.css
+│   │   ├── bootstrap-icons.min.css
+│   │   ├── google-fonts.css
+│   │   ├── swiper-bundle.min.css
+│   │   ├── flatpickr.min.css
+│   │   ├── style.css          # Main stylesheet
+│   │   ├── responsive.css     # Responsive overrides
+│   │   ├── dark.css           # Dark mode overrides
+│   │   ├── rtl.css            # RTL overrides
+│   │   └── flatpickr-dark.css
+│   ├── js/
+│   │   ├── bootstrap.bundle.min.js
+│   │   ├── swiper-bundle.min.js
+│   │   ├── flatpickr.min.js
+│   │   ├── chart.umd.min.js   # Chart.js
+│   │   ├── theme.js           # Dark/RTL switcher
+│   │   ├── main.js            # Global hooks
+│   │   ├── filter.js          # Frames shop filter
+│   │   ├── booking.js         # Booking wizard
+│   │   └── dashboard.js       # Admin charts
+│   └── images/
+│       ├── blog/ frames/ general/ lenses/ logo/ team/ ... (SVG placeholders)
+│
+└── documentation/
+    └── index.html             # This documentation</code></pre>
+      </section>
+
+      <section class="doc-card" id="install">
+        <h2>Installation</h2>
+        <p>No build step required. To preview locally:</p>
+        <ol>
+          <li>Copy the <code>opticare/</code> folder anywhere on your machine.</li>
+          <li>Double-click <code>index.html</code>, or run a static server, e.g.:<pre><code>npx serve opticare
+# or
+python -m http.server 8000 --directory opticare</code></pre></li>
+          <li>Navigate to <code>http://localhost:8000</code>.</li>
+        </ol>
+        <div class="note">Some demo screenshots or external fonts load from Google Fonts — an internet connection is required the first time those fonts are fetched.</div>
+      </section>
+
+      <section class="doc-card" id="pages-frontend">
+        <h2>Frontend Pages</h2>
+        <table>
+          <thead><tr><th>Page</th><th>File</th><th>Key blocks</th></tr></thead>
+          <tbody>
+            <tr><td>Home</td><td>index.html</td><td>Hero, featured frames (Swiper), services, about, testimonials (Swiper), blog, brands (Swiper)</td></tr>
+            <tr><td>Home alt</td><td>home-2.html</td><td>Split hero, stats counters, category grid</td></tr>
+            <tr><td>About / Team / Testimonials</td><td>about.html, team.html, testimonials.html</td><td>Intro, values, team cards (Swiper), testimonial grid</td></tr>
+            <tr><td>Services</td><td>services.html, service-details.html</td><td>Service cards, process steps, pricing hint, CTA band</td></tr>
+            <tr><td>Shop</td><td>frames.html, frame-details.html, lenses.html, contact-lenses.html</td><td>Product grid + filter.js, product gallery with thumbs, lens types</td></tr>
+            <tr><td>Booking</td><td>eye-test-booking.html</td><td>5-step wizard (booking.js), summary, success state</td></tr>
+            <tr><td>Content</td><td>pricing.html, faq.html</td><td>Pricing cards, compare table, sticky FAQ sidebar</td></tr>
+            <tr><td>Blog</td><td>blog.html, blog-list.html, blog-details.html</td><td>Grid/list cards, sidebar widgets, article + comments</td></tr>
+            <tr><td>Contact</td><td>contact.html</td><td>Info cards, map image, form, opening hours</td></tr>
+            <tr><td>Auth</td><td>login.html, register.html, forgot-password.html</td><td>Split auth layout, social buttons</td></tr>
+            <tr><td>Utility</td><td>404.html, coming-soon.html, maintenance.html</td><td>Error page, countdown, maintenance notice</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="doc-card" id="pages-admin">
+        <h2>Admin Pages</h2>
+        <table>
+          <thead><tr><th>Page</th><th>File</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>Dashboard</td><td>admin/index.html</td><td>Stat cards, revenue/appointment/category charts, recent orders, timeline</td></tr>
+            <tr><td>Reports</td><td>admin/reports.html</td><td>5 analytics charts, date range picker, top performers</td></tr>
+            <tr><td>Products</td><td>admin/products.html</td><td>Product table with search/status/category filters</td></tr>
+            <tr><td>Add Product</td><td>admin/product-add.html</td><td>Product form with image upload area</td></tr>
+            <tr><td>Categories / Coupons</td><td>admin/categories.html, admin/coupons.html</td><td>Tables + add modals (flatpickr on coupon expiry)</td></tr>
+            <tr><td>Orders / Reviews</td><td>admin/orders.html, admin/reviews.html</td><td>Orders with payment/status, reviews with rating summary</td></tr>
+            <tr><td>Customers / Users</td><td>admin/customers.html, admin/users.html</td><td>Customer records, staff with role badges + add user modal</td></tr>
+            <tr><td>Messages</td><td>admin/messages.html</td><td>Inbox list + message detail view</td></tr>
+            <tr><td>Appointments</td><td>admin/appointments.html</td><td>Appointment table, date filter, schedule sidebar</td></tr>
+            <tr><td>Services / Testimonials / Blog</td><td>admin/services.html, admin/testimonials.html, admin/blog.html</td><td>Service table, testimonial cards, blog post table</td></tr>
+            <tr><td>Settings / Profile</td><td>admin/settings.html, admin/profile.html</td><td>Store settings with toggles &amp; password fields, profile with upload + activity</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="doc-card" id="css">
+        <h2>CSS &amp; Themes</h2>
+        <p>Load order matters. Every page includes the stylesheets in this exact order (admin pages prefix with <code>../</code>):</p>
+        <pre><code>&lt;link rel="stylesheet" href="assets/css/bootstrap.min.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/bootstrap-icons.min.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/google-fonts.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/swiper-bundle.min.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/flatpickr.min.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/style.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/responsive.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/dark.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/rtl.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/flatpickr-dark.css"&gt;</code></pre>
+        <ul>
+          <li><strong>style.css</strong> — all components: header, hero, cards, forms, footer, auth, booking, blog, contact, and the whole <code>.admin-*</code> section (from ~line 4160).</li>
+          <li><strong>responsive.css</strong> — breakpoint overrides (1200/992/768/576/375/320).</li>
+          <li><strong>dark.css</strong> — <code>[data-theme="dark"]</code> overrides.</li>
+          <li><strong>rtl.css</strong> — <code>[dir="rtl"]</code> overrides.</li>
+        </ul>
+      </section>
+
+      <section class="doc-card" id="dark-rtl">
+        <h2>Dark Mode &amp; RTL</h2>
+        <p>The <code>&lt;html&gt;</code> tag carries the state:</p>
+        <pre><code>&lt;html lang="en" data-theme="light" dir="ltr"&gt;</code></pre>
+        <p>Use these two buttons anywhere (theme.js wires them up automatically):</p>
+        <pre><code>&lt;button type="button" data-theme-toggle aria-label="Toggle dark mode"&gt;&lt;i class="bi bi-moon-stars"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button type="button" data-dir-toggle aria-label="Toggle RTL"&gt;&lt;i class="bi bi-arrow-left-right"&gt;&lt;/i&gt;&lt;/button&gt;</code></pre>
+        <p>State is persisted in <code>localStorage</code> under <code>opticare_theme</code> and <code>opticare_dir</code>. Custom events <code>opticare:theme</code> and <code>opticare:dir</code> are dispatched after every change so scripts (e.g. Chart.js recoloring) can react.</p>
+      </section>
+
+      <section class="doc-card" id="colors">
+        <h2>Brand Colors</h2>
+        <p>All colors are CSS custom properties defined in <code>style.css</code>. Edit them once and the whole template updates:</p>
+        <pre><code>:root {
+  --primary: #0d6efd;   /* main brand blue */
+  --secondary: #6ee7f5; /* accent cyan */
+  --dark: #0b172d;      /* headings / dark surfaces */
+  --text: #3c4757;      /* body text */
+  --muted: #6b7a90;     /* muted text */
+  --border: #e6ebf2;    /* hairlines */
+  --bg: #f6f9fc;        /* page background */
+  --card-bg: #ffffff;   /* cards */
+  --radius: 14px;
+  --box-shadow: 0 10px 30px rgba(11, 23, 45, 0.07);
+}</code></pre>
+        <div class="note">Dark-mode counterparts live in <code>dark.css</code> under <code>[data-theme="dark"]</code>. Keep every component using variables so the theme swaps cleanly.</div>
+      </section>
+
+      <section class="doc-card" id="js-main">
+        <h2>main.js — Global Hooks</h2>
+        <p>Loaded on every page. Everything is opt-in via attributes.</p>
+        <table>
+          <thead><tr><th>Hook</th><th>What it does</th></tr></thead>
+          <tbody>
+            <tr><td><code>data-search-open</code> / <code>data-search-close</code></td><td>Open / close the header search popover <code>#searchPop</code></td></tr>
+            <tr><td><code>data-wishlist="id"</code> + <code>[data-wish-count]</code></td><td>Toggle wishlist item, update count element</td></tr>
+            <tr><td><code>data-add-cart</code> + <code>[data-cart-count]</code></td><td>Add to cart, update badge count</td></tr>
+            <tr><td><code>data-counter</code> (+<code>data-prefix</code>/<code>data-suffix</code>)</td><td>Animated number counter when scrolled into view</td></tr>
+            <tr><td><code>.reveal</code></td><td>Fade-up reveal on scroll (IntersectionObserver)</td></tr>
+            <tr><td><code>.faq-item</code> / <code>.faq-q</code> / <code>.faq-a</code></td><td>Accordion behavior; group via <code>[data-faq-group]</code></td></tr>
+            <tr><td><code>.password-toggle</code> + <code>data-password-target="id"</code></td><td>Show/hide a password field</td></tr>
+            <tr><td><code>[data-newsletter]</code> + <code>[data-newsletter-success]</code></td><td>Newsletter form success message</td></tr>
+            <tr><td><code>data-gallery-thumb</code> + <code>data-gallery-src</code></td><td>Swap main image in product galleries</td></tr>
+            <tr><td><code>[data-color-options] .color-swatch</code>, <code>[data-size-options] .size-chip</code></td><td>Single-select color / size chips</td></tr>
+            <tr><td><code>[data-blog-filter]</code> + <code>[data-blog-category]</code></td><td>Filter blog cards by category</td></tr>
+            <tr><td><code>.back-to-top</code></td><td>Smooth scroll to top</td></tr>
+            <tr><td><code>data-theme-toggle</code></td><td>Delegated to theme.js (no-op here)</td></tr>
+            <tr><td><code>[data-table]</code>, <code>[data-delete]</code>, <code>[data-upload]</code>, <code>[data-sidebar-toggle]</code></td><td>Admin controls — see sections below</td></tr>
+          </tbody>
+        </table>
+        <div class="note warn">Dedicated Swiper blocks <code>#testimonialSlider</code>, <code>#brandSlider</code>, <code>#featuredFramesSlider</code>, <code>#teamSlider</code> are initialized inside main.js. Do <strong>not</strong> add the class <code>.swiper-init</code> to them or they will be initialized twice. Use <code>.swiper-init</code> only for additional sliders you add yourself.</div>
+      </section>
+
+      <section class="doc-card" id="js-theme">
+        <h2>theme.js — Dark / RTL Switcher</h2>
+        <p>Load <code>theme.js</code> before <code>main.js</code>. It exposes a global <code>window.OptiCareTheme</code> with <code>getTheme()</code>, <code>getDir()</code>, <code>setTheme()</code>, <code>setDir()</code> and persists both choices in localStorage.</p>
+        <pre><code>// Read current state anywhere
+var theme = window.OptiCareTheme.getTheme();
+var dir = window.OptiCareTheme.getDir();</code></pre>
+      </section>
+
+      <section class="doc-card" id="js-filter">
+        <h2>filter.js — Frames Shop (frames.html)</h2>
+        <p>Loads after main.js and controls the product grid. Required markup:</p>
+        <pre><code>&lt;div id="productGrid"&gt;
+  &lt;div class="product-card" data-name="Aviator" data-category="men"
+       data-brand="ray-ban" data-gender="men" data-rating="4.8"
+       data-price="129"&gt; ... &lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+        <table>
+          <thead><tr><th>Element</th><th>Role</th></tr></thead>
+          <tbody>
+            <tr><td><code>#productGrid</code></td><td>Grid container holding the <code>.product-card</code> items</td></tr>
+            <tr><td><code>#productSearch</code></td><td>Text input — filters by <code>data-name</code> + <code>data-category</code></td></tr>
+            <tr><td><code>input[name="filter-category|filter-brand|filter-gender"]</code></td><td>Radio groups for category / brand / gender</td></tr>
+            <tr><td><code>#priceRange</code> (max 1000) + <code>#priceOutput</code></td><td>Price range slider bound to <code>data-price</code></td></tr>
+            <tr><td><code>#productSort</code></td><td>Sort: featured / name asc / name desc / price low-high / high-low / rating</td></tr>
+            <tr><td><code>#productCount</code>, <code>#productPagination</code></td><td>Result count + pagination output (6 per page)</td></tr>
+            <tr><td><code>#filterReset</code></td><td>Resets all filters</td></tr>
+            <tr><td><code>#emptyState</code> / <code>#emptyReset</code></td><td>Empty-results panel + its reset button</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="doc-card" id="js-booking">
+        <h2>booking.js — Booking Wizard (eye-test-booking.html)</h2>
+        <p>Loads after main.js. Required IDs / classes:</p>
+        <table>
+          <thead><tr><th>Element</th><th>Role</th></tr></thead>
+          <tbody>
+            <tr><td><code>#bookingWizard</code> + 5 <code>.booking-step[data-step-title]</code></td><td>Wizard container and steps</td></tr>
+            <tr><td><code>.step-dot</code> / <code>.step-connector</code></td><td>Progress bar items</td></tr>
+            <tr><td><code>#bookingPrev</code> / <code>#bookingNext</code> / <code>#bookingConfirm</code> / <code>#bookingAgain</code></td><td>Wizard navigation buttons</td></tr>
+            <tr><td><code>[data-service-group]</code> + <code>.service-select-card</code></td><td>Service picker cards (hidden radio <code>name="bk-service"</code>)</td></tr>
+            <tr><td><code>#bkDate</code></td><td>Date input (Flatpickr)</td></tr>
+            <tr><td><code>[data-time-group]</code> + <code>.time-slot</code></td><td>Time slot picker</td></tr>
+            <tr><td><code>#bkOptometrist</code></td><td>Optometrist select</td></tr>
+            <tr><td><code>#bookingSummary</code> → <code>#sum-*</code></td><td>Review summary fields</td></tr>
+            <tr><td><code>#bookingSuccess</code> → <code>#successName</code> / <code>#successDate</code></td><td>Success panel</td></tr>
+            <tr><td><code>.field-error</code> / <code>#error-*</code></td><td>Inline validation messages</td></tr>
+          </tbody>
+        </table>
+        <div class="note">Each step validates its inputs using the <code>data-error</code> rule attribute (same mini validation engine as main.js). Step 5 subtitle text is step-agnostic ("Complete the steps below to book your appointment.").</div>
+      </section>
+
+      <section class="doc-card" id="js-dashboard">
+        <h2>dashboard.js — Admin Charts</h2>
+        <p>Load after Chart.js (<code>chart.umd.min.js</code>) on chart pages. Charts are created only when the matching canvas exists, so one script works for both pages:</p>
+        <div class="grid-2">
+          <div>
+            <h3>Dashboard (admin/index.html)</h3>
+            <ul>
+              <li><code>#revenueChart</code> — line</li>
+              <li><code>#appointmentChart</code> — bar</li>
+              <li><code>#categoryChart</code> — doughnut</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Reports (admin/reports.html)</h3>
+            <ul>
+              <li><code>#salesChart</code></li>
+              <li><code>#customersChart</code></li>
+              <li><code>#appointmentReportChart</code></li>
+              <li><code>#productChart</code></li>
+              <li><code>#trafficChart</code></li>
+            </ul>
+          </div>
+        </div>
+        <p>Charts read colors from the CSS variables and re-render when the <code>opticare:theme</code> event fires, so dark mode stays consistent.</p>
+      </section>
+
+      <section class="doc-card" id="admin-shell">
+        <h2>Admin Shell</h2>
+        <p>Every admin page uses the same layout:</p>
+        <pre><code>&lt;body class="admin-body"&gt;
+  &lt;div class="admin-wrapper"&gt;
+    &lt;aside class="admin-sidebar"&gt;
+      &lt;div class="sidebar-head"&gt; ... logo + toggle ... &lt;/div&gt;
+      &lt;div class="sidebar-scroll"&gt;
+        &lt;div class="sidebar-section"&gt;
+          &lt;span class="sidebar-label"&gt;Overview&lt;/span&gt;
+          &lt;ul class="sidebar-nav"&gt;
+            &lt;li class="nav-item"&gt;&lt;a class="nav-link active" href="index.html"&gt;...&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/aside&gt;
+    &lt;div class="admin-main"&gt;
+      &lt;header class="admin-topbar"&gt; ... &lt;/header&gt;
+      &lt;main class="admin-content"&gt; ... page content ... &lt;/main&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id="sidebarBackdrop"&gt;&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+        <ul>
+          <li>Sidebar is fixed and 264px wide (<code>--sidebar-w</code>); the main area is offset with <code>margin-inline-start</code>.</li>
+          <li><strong>Desktop:</strong> <code>[data-sidebar-toggle]</code> toggles the <code>sidebar-collapsed</code> class on <code>body</code>.</li>
+          <li><strong>Mobile (≤992px):</strong> the same button toggles <code>sidebar-open</code>, sliding the sidebar in as an off-canvas panel. Clicking <code>#sidebarBackdrop</code> closes it.</li>
+        </ul>
+        <div class="note warn">There is no CSS for the backdrop in style.css, so each admin page includes a small inline <code>&lt;style&gt;</code> block styling <code>#sidebarBackdrop</code> as a fixed overlay shown when <code>.sidebar-open</code> is present. Keep it when you duplicate a page.</div>
+        <div class="note warn">main.js only auto-highlights links inside <code>.main-nav</code> / <code>.offcanvas-nav</code>. The admin sidebar does <strong>not</strong> auto-highlight — hard-code <code>class="nav-link active"</code> on the current page’s link.</div>
+      </section>
+
+      <section class="doc-card" id="admin-tables">
+        <h2>Admin Data Tables</h2>
+        <p>One generic engine powers every admin table. Each table gets a unique <code>name</code> and matching controls:</p>
+        <pre><code>&lt;table class="table table-admin" data-table="products"&gt; ... &lt;/table&gt;
+&lt;input  data-table-search="products"&gt;
+&lt;select data-table-status="products"&gt;&lt;/select&gt;   &lt;!-- option values must match data-status on badges --&gt;
+&lt;select data-table-size="products"&gt;&lt;/select&gt;
+&lt;span   data-table-info="products"&gt;&lt;/span&gt;
+&lt;ul     data-table-pagination="products"&gt;&lt;/ul&gt;</code></pre>
+        <ul>
+          <li>Search filters rows by text content.</li>
+          <li>Status filter matches the first <code>.status-badge[data-status]</code> in a row.</li>
+          <li>Pagination + "Showing X-Y of Z" info update automatically.</li>
+        </ul>
+        <h3>Status badges</h3>
+        <pre><code>&lt;span class="status-badge status-published" data-status="published"&gt;Published&lt;/span&gt;
+&lt;span class="status-badge status-pending"   data-status="pending"&gt;Pending&lt;/span&gt;
+&lt;span class="status-badge status-completed" data-status="completed"&gt;Completed&lt;/span&gt;
+&lt;span class="status-badge status-processing" data-status="processing"&gt;Processing&lt;/span&gt;
+&lt;span class="status-badge status-cancelled" data-status="cancelled"&gt;Cancelled&lt;/span&gt;</code></pre>
+      </section>
+
+      <section class="doc-card" id="admin-more">
+        <h2>More Admin Controls</h2>
+        <h3>Delete confirmation</h3>
+        <p>Any element with <code>data-delete</code> opens the Bootstrap modal <code>#deleteModal</code> (include it on every page that uses delete buttons) and shows a toast.</p>
+        <h3>Image upload preview</h3>
+        <pre><code>&lt;input type="file" id="thumbUpload" hidden accept="image/*"&gt;
+&lt;div data-upload data-upload-input="thumbUpload"&gt; Click to upload &lt;/div&gt;
+&lt;div data-upload-preview="thumbUpload"&gt;&lt;/div&gt;</code></pre>
+        <p>Clicking the <code>data-upload</code> element triggers the file input; chosen images are rendered into the preview container (up to 6, removable).</p>
+        <h3>Stat cards / lists / timeline</h3>
+        <pre><code>&lt;div class="admin-stat"&gt;
+  &lt;span class="stat-icon bg-soft-primary text-primary"&gt;&lt;i class="bi bi-receipt"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;div class="stat-info"&gt;&lt;h4&gt;1,864&lt;/h4&gt;&lt;span class="stat-label"&gt;Total Orders&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <p>Available soft colors: <code>bg-soft-primary / success / warning / danger / info / teal</code>. Also available: <code>.avatar</code>/<code>.avatar-sm</code>, <code>.actions</code>, <code>.product-cell</code>, <code>.mini-list</code>/<code>.mini-info</code>/<code>.mini-value</code>, <code>.progress-thin</code>, <code>.dash-timeline .tl-success/primary/warning/info/danger</code>, <code>.dropdown-notify .notify-item</code>, <code>.upload-area</code>.</p>
+      </section>
+
+      <section class="doc-card" id="credits">
+        <h2>Credits</h2>
+        <ul>
+          <li><a href="https://getbootstrap.com">Bootstrap 5</a> — CSS framework</li>
+          <li><a href="https://icons.getbootstrap.com">Bootstrap Icons</a> — icon set</li>
+          <li><a href="https://swiperjs.com">Swiper</a> — sliders/carousels</li>
+          <li><a href="https://www.chartjs.org">Chart.js</a> — admin charts</li>
+          <li><a href="https://flatpickr.js.org">Flatpickr</a> — date pickers</li>
+          <li><a href="https://fonts.google.com">Google Fonts</a> — typography</li>
+          <li>All images are inline SVG placeholders bundled in <code>assets/images/</code>.</li>
+        </ul>
+      </section>
+
+      <section class="doc-card" id="support">
+        <h2>Support &amp; Customization</h2>
+        <ul>
+          <li>To change content, edit the HTML directly — it is plain, commented sections.</li>
+          <li>To restyle, edit CSS variables in <code>style.css</code> (see Brand Colors).</li>
+          <li>To extend JS behavior, follow the attribute-hook pattern in <code>main.js</code>.</li>
+          <li>Test at breakpoints: 320, 375, 390, 576, 768, 992, 1200, 1440, 1920.</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var links = document.querySelectorAll('.doc-sidebar a');
+      var sections = [];
+      links.forEach(function (a) { sections.push(document.querySelector(a.getAttribute('href'))); });
+      window.addEventListener('scroll', function () {
+        var fromTop = window.scrollY + 90;
+        var current = sections[0];
+        sections.forEach(function (s) { if (s && s.offsetTop <= fromTop) current = s; });
+        links.forEach(function (a) { a.classList.remove('active'); });
+        if (current) {
+          var active = document.querySelector('.doc-sidebar a[href="#' + current.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

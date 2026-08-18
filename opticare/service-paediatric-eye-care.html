@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paediatric Eye Care Service - OptiCare</title>
+  <meta name="description" content="Child-friendly paediatric eye care at OptiCare - gentle exams, myopia control and developmental vision assessments.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/google-fonts.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/minimal-navbar.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/flatpickr-dark.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="topbar-contact d-flex align-items-center">
+          <span class="topbar-item"><i class="bi bi-telephone-fill"></i> +91 98765 43210</span>
+          <span class="topbar-sep"></span>
+          <span class="topbar-item"><i class="bi bi-envelope-fill"></i> support@opticare.com</span>
+          <span class="topbar-sep d-none d-md-inline-block"></span>
+          <span class="topbar-item d-none d-lg-inline-flex"><i class="bi bi-clock-fill"></i> Mon - Sat: 9:00 AM - 8:00 PM</span>
+        </div>
+        <div class="topbar-actions"></div>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="site-logo" href="index.html" aria-label="OptiCare home"><img src="assets/images/logo/logo.png" alt="OptiCare logo"></a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li class="dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link active" href="services.html">Services</a></li>
+            <li class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="frames.html">Frames</a></li>
+                <li><a class="dropdown-item" href="lenses.html">Lenses</a></li>
+                <li><a class="dropdown-item" href="contact-lenses.html">Contact Lenses</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link" href="blog.html">Blog</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button type="button" class="nav-icon-btn d-none d-sm-inline-flex" data-search-open aria-label="Search"><i class="bi bi-search"></i></button>
+          <a href="wishlist.html" class="nav-icon-btn d-none d-md-inline-flex" aria-label="Wishlist"><i class="bi bi-heart"></i><span class="count" data-wish-count>0</span></a>
+          <a href="cart.html" class="nav-icon-btn cart-btn d-none d-md-inline-flex" aria-label="Cart"><i class="bi bi-bag"></i><span class="count cart-count" data-cart-count>0</span></a>
+          <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars"></i></button>
+          <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction"><i class="bi bi-globe2"></i></button>
+          <div class="dropdown nav-login-drop d-none d-md-inline-flex">
+            <button type="button" class="nav-icon-btn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account"><i class="bi bi-person"></i></button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="admin/index.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-primary nav-cta d-none d-xl-inline-flex" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="#offcanvasNav" aria-label="Open menu"><i class="bi bi-list"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="search-pop" id="searchPop" role="search">
+      <div class="container">
+        <form class="position-relative">
+          <input type="search" class="search-input" placeholder="Search frames, lenses, services, articles..." aria-label="Search">
+          <button type="button" class="btn-close position-absolute top-50 end-0 translate-middle-y" data-search-close aria-label="Close search"></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+    <div class="offcanvas-header">
+      <a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo"></a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="offcanvas-nav" aria-label="Mobile navigation">
+        <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+        <a class="nav-link" href="about.html"><i class="bi bi-info-circle"></i> About</a>
+        <a class="nav-link active" href="services.html"><i class="bi bi-grid"></i> Services</a>
+        <span class="offcanvas-section-label">Products</span>
+        <a class="nav-link" href="frames.html"><i class="bi bi-eyeglasses"></i> Frames</a>
+        <a class="nav-link" href="lenses.html"><i class="bi bi-circle-half"></i> Lenses</a>
+        <a class="nav-link" href="contact-lenses.html"><i class="bi bi-phone"></i> Contact Lenses</a>
+        <a class="nav-link" href="blog.html"><i class="bi bi-newspaper"></i> Blog</a>
+        <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+        <a class="nav-link" href="wishlist.html"><i class="bi bi-heart"></i> Wishlist</a>
+        <a class="nav-link" href="cart.html"><i class="bi bi-bag"></i> Cart</a>
+        <hr class="my-3">
+        <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+        <a class="nav-link" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><i class="bi bi-joystick"></i> Service Detail</span>
+        <h1 class="page-title">Paediatric Eye Care</h1>
+        <p class="page-lead">Gentle, child-friendly exams and myopia control for developing eyes.</p>
+        <nav class="breadcrumb-wrap" aria-label="Breadcrumb">
+          <ol class="breadcrumb-custom">
+            <li><a href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li class="active" aria-current="page">Paediatric Eye Care</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row g-4">
+          <aside class="col-lg-4">
+            <div class="widget reveal">
+              <h3 class="widget-title">All Services</h3>
+              <ul class="list-unstyled mb-0 service-links">
+                <li><a class="d-flex align-items-center gap-2 py-2 border-bottom" href="service-eye-examination.html"><i class="bi bi-eye"></i> Eye Examination</a></li>
+                <li><a class="d-flex align-items-center gap-2 py-2 border-bottom" href="service-vision-testing.html"><i class="bi bi-activity"></i> Vision Testing</a></li>
+                <li><a class="d-flex align-items-center gap-2 py-2 border-bottom" href="service-contact-lens-fitting.html"><i class="bi bi-phone"></i> Contact Lens Fitting</a></li>
+                <li><a class="d-flex align-items-center gap-2 py-2 border-bottom" href="service-details.html"><i class="bi bi-moisture"></i> Dry Eye Clinic</a></li>
+                <li><a class="d-flex align-items-center gap-2 py-2 border-bottom active" href="service-paediatric-eye-care.html"><i class="bi bi-joystick"></i> Paediatric Eye Care</a></li>
+                <li><a class="d-flex align-items-center gap-2 py-2" href="service-senior-vision-care.html"><i class="bi bi-person-walking"></i> Senior Vision Care</a></li>
+              </ul>
+            </div>
+            <div class="widget reveal">
+              <h3 class="widget-title">Need Help?</h3>
+              <div class="d-flex align-items-start gap-3">
+                <span class="icon-box"><i class="bi bi-headset"></i></span>
+                <div>
+                  <h4 class="h6 mb-1">Talk to Our Team</h4>
+                  <p class="small mb-1">Mon - Sat: 9:00 AM - 8:00 PM</p>
+                  <a href="tel:+919876543210" class="fw-bold text-primary">+91 98765 43210</a>
+                </div>
+              </div>
+              <a href="eye-test-booking.html" class="btn btn-primary w-100 mt-3"><i class="bi bi-calendar2-check"></i> Book Appointment</a>
+            </div>
+          </aside>
+
+          <div class="col-lg-8">
+            <img src="assets/images/paedriatic1.jpg" alt="Child-friendly paediatric eye exam" class="rounded-4 shadow w-100 mb-4 reveal" loading="lazy">
+            <div class="reveal">
+              <h2 class="h3">Specialist Care for Young Eyes</h2>
+              <p>Children's eyes develop rapidly, making early detection of vision problems essential. Our paediatric eye care service uses age-appropriate techniques and a friendly environment to keep your child comfortable throughout the examination.</p>
+              <p>From newborn vision screening to myopia management for school-age children, our specialists provide comprehensive care tailored to every stage of your child's visual development.</p>
+            </div>
+            <div class="row g-3 reveal">
+              <div class="col-sm-6">
+                <div class="card rounded-card h-100 p-4">
+                  <span class="icon-box"><i class="bi bi-eye"></i></span>
+                  <h4 class="h6 mt-3">Vision Screening</h4>
+                  <p class="small mb-0">Age-appropriate tests to detect refractive errors, lazy eye and squint early.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card rounded-card h-100 p-4">
+                  <span class="icon-box icon-box--secondary"><i class="bi bi-graph-down-arrow"></i></span>
+                  <h4 class="h6 mt-3">Myopia Control</h4>
+                  <p class="small mb-0">Atropine drops, orthokeratology and lifestyle advice to slow myopia progression.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card rounded-card h-100 p-4">
+                  <span class="icon-box"><i class="bi bi-joystick"></i></span>
+                  <h4 class="h6 mt-3">Binocular Vision</h4>
+                  <p class="small mb-0">Assessment of eye teaming and coordination for reading and sports performance.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card rounded-card h-100 p-4">
+                  <span class="icon-box icon-box--secondary"><i class="bi bi-eyeglasses"></i></span>
+                  <h4 class="h6 mt-3">Paediatric Eyewear</h4>
+                  <p class="small mb-0">Durable, fun frame designs that kids love to wear every day.</p>
+                </div>
+              </div>
+            </div>
+            <div class="reveal mt-4">
+              <h2 class="h3">What's Included</h2>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Child-friendly vision screening</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Refractive error and squint assessment</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Binocular vision and eye coordination check</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Myopia risk evaluation and management plan</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Parent counselling and school vision advice</li>
+              </ul>
+            </div>
+            <div class="cta-band reveal mt-4">
+              <div class="row align-items-center g-3">
+                <div class="col-md-8">
+                  <h2>Give Your Child the Gift of Clear Vision</h2>
+                  <p class="mb-0">Book a paediatric eye exam in a friendly, kid-safe environment.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                  <a href="eye-test-booking.html" class="btn btn-white"><i class="bi bi-calendar2-check"></i> Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-col">
+          <div class="footer-brand"><a href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
+          <p>Your trusted destination for professional eye care and quality eyewear.</p>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt"></i> <span>42 Vision Park, Connaught Place, New Delhi 110001</span></li>
+            <li><i class="bi bi-telephone"></i> <span>+91 98765 43210</span></li>
+            <li><i class="bi bi-envelope"></i> <span>support@opticare.com</span></li>
+            <li><i class="bi bi-clock"></i> <span>Mon - Sat: 9:00 AM - 8:00 PM</span></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="frames.html"><i class="bi bi-chevron-right"></i> Frames</a></li>
+            <li><a href="lenses.html"><i class="bi bi-chevron-right"></i> Lenses</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-col">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-eye-examination.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
+            <li><a href="service-vision-testing.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
+            <li><a href="service-contact-lens-fitting.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
+            <li><a href="service-paediatric-eye-care.html"><i class="bi bi-chevron-right"></i> Paediatric Eye Care</a></li>
+            <li><a href="service-senior-vision-care.html"><i class="bi bi-chevron-right"></i> Senior Vision Care</a></li>
+            <li><a href="eye-test-booking.html"><i class="bi bi-chevron-right"></i> Book Eye Test</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-col">
+          <h5>Newsletter</h5>
+          <p>Get eye-care tips, offers and new collection alerts.</p>
+          <form class="newsletter-form" data-newsletter novalidate>
+            <input type="email" class="form-control" placeholder="Email address" aria-label="Email address" required>
+            <button type="submit" class="btn btn-primary">Subscribe <i class="bi bi-send"></i></button>
+          </form>
+          <div class="newsletter-success" data-newsletter-success>Thank you for subscribing!</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner d-flex align-items-center justify-content-between flex-wrap gap-2">
+          <p class="mb-0">&copy; 2026 OptiCare. All Rights Reserved.</p>
+          <div class="d-flex gap-3">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+          <div class="payment-icons d-flex gap-2">
+            <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+            <i class="bi bi-credit-card" aria-hidden="true"></i>
+            <i class="bi bi-paypal" aria-hidden="true"></i>
+            <i class="bi bi-cash-coin" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/flatpickr.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+/* ============================================================
+   OptiCare - minimal-navbar.css
+   Minimal navbar styling - responsive for all devices
+   ============================================================ */
+
+/* ---- Global overflow prevention ---- */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 74px !important;
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hide search button, wishlist, and book eye test button */
+button[data-search-open],
+.nav-actions .wishlist-btn,
+.nav-actions .wish,
+.nav-actions .header-book-btn,
+.nav-actions .nav-cta {
+  display: none !important;
+}
+
+/* Dark mode - hide same elements */
+html[data-theme="dark"] button[data-search-open],
+html[data-theme="dark"] .nav-actions .wishlist-btn,
+html[data-theme="dark"] .nav-actions .wish,
+html[data-theme="dark"] .nav-actions .header-book-btn,
+html[data-theme="dark"] .nav-actions .nav-cta {
+  display: none !important;
+}
+
+/* ============================================================
+   NAVBAR BASE - Fixed, solid, no scroll effects
+   ============================================================ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1030;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 68px;
+  padding: 0;
+}
+
+.main-nav {
+  flex: 1;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav .nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+  padding: 8px 16px;
+  border-radius: 6px;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.main-nav .nav-link:hover {
+  color: var(--primary);
+  background: rgba(31, 138, 122, 0.08);
+}
+
+.main-nav .nav-link.active {
+  color: var(--primary);
+  background: rgba(31, 138, 122, 0.12);
+}
+
+.main-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 16px;
+  inset-inline-end: 16px;
+  bottom: 3px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--primary);
+}
+
+/* ============================================================
+   RESPONSIVE NAVBAR - Desktop >= 1200px
+   ============================================================ */
+@media (min-width: 1200px) {
+  .header-inner {
+    min-height: 74px;
+    padding: 8px 0;
+  }
+
+  .site-logo img {
+    width: 120px;
+    max-height: 42px;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE NAVBAR - Large Desktop 1200px - 1399px
+   ============================================================ */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .header-inner {
+    gap: 14px;
+  }
+
+  .main-nav .nav-link {
+    padding: 8px 12px;
+    font-size: 0.88rem;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE NAVBAR - Tablet / Small Desktop 992px - 1199px
+   ============================================================ */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .header-inner {
+    min-height: 70px;
+    gap: 12px;
+    padding: 6px 0;
+  }
+
+  .site-logo img {
+    width: 110px;
+  }
+
+  .main-nav .nav-link {
+    padding: 8px 10px;
+    font-size: 0.82rem;
+  }
+
+  .main-nav .nav-link.active::after {
+    inset-inline-start: 10px;
+    inset-inline-end: 10px;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE NAVBAR - Tablet < 992px
+   Show hamburger, hide desktop nav
+   ============================================================ */
+@media (max-width: 991.98px) {
+  body {
+    padding-top: 70px !important;
+  }
+
+  .header-inner {
+    min-height: 64px;
+    gap: 10px;
+    padding: 6px 0;
+  }
+
+  .site-logo img {
+    width: 110px;
+    max-height: 38px;
+  }
+
+  /* Hide desktop navigation */
+  .main-nav {
+    display: none !important;
+  }
+
+  /* Show hamburger toggler */
+  .navbar-toggler {
+    display: inline-flex !important;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text-2);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .navbar-toggler i,
+  .navbar-toggler .bi {
+    font-size: 1.3rem;
+  }
+
+  .navbar-toggler:hover {
+    color: var(--primary);
+    background: var(--primary-50);
+    border-color: var(--primary);
+  }
+
+  .nav-actions {
+    margin-left: auto;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .nav-cta {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE NAVBAR - Mobile < 768px
+   ============================================================ */
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 62px !important;
+  }
+
+  .header-inner {
+    min-height: 56px;
+    gap: 8px;
+    padding: 5px 0;
+  }
+
+  .site-logo img {
+    width: 100px;
+    max-height: 34px;
+  }
+
+  .nav-actions {
+    gap: 5px;
+  }
+
+  .nav-icon-btn {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+    border-radius: 9px;
+  }
+
+  .nav-icon-btn i,
+  .nav-icon-btn .bi {
+    font-size: 0.95rem;
+  }
+
+  .navbar-toggler {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE NAVBAR - Small Mobile < 576px
+   ============================================================ */
+@media (max-width: 575.98px) {
+  body {
+    padding-top: 58px !important;
+  }
+
+  .header-inner {
+    min-height: 52px;
+    gap: 6px;
+    padding: 4px 0;
+  }
+
+  .site-logo img {
+    width: 90px;
+    max-height: 30px;
+  }
+
+  .nav-actions {
+    gap: 4px;
+  }
+
+  .nav-icon-btn {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .nav-icon-btn i,
+  .nav-icon-btn .bi {
+    font-size: 0.88rem;
+  }
+
+  .navbar-toggler {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .navbar-toggler i,
+  .navbar-toggler .bi {
+    font-size: 1.2rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE NAVBAR - Extra Small < 390px
+   ============================================================ */
+@media (max-width: 389.98px) {
+  body {
+    padding-top: 54px !important;
+  }
+
+  .header-inner {
+    min-height: 48px;
+    gap: 5px;
+    padding: 4px 0;
+  }
+
+  .site-logo img {
+    width: 80px;
+    max-height: 28px;
+  }
+
+  .nav-actions {
+    gap: 3px;
+  }
+
+  .nav-icon-btn {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+    border-radius: 8px;
+  }
+
+  .nav-icon-btn i,
+  .nav-icon-btn .bi {
+    font-size: 0.82rem;
+  }
+
+  .navbar-toggler {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+  }
+
+  .navbar-toggler i,
+  .navbar-toggler .bi {
+    font-size: 1.1rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE NAVBAR - Tiny < 320px
+   ============================================================ */
+@media (max-width: 319.98px) {
+  .site-logo img {
+    width: 70px;
+    max-height: 24px;
+  }
+
+  .nav-icon-btn {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+
+  .nav-icon-btn i,
+  .nav-icon-btn .bi {
+    font-size: 0.78rem;
+  }
+
+  .navbar-toggler {
+    width: 32px;
+    height: 32px;
+  }
+
+  .navbar-toggler i,
+  .navbar-toggler .bi {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+   DARK MODE - Solid header, no glassmorphism
+   ============================================================ */
+html[data-theme="dark"] .header {
+  background: #ECC0FA;
+  border-color: rgba(26, 10, 46, 0.15);
+}

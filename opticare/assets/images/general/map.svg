@@ -1,0 +1,20 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" role="img" aria-label="Store location map placeholder">
+  <rect width="800" height="420" fill="#e8eef7"/>
+  <g stroke="#d3dcea" stroke-width="3" fill="none">
+    <path d="M0 60 H800 M0 120 H800 M0 180 H800 M0 240 H800 M0 300 H800 M0 360 H800"/>
+    <path d="M100 0 V420 M200 0 V420 M300 0 V420 M400 0 V420 M500 0 V420 M600 0 V420 M700 0 V420"/>
+  </g>
+  <g fill="#d6e0ef">
+    <rect x="250" y="50" width="180" height="90" rx="8"/>
+    <rect x="470" y="160" width="160" height="110" rx="8"/>
+    <rect x="150" y="300" width="200" height="80" rx="8"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M130 60 q120 -30 240 0 q80 20 160 -10"/>
+    <path d="M420 300 q-80 30 -160 -10"/>
+  </g>
+  <circle cx="380" cy="210" r="26" fill="#0b5fd9" stroke="#ffffff" stroke-width="6"/>
+  <circle cx="380" cy="210" r="8" fill="#00c2a8"/>
+  <rect x="300" y="258" width="160" height="34" rx="17" fill="#14284f"/>
+  <text x="380" y="281" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#ffffff">OptiCare Store</text>
+</svg>

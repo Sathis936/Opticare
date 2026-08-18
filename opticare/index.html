@@ -1,0 +1,1042 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OptiCare - Optical Store &amp; Eye Care HTML Template</title>
+  <meta name="description" content="OptiCare - Premium optical store and eye care centre HTML template. Eye examinations, prescription glasses, contact lenses, frame shop, and eye test booking.">
+  <meta name="keywords" content="optical store, eye care, optician, frames, lenses, eye test, contact lenses, HTML template">
+  <meta name="author" content="OptiCare">
+  <link rel="canonical" href="https://www.opticare.com/">
+  <meta property="og:title" content="OptiCare - Optical Store &amp; Eye Care HTML Template">
+  <meta property="og:description" content="Premium optical store and eye care centre HTML template with frames, lenses, and eye test booking.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/google-fonts.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/minimal-navbar.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/flatpickr-dark.css">
+</head>
+<body>
+
+
+  <!-- =========================
+     SINGLE HEADER
+========================= -->
+<header class="header">
+
+  <div class="container">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a class="site-logo" href="index.html" aria-label="OptiCare home">
+        <img src="assets/images/logo/logo.png" alt="OptiCare logo">
+      </a>
+      <!-- Main Navigation -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li class="dropdown">
+            <a class="nav-link active dropdown-toggle" href="index.html" data-bs-toggle="dropdown" aria-expanded="false">
+              Home
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="index.html">Home 1</a></li>
+              <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="about.html"> About </a>
+          </li>
+          <li>
+            <a class="nav-link" href="services.html">
+              Services
+            </a>
+          </li>
+                    <li class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="frames.html">Frames</a></li>
+              <li><a class="dropdown-item" href="lenses.html">Lenses</a></li>
+              <li><a class="dropdown-item" href="contact-lenses.html">Contact Lenses</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="nav-link" href="blog.html">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="contact.html">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+
+      <!-- Header Actions -->
+      <div class="nav-actions">
+        <!-- Search -->
+        <button type="button" class="nav-icon-btn d-none d-sm-inline-flex" data-search-open aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
+        <!-- Wishlist -->
+        <a href="wishlist.html" class="nav-icon-btn d-none d-md-inline-flex" aria-label="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="count" data-wish-count>0</span>
+        </a>
+        <!-- Cart -->
+        <a href="cart.html" class="nav-icon-btn cart-btn d-none d-md-inline-flex" aria-label="Cart">
+          <i class="bi bi-bag"></i>
+          <span class="count cart-count" data-cart-count>0</span>
+        </a>
+        <!-- Dark / Light Mode -->
+        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-theme-toggle aria-label="Toggle dark mode">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <!-- RTL / LTR -->
+        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction">
+          <i class="bi bi-globe2"></i>
+        </button>
+        <!-- Account Dropdown -->
+        <div class="dropdown nav-login-drop d-none d-md-inline-flex">
+          <button type="button" class="nav-icon-btn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account">
+            <i class="bi bi-person"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
+            <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="admin/index.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
+          </ul>
+        </div>
+        <!-- Book Eye Test -->
+        <a class="btn btn-primary nav-cta d-none d-xl-inline-flex" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="#offcanvasNav" aria-label="Open menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div></header>
+
+
+<!-- =========================
+     MOBILE OFFCANVAS
+========================= -->
+<div
+  class="offcanvas offcanvas-end offcanvas-nav"
+  tabindex="-1"
+  id="offcanvasNav"
+  aria-labelledby="offcanvasNavLabel">
+
+
+  <!-- Mobile Header -->
+  <div class="offcanvas-header">
+
+    <a
+      class="site-logo"
+      href="index.html"
+      aria-label="OptiCare home">
+
+      <img
+        src="assets/images/logo/logo.png"
+        alt="OptiCare logo">
+
+    </a>
+
+
+    <button
+      type="button"
+      class="mobile-close-btn"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close menu">
+
+      <i class="bi bi-x-lg"></i>
+
+    </button>
+
+  </div>
+
+
+  <!-- Mobile Body -->
+  <div class="offcanvas-body">
+
+
+    <!-- Contact Information -->
+    <div class="mobile-contact">
+
+      <a href="tel:+919876543210">
+
+        <i class="bi bi-telephone"></i>
+
+        <span>+91 98765 43210</span>
+
+      </a>
+
+
+      <a href="mailto:support@opticare.com">
+
+        <i class="bi bi-envelope"></i>
+
+        <span>support@opticare.com</span>
+
+      </a>
+
+
+      <div class="mobile-hours">
+
+        <i class="bi bi-clock"></i>
+
+        <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+
+      </div>
+
+    </div>
+
+
+    <!-- Mobile Navigation -->
+    <nav
+      class="mobile-nav"
+      aria-label="Mobile navigation">
+
+
+      <div class="mobile-submenu">
+        <a
+          class="mobile-nav-link active"
+          href="index.html">
+
+          <i class="bi bi-house-door"></i>
+
+          <span>Home 1</span>
+
+        </a>
+        <a
+          class="mobile-nav-link"
+          href="home-2.html">
+
+          <i class="bi bi-house-door-fill"></i>
+
+          <span>Home 2</span>
+
+        </a>
+      </div>
+
+        <i class="bi bi-info-circle"></i>
+
+        <span>About</span>
+
+      </a>
+
+
+      <a
+        class="mobile-nav-link"
+        href="services.html">
+
+        <i class="bi bi-grid"></i>
+
+        <span>Services</span>
+
+      </a>
+
+
+      <!-- Services Submenu -->
+      <div class="mobile-submenu">
+
+        <a href="service-details.html">
+          Eye Examination
+        </a>
+
+        <a href="service-details.html">
+          Vision Testing
+        </a>
+
+        <a href="service-details.html">
+          Contact Lens Consultation
+        </a>
+
+      </div>
+
+
+      <a
+        class="mobile-nav-link"
+        href="frames.html">
+
+        <i class="bi bi-eyeglasses"></i>
+
+        <span>Frames</span>
+
+      </a>
+
+
+      <a
+        class="mobile-nav-link"
+        href="lenses.html">
+
+        <i class="bi bi-circle-half"></i>
+
+        <span>Lenses</span>
+
+      </a>
+
+
+      <a
+        class="mobile-nav-link"
+        href="contact-lenses.html">
+
+        <i class="bi bi-eye-fill"></i>
+
+        <span>Contact Lenses</span>
+
+      </a>
+
+
+      <a
+        class="mobile-nav-link"
+        href="pricing.html">
+
+        <i class="bi bi-tags"></i>
+
+        <span>Pricing</span>
+
+      </a>
+      <a class="mobile-nav-link" href="blog.html">
+        <i class="bi bi-newspaper"></i>
+        <span>Blog</span>
+      </a>
+      <a class="mobile-nav-link" href="contact.html">
+        <i class="bi bi-envelope"></i>
+        <span>Contact</span>
+      </a>
+      <a class="mobile-nav-link" href="wishlist.html">
+        <i class="bi bi-heart"></i>
+        <span>Wishlist</span>
+      </a>
+      <a class="mobile-nav-link" href="cart.html">
+        <i class="bi bi-bag"></i>
+        <span>Cart</span>
+      </a>
+      <!-- Divider -->
+      <hr>
+      <!-- Login -->
+      <a
+        class="mobile-nav-link"
+        href="login.html">
+        <i class="bi bi-person"></i>
+        <span>Login</span>
+    </a>
+      <!-- Book Eye Test -->
+      <a class="mobile-book-btn"href="eye-test-booking.html">
+        <i class="bi bi-calendar2-check"></i>
+        <span>Book Eye Test</span>
+      </a>
+    </nav>
+  </div>
+</div>
+
+  <main>
+    <!-- ======= Hero ======= -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <span class="hero-badge"><i class="bi bi-eye-fill"></i> Trusted Eye Care Since 2014</span>
+              <h1 class="hero-title">Clear Vision.<br><span class="text-gradient">Better Life.</span></h1>
+              <p class="hero-desc">Expert eye care, premium eyewear and personalised vision solutionsâ€”all under one roof. Book an eye test or explore our curated frame collection today.</p>
+              <div class="hero-cta">
+                <a href="eye-test-booking.html" class="btn btn-primary btn-lg"><i class="bi bi-calendar2-check"></i> Book an Eye Test</a>
+                <a href="frames.html" class="btn btn-outline-primary btn-lg"><i class="bi bi-eyeglasses"></i> Explore Frames</a>
+              </div>
+              <div class="hero-rating">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="stars" aria-label="Rated 4.9 out of 5">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                  </div>
+                  <small>4.9 / 5 from 2,400+ reviews</small>
+                </div>
+                <div class="avatar-stack d-flex align-items-center">
+                  <img src="assets/images/testimonials/avatar-1.jpg" alt="Customer avatar" width="40" height="40" loading="lazy">
+                  <img src="assets/images/testimonials/avatar-2.jpg" alt="Customer avatar" width="40" height="40" loading="lazy">
+                  <img src="assets/images/testimonials/avatar-3.jpg" alt="Customer avatar" width="40" height="40" loading="lazy">
+                  <img src="assets/images/testimonials/avatar-4.jpg" alt="Customer avatar" width="40" height="40" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-media">
+              <img class="hero-img" src="assets/images/eye care.jpg" alt="Stylish eyeglasses on a premium gradient background" width="720" height="640">
+              <div class="hero-floating hero-floating--1">
+                <span class="icon-box"><i class="bi bi-award"></i></span>
+                <span>
+                  <strong>10+ Years</strong>
+                  <small>of Experience</small>
+                </span>
+              </div>
+              <div class="hero-floating hero-floating--2">
+                <span class="icon-box icon-box--secondary"><i class="bi bi-people"></i></span>
+                <span>
+                  <strong>50K+</strong>
+                  <small>Happy Customers</small>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======= Trusted Brands ======= -->
+    <section class="brands-strip" aria-label="Trusted brands">
+      <div class="container">
+        <div class="swiper" id="brandSlider">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><span class="brand-item"><i class="bi bi-star-fill"></i> Ray-Ban</span></div>
+            <div class="swiper-slide"><span class="brand-item"><i class="bi bi-shield"></i> Oakley</span></div>
+            <div class="swiper-slide"><span class="brand-item"><i class="bi bi-gem"></i> Titan</span></div>
+            <div class="swiper-slide"><span class="brand-item"><i class="bi bi-bag"></i> Vogue</span></div>
+            <div class="swiper-slide"><span class="brand-item"><i class="bi bi-lightning"></i> Carrera</span></div>
+            <div class="swiper-slide"><span class="brand-item"><i class="bi bi-speedometer2"></i> Fastrack</span></div>
+            <div class="swiper-slide"><span class="brand-item"><i class="bi bi-star-fill"></i> Ray-Ban</span></div>
+            <div class="swiper-slide"><span class="brand-item"><i class="bi bi-shield"></i> Oakley</span></div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- ======= Stats ======= -->
+<section class="hero-stats-section">
+  <div class="container">
+    <div class="hero-stats">
+
+      <div class="hero-stat reveal">
+        <span class="stat-num">
+          <span data-counter="10">0</span>+
+        </span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+
+      <div class="hero-stat reveal">
+        <span class="stat-num">
+          <span data-counter="50" data-suffix="K">0</span>+
+        </span>
+        <span class="stat-label">Happy Customers</span>
+      </div>
+
+      <div class="hero-stat reveal">
+        <span class="stat-num">
+          <span data-counter="25">0</span>+
+        </span>
+        <span class="stat-label">Frame Brands</span>
+      </div>
+
+      <div class="hero-stat reveal">
+        <span class="stat-num">
+          <span data-counter="98">0</span>%
+        </span>
+        <span class="stat-label">Customer Satisfaction</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ======= Services ======= -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="bi bi-grid-1x2-fill"></i> Our Services</span>
+          <h2 class="section-title">Complete Eye Care Under One Roof</h2>
+          <p class="section-desc">From routine eye examinations to premium eyewear fitting, our certified optometrists care for every part of your vision.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <span class="service-icon"><i class="bi bi-eye-fill"></i></span>
+              <h3>Comprehensive Eye Exam</h3>
+              <article>Professional eye testing for accurate vision assessment and early detection of eye conditions.</article>
+              <a class="link-arrow" href="service-details.html">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <span class="service-icon"><i class="bi bi-clipboard2-pulse"></i></span>
+              <h3>Vision Testing</h3>
+              <article>Advanced vision screening to measure clarity, focus and colour perception for every age.</article>
+              <a class="link-arrow" href="service-details.html">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <span class="service-icon"><i class="bi bi-broadcast"></i></span>
+              <h3>Contact Lens Consultation</h3>
+              <article>Personalised contact lens fitting, trials and hygiene guidance for all-day comfort.</article>
+              <a class="link-arrow" href="service-details.html">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <span class="service-icon"><i class="bi bi-palette"></i></span>
+              <h3>Frame Fitting</h3>
+              <article>Expert measurement and fitting to match your face shape, lifestyle and prescription.</article>
+              <a class="link-arrow" href="service-details.html">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <span class="service-icon"><i class="bi bi-eyeglasses"></i></span>
+              <h3>Prescription Glasses</h3>
+              <article>Premium lenses and designer frames crafted precisely to your prescription.</article>
+              <a class="link-arrow" href="service-details.html">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card service-card--featured">
+              <span class="service-icon"><i class="bi bi-heart-pulse"></i></span>
+              <h3>Eye Care Consultation</h3>
+              <aside>Digital eye strain, dry eyes and family eye-care consultations by expert optometrists.</aside>
+              <a class="link-arrow" href="eye-test-booking.html">Book Now <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Popular Categories ======= -->
+    <section class="section section--alt" id="categories">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="bi bi-sunglasses"></i> Frame Collections</span>
+          <h2 class="section-title">Popular Frame Categories</h2>
+          <p class="section-desc">Discover handpicked eyewear across every style, occasion and need.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3 reveal">
+            <a class="category-card" href="frames.html">
+              <img src="assets/images/reading.jpg" alt="Reading glasses collection" loading="lazy">
+              <div class="category-card-body">
+                <div>
+                  <h4>Reading Glasses</h4>
+                  <small>42 styles</small>
+                </div>
+                <span class="arrow"><i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <a class="category-card" href="frames.html">
+              <img src="assets/images/sun glass.jpg" alt="Sunglasses collection" loading="lazy">
+              <div class="category-card-body">
+                <div>
+                  <h4>Sunglasses</h4>
+                  <small>36 styles</small>
+                </div>
+                <span class="arrow"><i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <a class="category-card" href="frames.html">
+              <img src="assets/images/sports glass.jpg" alt="Sports glasses collection" loading="lazy">
+              <div class="category-card-body">
+                <div>
+                  <h4>Sports Glasses</h4>
+                  <small>24 styles</small>
+                </div>
+                <span class="arrow"><i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <a class="category-card" href="frames.html">
+              <img src="assets/images/kids glass.jpg" alt="Child being fitted for glasses" loading="lazy">
+              <div class="category-card-body">
+                <div>
+                  <h4>Kids Glasses</h4>
+                  <small>28 styles</small>
+                </div>
+                <span class="arrow"><i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Featured Frames ======= -->
+    <section class="section" id="featured-frames">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between gap-3 flex-wrap mb-4">
+          <div class="section-head--left mb-0 reveal">
+            <span class="eyebrow"><i class="bi bi-star-fill"></i> Featured</span>
+            <h2 class="section-title">Handpicked Frames</h2>
+            <p class="section-desc">Our best-selling eyewear, loved by thousands of customers.</p>
+          </div>
+          <a href="frames.html" class="btn btn-outline-primary">View All Frames <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="swiper" id="featuredFramesSlider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="product-card">
+                <div class="product-media">
+                  <img src="assets/images/frames/frame-01.jpg" alt="Classic black optical frame" loading="lazy">
+                  <div class="product-badges"><span class="badge badge-primary">New</span></div>
+                  <button type="button" class="product-wish" data-wishlist="frame-01" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="product-body">
+                  <span class="product-cat">Sunglasses</span>
+                  <h4><a href="frame-details.html">Aviator Classic</a></h4>
+                  <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> 4.8</div>
+                  <div class="product-price"><span class="price">â‚¹2,499</span><span class="price-discount">â‚¹3,199</span><span class="price-off">-22%</span></div>
+                  <div class="product-actions">
+                    <a href="frame-details.html" class="btn btn-primary btn-sm">View Details</a>
+                    <button type="button" class="btn btn-ghost btn-icon-only" data-add-cart="frame-01" aria-label="Add to cart"><i class="bi bi-bag-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-card">
+                <div class="product-media">
+                  <img src="assets/images/frames/frame-02.jpg?v=2" alt="Round reading glasses" loading="lazy">
+                  <div class="product-badges"><span class="badge badge-soft-success">Best Seller</span></div>
+                  <button type="button" class="product-wish" data-wishlist="frame-02" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="product-body">
+                  <span class="product-cat">Reading Glasses</span>
+                  <h4><a href="frame-details.html">Metro Round</a></h4>
+                  <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span> 4.6</div>
+                  <div class="product-price"><span class="price">â‚¹1,799</span></div>
+                  <div class="product-actions">
+                    <a href="frame-details.html" class="btn btn-primary btn-sm">View Details</a>
+                    <button type="button" class="btn btn-ghost btn-icon-only" data-add-cart="frame-02" aria-label="Add to cart"><i class="bi bi-bag-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-card">
+                <div class="product-media">
+                  <img src="assets/images/frames/frame-03.jpg?v=2" alt="Sports performance glasses" loading="lazy">
+                  <div class="product-badges"><span class="badge badge-soft-info">Sports</span></div>
+                  <button type="button" class="product-wish" data-wishlist="frame-03" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="product-body">
+                  <span class="product-cat">Sports Glasses</span>
+                  <h4><a href="frame-details.html">Velocity Sport</a></h4>
+                  <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> 4.9</div>
+                  <div class="product-price"><span class="price">â‚¹3,499</span><span class="price-discount">â‚¹4,299</span><span class="price-off">-19%</span></div>
+                  <div class="product-actions">
+                    <a href="frame-details.html" class="btn btn-primary btn-sm">View Details</a>
+                    <button type="button" class="btn btn-ghost btn-icon-only" data-add-cart="frame-03" aria-label="Add to cart"><i class="bi bi-bag-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-card">
+                <div class="product-media">
+                  <img src="assets/images/frames/frame-04.jpg" alt="Cat eye frame for women" loading="lazy">
+                  <div class="product-badges"><span class="badge badge-soft-warning">Trending</span></div>
+                  <button type="button" class="product-wish" data-wishlist="frame-04" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                </div>
+                <div class="product-body">
+                  <span class="product-cat">Reading Glasses</span>
+                  <h4><a href="frame-details.html">Marina Cat Eye</a></h4>
+                  <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span> 5.0</div>
+                  <div class="product-price"><span class="price">â‚¹2,199</span></div>
+                  <div class="product-actions">
+                    <a href="frame-details.html" class="btn btn-primary btn-sm">View Details</a>
+                    <button type="button" class="btn btn-ghost btn-icon-only" data-add-cart="frame-04" aria-label="Add to cart"><i class="bi bi-bag-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Eye Care Awareness ======= -->
+    <section class="section section--tint" id="eye-care-awareness">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 reveal">
+            <img src="assets/images/general/eyechart.svg" alt="Eye chart used during a comprehensive eye examination" class="w-100 rounded-4 shadow" loading="lazy">
+          </div>
+          <div class="col-lg-6 reveal">
+            <span class="eyebrow"><i class="bi bi-heart-pulse-fill"></i> Eye Health</span>
+            <h2 class="section-title">Why Regular Eye Tests Matter</h2>
+            <p class="lead-text mb-4">Regular eye examinations help detect vision problems early and protect your long-term eye health.</p>
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-start gap-3 mb-3">
+                <span class="icon-box icon-box--secondary icon-box--sm"><i class="bi bi-check2"></i></span>
+                <div><strong>Early detection</strong><p class="mb-0 small text-muted">Spot glaucoma, cataract and macular issues before symptoms appear.</p></div>
+              </li>
+              <li class="d-flex align-items-start gap-3 mb-3">
+                <span class="icon-box icon-box--secondary icon-box--sm"><i class="bi bi-check2"></i></span>
+                <div><strong>Accurate prescription</strong><p class="mb-0 small text-muted">Up-to-date prescriptions prevent headaches and eye strain.</p></div>
+              </li>
+              <li class="d-flex align-items-start gap-3 mb-3">
+                <span class="icon-box icon-box--secondary icon-box--sm"><i class="bi bi-check2"></i></span>
+                <div><strong>Better eye health</strong><p class="mb-0 small text-muted">Personalised advice on diet, screen time and eye-care habits.</p></div>
+              </li>
+            </ul>
+            <a href="eye-test-booking.html" class="btn btn-primary btn-lg"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Lens Technology ======= -->
+    <section class="section" id="lenses">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="bi bi-layers-fill"></i> Lens Solutions</span>
+          <h2 class="section-title">Advanced Lens Solutions</h2>
+          <p class="section-desc">Every lens is tailored to your lifestyle, prescription and daily screen habits.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="lens-card">
+              <span class="lens-icon"><i class="bi bi-eye"></i></span>
+              <h3>Single Vision</h3>
+              <article>Clear everyday vision correction for near or distance in one smooth lens.</article>
+              <div class="lens-tags"><span>Everyday</span><span>Prescription</span></div>
+              <a class="link-arrow" href="lenses.html">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="lens-card">
+              <span class="lens-icon lens-icon--alt"><i class="bi bi-sliders"></i></span>
+              <h3>Progressive</h3>
+              <article>Seamless near, intermediate and distance vision without visible lines.</article>
+              <div class="lens-tags"><span>Presbyopia</span><span>Multifocal</span></div>
+              <a class="link-arrow" href="lenses.html">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="lens-card">
+              <span class="lens-icon"><i class="bi bi-laptop"></i></span>
+              <h3>Blue Light Protection</h3>
+              <article>Filters harmful blue light from digital screens to reduce strain and fatigue.</article>
+              <div class="lens-tags"><span>Screen Users</span><span>Anti-Fatigue</span></div>
+              <a class="link-arrow" href="lenses.html">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="lens-card">
+              <span class="lens-icon lens-icon--alt"><i class="bi bi-sun"></i></span>
+              <h3>Photochromic</h3>
+              <article>Lenses that adapt automatically from clear indoors to dark outdoors.</article>
+              <div class="lens-tags"><span>Indoor/Outdoor</span><span>UV Auto</span></div>
+              <a class="link-arrow" href="lenses.html">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="lens-card">
+              <span class="lens-icon"><i class="bi bi-shield-check"></i></span>
+              <h3>Anti-Reflective</h3>
+              <article>Eliminates glare from screens, headlights and bright light for crystal clarity.</article>
+              <div class="lens-tags"><span>Driving</span><span>Night</span></div>
+              <a class="link-arrow" href="lenses.html">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="lens-card">
+              <span class="lens-icon lens-icon--alt"><i class="bi bi-umbrella"></i></span>
+              <h3>UV Protection</h3>
+              <article>Blocks 100% of UVA and UVB rays to safeguard your eyes outdoors.</article>
+              <div class="lens-tags"><span>Outdoor</span><span>100% UV</span></div>
+              <a class="link-arrow" href="lenses.html">Learn More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CTA Band ======= -->
+    <section class="section section--pad-sm">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <h2>See Clearly. Live Confidently.</h2>
+              <p>Book your comprehensive eye examination with our experienced eye-care professionals today.</p>
+            </div>
+            <div class="col-lg-5">
+              <div class="d-flex flex-column flex-sm-row flex-lg-column flex-xl-row align-items-start align-items-sm-center align-items-lg-start align-items-xl-center gap-3 justify-content-lg-end">
+                <a href="eye-test-booking.html" class="btn btn-white"><i class="bi bi-calendar2-check"></i> Book Your Eye Test</a>
+                <a href="tel:+919876543210" class="btn btn-outline-light"><i class="bi bi-telephone"></i> +91 98765 43210</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Why Choose Us ======= -->
+    <section class="section section--alt" id="why-us">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 reveal">
+            <span class="eyebrow"><i class="bi bi-person-check-fill"></i> Why Choose Us</span>
+            <h2 class="section-title">A Premium Eye Care Experience</h2>
+            <p class="lead-text mb-4">We combine clinical expertise, premium products and genuine care to protect your vision for life.</p>
+            <div class="why-item">
+              <span class="icon-box"><i class="bi bi-people"></i></span>
+              <div><h4>Certified Optometrists</h4><p>Qualified professionals with 10+ years of clinical experience.</p></div>
+            </div>
+            <div class="why-item">
+              <span class="icon-box icon-box--secondary"><i class="bi bi-gem"></i></span>
+              <div><h4>Premium Brands Only</h4><p>Ray-Ban, Oakley, Titan and 20+ other trusted global brands.</p></div>
+            </div>
+            <div class="why-item">
+              <span class="icon-box"><i class="bi bi-shield-check"></i></span>
+              <div><h4>Lifetime Frame Warranty</h4><p>Free adjustments and repair cover for the life of your frame.</p></div>
+            </div>
+            <div class="why-item">
+              <span class="icon-box icon-box--secondary"><i class="bi bi-cash-coin"></i></span>
+              <div><h4>Transparent Pricing</h4><p>Honest quotes with no hidden charges on exams or eyewear.</p></div>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal">
+            <div class="position-relative">
+              <img src="assets/images/eye care ex.jpg" alt="Optometrist performing an eye examination" class="w-100 rounded-4 shadow" loading="lazy">
+              <div class="hero-floating hero-floating--2 position-absolute">
+                <span class="icon-box icon-box--secondary"><i class="bi bi-clipboard-check"></i></span>
+                <span><strong>1,200+</strong><small>Eye Exams Every Month</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Testimonials ======= -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="bi bi-chat-square-quote-fill"></i> Testimonials</span>
+          <h2 class="section-title">What Our Customers Say</h2>
+          <p class="section-desc">Real stories from customers who trust OptiCare with their vision.</p>
+        </div>
+        <div class="swiper" id="testimonialSlider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text">Excellent service and a great collection of frames. The staff was very helpful and the eye exam was thorough.</p>
+                <div class="testimonial-footer">
+                  <img src="assets/images/testimonials/avatar-1.jpg" alt="Rahul Kumar avatar" loading="lazy">
+                  <div><strong>Rahul Kumar</strong><small>Verified Customer Â· Delhi</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text">Got my progressive lenses fitted perfectly. The optometrist explained every option clearly without any pressure.</p>
+                <div class="testimonial-footer">
+                  <img src="assets/images/testimonials/avatar-2.jpg" alt="Priya Sharma avatar" loading="lazy">
+                  <div><strong>Priya Sharma</strong><small>Verified Customer Â· Mumbai</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                <p class="testimonial-text">Fast booking, friendly team and a fantastic range of Ray-Ban frames. Highly recommended for the whole family.</p>
+                <div class="testimonial-footer">
+                  <img src="assets/images/testimonials/avatar-3.jpg" alt="Arjun Mehta avatar" loading="lazy">
+                  <div><strong>Arjun Mehta</strong><small>Verified Customer Â· Bengaluru</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <p class="testimonial-text">The contact lens consultation was outstanding. Comfortable lenses and a clear care routine that actually works.</p>
+                <div class="testimonial-footer">
+                  <img src="assets/images/testimonials/avatar-4.jpg" alt="Karthik Nair avatar" loading="lazy">
+                  <div><strong>Karthik Nair</strong><small>Verified Customer Â· Chennai</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Blog ======= -->
+    <section class="section section--alt" id="blog">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="bi bi-journal-text"></i> Eye Care Journal</span>
+          <h2 class="section-title">Latest From Our Blog</h2>
+          <p class="section-desc">Expert tips and insights to keep your eyes healthy and your vision sharp.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="blog-card">
+              <div class="blog-media">
+                <img src="assets/images/blog/blog-1.jpg" alt="How often should you get an eye test" loading="lazy">
+                <span class="blog-cat">Eye Health</span>
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3"></i> Aug 14, 2026</span><span><i class="bi bi-clock"></i> 5 min read</span></div>
+                <h4><a href="blog-details.html">How Often Should You Get an Eye Test?</a></h4>
+                <p class="blog-excerpt line-clamp-2">Eye exams are about more than updating a prescription. Learn how often adults, children and seniors should have theirs.</p>
+                <a class="link-arrow" href="blog-details.html">Read Article <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="blog-card">
+              <div class="blog-media">
+                <img src="assets/images/blog/blog-2.jpg" alt="Tips for choosing the right frame" loading="lazy">
+                <span class="blog-cat">Eyewear</span>
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3"></i> Aug 8, 2026</span><span><i class="bi bi-clock"></i> 6 min read</span></div>
+                <h4><a href="blog-details.html">5 Tips for Choosing the Right Frame</a></h4>
+                <p class="blog-excerpt line-clamp-2">From face shape to lens thickness, here is how to find frames that look great and fit perfectly.</p>
+                <a class="link-arrow" href="blog-details.html">Read Article <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="blog-card">
+              <div class="blog-media">
+                <img src="assets/images/blog/blog-3.jpg" alt="Blue light and your eyes" loading="lazy">
+                <span class="blog-cat">Vision Care</span>
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3"></i> Aug 1, 2026</span><span><i class="bi bi-clock"></i> 4 min read</span></div>
+                <h4><a href="blog-details.html">Blue Light: What You Need to Know</a></h4>
+                <p class="blog-excerpt line-clamp-2">Screens are everywhere. Understand how blue light affects your sleep, eyes and how protective lenses help.</p>
+                <a class="link-arrow" href="blog-details.html">Read Article <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Newsletter ======= -->
+    <section class="section section--pad-sm">
+      <div class="container">
+        <div class="newsletter-box reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <h3>Eye Care Tips, Straight to Your Inbox</h3>
+              <p>Join 20,000+ subscribers. No spam, unsubscribe anytime.</p>
+            </div>
+            <div class="col-lg-7">
+              <form class="newsletter-form" data-newsletter novalidate>
+                <input type="email" class="form-control" placeholder="Enter your email address" aria-label="Email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe <i class="bi bi-send"></i></button>
+              </form>
+              <div class="newsletter-success" data-newsletter-success>Thank you for subscribing!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-col">
+          <div class="footer-brand"><a href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
+          <p>Your trusted destination for professional eye care and quality eyewear.</p>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt"></i> <span>42 Vision Park, Connaught Place, New Delhi 110001</span></li>
+            <li><i class="bi bi-telephone"></i> <span>+91 98765 43210</span></li>
+            <li><i class="bi bi-envelope"></i> <span>support@opticare.com</span></li>
+            <li><i class="bi bi-clock"></i> <span>Mon - Sat: 9:00 AM - 8:00 PM</span></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="frames.html"><i class="bi bi-chevron-right"></i> Frames</a></li>
+            <li><a href="lenses.html"><i class="bi bi-chevron-right"></i> Lenses</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 footer-col">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
+            <li><a href="contact-lenses.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Frame Fitting</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+            <li><a href="eye-test-booking.html"><i class="bi bi-chevron-right"></i> Book Eye Test</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-col">
+          <h5>Newsletter</h5>
+          <p>Get eye-care tips, offers and new collection alerts.</p>
+          <form class="newsletter-form" data-newsletter novalidate>
+            <input type="email" class="form-control" placeholder="Email address" aria-label="Email address" required>
+            <button type="submit" class="btn btn-primary">Subscribe <i class="bi bi-send"></i></button>
+          </form>
+          <div class="newsletter-success" data-newsletter-success>Thank you for subscribing!</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner d-flex align-items-center justify-content-between flex-wrap gap-2">
+          <p class="mb-0">Â© 2026 OptiCare. All Rights Reserved.</p>
+          <div class="d-flex gap-3">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+          <div class="payment-icons d-flex gap-2">
+            <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
+            <i class="bi bi-credit-card" aria-hidden="true"></i>
+            <i class="bi bi-paypal" aria-hidden="true"></i>
+            <i class="bi bi-cash-coin" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/flatpickr.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

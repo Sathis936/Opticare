@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60" role="img" aria-label="OptiCare logo">
+  <defs>
+    <linearGradient id="lgLogo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b5fd9"/>
+      <stop offset="1" stop-color="#00c2a8"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#0b5fd9" stroke-width="4" stroke-linecap="round" fill="none">
+    <line x1="8" y1="12" x2="20" y2="26"/>
+    <line x1="44" y1="12" x2="32" y2="26"/>
+    <ellipse cx="20" cy="29" rx="10" ry="8"/>
+    <ellipse cx="32" cy="29" rx="10" ry="8"/>
+  </g>
+  <circle cx="20" cy="29" r="3.5" fill="#00c2a8"/>
+  <circle cx="32" cy="29" r="3.5" fill="#00c2a8"/>
+  <text x="54" y="31" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" fill="#1b2a4a" letter-spacing="0.5">Opti<span fill="url(#lgLogo)">Care</span></text>
+</svg>
