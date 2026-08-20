@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/flatpickr.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/minimal-navbar.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/dark.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
@@ -92,9 +93,7 @@
           <i class="bi bi-moon-stars"></i>
         </button>
         <!-- RTL / LTR -->
-        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction">
-          <i class="bi bi-globe2"></i>
-        </button>
+        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction"><span class="dir-text">RTL</span></button>
         <!-- Account Dropdown -->
         <div class="dropdown nav-login-drop d-none d-md-inline-flex">
           <button type="button" class="nav-icon-btn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account">
@@ -104,7 +103,6 @@
             <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
             <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="admin/index.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
           </ul>
         </div>
         <!-- Book Eye Test -->
@@ -148,6 +146,17 @@
         <a class="nav-link" href="wishlist.html"><i class="bi bi-heart"></i> Wishlist</a>
         <a class="nav-link" href="cart.html"><i class="bi bi-bag"></i> Cart</a>
         <hr class="my-3">
+        <!-- Theme & Direction Toggles -->
+        <div class="mobile-toggles">
+          <button type="button" class="mobile-toggle-btn" data-theme-toggle aria-label="Toggle dark mode">
+            <i class="bi bi-moon-stars"></i>
+            <span class="theme-label">Dark Mode</span>
+          </button>
+          <button type="button" class="mobile-toggle-btn" data-dir-toggle aria-label="Toggle RTL direction">
+            <i class="bi bi-globe2"></i>
+            <span class="dir-label">RTL / LTR</span>
+          </button>
+        </div>
         <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
         <a class="nav-link" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
       </nav>
@@ -174,25 +183,25 @@
     <!-- ======= Rating Summary ======= -->
     <section class="section section--pad-sm pb-0">
       <div class="container">
-        <div class="card rounded-card p-4 p-lg-5">
-          <div class="row align-items-center g-4 text-center text-lg-start">
-            <div class="col-lg-4">
+        <div class="card rounded-card p-3 p-sm-4 p-lg-5">
+          <div class="row align-items-center g-3 g-lg-4 text-center text-lg-start">
+            <div class="col-12 col-lg-4">
               <div class="hero-stat d-inline-flex flex-column align-items-center align-items-lg-start">
                 <span class="stat-num">4.9</span>
                 <span class="stat-label">Average Rating</span>
                 <div class="product-rating mt-2"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div>
               </div>
             </div>
-            <div class="col-lg-5">
-              <div class="rating-bar mb-3">
+            <div class="col-12 col-lg-5">
+              <div class="rating-bar mb-2 mb-lg-3">
                 <div class="d-flex justify-content-between small"><span>5 Star</span><span>85%</span></div>
                 <div class="progress rounded-pill" style="height:8px"><div class="progress-bar" style="width:85%"></div></div>
               </div>
-              <div class="rating-bar mb-3">
+              <div class="rating-bar mb-2 mb-lg-3">
                 <div class="d-flex justify-content-between small"><span>4 Star</span><span>12%</span></div>
                 <div class="progress rounded-pill" style="height:8px"><div class="progress-bar" style="width:12%"></div></div>
               </div>
-              <div class="rating-bar mb-3">
+              <div class="rating-bar mb-2 mb-lg-3">
                 <div class="d-flex justify-content-between small"><span>3 Star</span><span>3%</span></div>
                 <div class="progress rounded-pill" style="height:8px"><div class="progress-bar" style="width:3%"></div></div>
               </div>
@@ -201,7 +210,7 @@
                 <div class="progress rounded-pill" style="height:8px"><div class="progress-bar" style="width:0%"></div></div>
               </div>
             </div>
-            <div class="col-lg-3 text-center text-lg-end">
+            <div class="col-12 col-lg-3 text-center text-lg-end">
               <a href="contact.html" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i> Write a Review</a>
             </div>
           </div>
@@ -212,8 +221,8 @@
     <!-- ======= Testimonials Grid ======= -->
     <section class="section">
       <div class="container">
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4 reveal">
+        <div class="row g-3 g-md-4">
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
             <div class="testimonial-card">
               <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
               <p class="testimonial-text">The retinal imaging caught an issue my previous clinic never noticed. Truly grateful for the thorough care.</p>
@@ -223,7 +232,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 reveal">
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
             <div class="testimonial-card">
               <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
               <p class="testimonial-text">My daughter was nervous about her first eye exam. The team made it fun and stress-free.</p>
@@ -233,7 +242,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 reveal">
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
             <div class="testimonial-card">
               <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
               <p class="testimonial-text">Professional, patient and transparent. My progressive lens prescription has never been more accurate.</p>
@@ -243,7 +252,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 reveal">
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
             <div class="testimonial-card">
               <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
               <p class="testimonial-text">Picked up stylish frames and the fitting was perfect. The aftercare and adjustments are a huge plus.</p>
@@ -253,7 +262,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 reveal">
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
             <div class="testimonial-card">
               <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
               <p class="testimonial-text">As a contact lens wearer for 10 years, this is the first clinic that got my toric fit right. Brilliant service.</p>
@@ -263,7 +272,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 reveal">
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
             <div class="testimonial-card">
               <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
               <p class="testimonial-text">The dry eye clinic changed my daily comfort completely. My whole family now comes to OptiCare.</p>
@@ -303,7 +312,7 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6 footer-col">
-          <div class="footer-brand"><a href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
+          <div class="footer-brand"><a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
           <p>Your trusted destination for professional eye care and quality eyewear.</p>
           <ul class="footer-contact">
             <li><i class="bi bi-geo-alt"></i> <span>42 Vision Park, Connaught Place, New Delhi 110001</span></li>
@@ -333,10 +342,10 @@
         <div class="col-lg-2 col-md-6 footer-col">
           <h5>Services</h5>
           <ul class="footer-links">
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
-            <li><a href="contact-lenses.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Frame Fitting</a></li>
+            <li><a href="service-eye-examination.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
+            <li><a href="service-vision-testing.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
+            <li><a href="service-contact-lens-fitting.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
+            <li><a href="service-dry-eye-clinic.html"><i class="bi bi-chevron-right"></i> Dry Eye Clinic</a></li>
             <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
             <li><a href="eye-test-booking.html"><i class="bi bi-chevron-right"></i> Book Eye Test</a></li>
           </ul>
@@ -352,19 +361,10 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="footer-bottom-inner d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="footer-bottom-inner text-center">
           <p class="mb-0">© 2026 OptiCare. All Rights Reserved.</p>
-          <div class="d-flex gap-3">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms &amp; Conditions</a>
-          </div>
-          <div class="payment-icons d-flex gap-2">
-            <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
-            <i class="bi bi-credit-card" aria-hidden="true"></i>
-            <i class="bi bi-paypal" aria-hidden="true"></i>
-            <i class="bi bi-cash-coin" aria-hidden="true"></i>
-          </div>
         </div>
+      </div>
       </div>
     </div>
   </footer>

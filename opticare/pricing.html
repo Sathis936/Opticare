@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/flatpickr.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/minimal-navbar.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/dark.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
@@ -92,9 +93,7 @@
           <i class="bi bi-moon-stars"></i>
         </button>
         <!-- RTL / LTR -->
-        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction">
-          <i class="bi bi-globe2"></i>
-        </button>
+        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction"><span class="dir-text">RTL</span></button>
         <!-- Account Dropdown -->
         <div class="dropdown nav-login-drop d-none d-md-inline-flex">
           <button type="button" class="nav-icon-btn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account">
@@ -104,7 +103,6 @@
             <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
             <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="admin/index.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
           </ul>
         </div>
         <!-- Book Eye Test -->
@@ -148,6 +146,17 @@
         <a class="nav-link" href="wishlist.html"><i class="bi bi-heart"></i> Wishlist</a>
         <a class="nav-link" href="cart.html"><i class="bi bi-bag"></i> Cart</a>
         <hr class="my-3">
+        <!-- Theme & Direction Toggles -->
+        <div class="mobile-toggles">
+          <button type="button" class="mobile-toggle-btn" data-theme-toggle aria-label="Toggle dark mode">
+            <i class="bi bi-moon-stars"></i>
+            <span class="theme-label">Dark Mode</span>
+          </button>
+          <button type="button" class="mobile-toggle-btn" data-dir-toggle aria-label="Toggle RTL direction">
+            <i class="bi bi-globe2"></i>
+            <span class="dir-label">RTL / LTR</span>
+          </button>
+        </div>
         <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
         <a class="nav-link" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
       </nav>
@@ -179,7 +188,7 @@
               <span class="plan-icon"><i class="bi bi-eye"></i></span>
               <h3 class="plan-name">Basic Eye Test</h3>
               <p class="plan-desc">Essential vision check for healthy eyes.</p>
-              <div class="plan-price">$49<small>/ visit</small></div>
+              <div class="plan-price">₹499<small>/ visit</small></div>
               <p class="plan-period">Pay per visit · No commitment</p>
               <ul class="plan-features">
                 <li><i class="bi bi-check-circle-fill"></i> Visual acuity test</li>
@@ -197,7 +206,7 @@
               <span class="plan-icon"><i class="bi bi-stars"></i></span>
               <h3 class="plan-name">Standard Package</h3>
               <p class="plan-desc">Complete eye health check every year.</p>
-              <div class="plan-price">$79<small>/ year</small></div>
+              <div class="plan-price">₹999<small>/ year</small></div>
               <p class="plan-period">Billed annually · Save 20%</p>
               <ul class="plan-features">
                 <li><i class="bi bi-check-circle-fill"></i> Everything in Basic</li>
@@ -214,7 +223,7 @@
               <span class="plan-icon"><i class="bi bi-gem"></i></span>
               <h3 class="plan-name">Premium Care</h3>
               <p class="plan-desc">All-inclusive care for your whole family.</p>
-              <div class="plan-price">$129<small>/ year</small></div>
+              <div class="plan-price">₹1,999<small>/ year</small></div>
               <p class="plan-period">Up to 4 family members</p>
               <ul class="plan-features">
                 <li><i class="bi bi-check-circle-fill"></i> Everything in Standard</li>
@@ -249,18 +258,18 @@
                 </tr>
               </thead>
               <tbody>
-                <tr><td class="ps-4 fw-semibold">Vision Testing Only</td><td>20 mins</td><td class="pe-4">$49</td></tr>
-                <tr><td class="ps-4 fw-semibold">Comprehensive Eye Examination</td><td>45 mins</td><td class="pe-4">$79</td></tr>
-                <tr><td class="ps-4 fw-semibold">Digital Retinal Imaging</td><td>10 mins</td><td class="pe-4">$30</td></tr>
-                <tr><td class="ps-4 fw-semibold">Contact Lens Fitting</td><td>60 mins</td><td class="pe-4">$99</td></tr>
-                <tr><td class="ps-4 fw-semibold">Dry Eye Assessment</td><td>40 mins</td><td class="pe-4">$69</td></tr>
+                <tr><td class="ps-4 fw-semibold">Vision Testing Only</td><td>20 mins</td><td class="pe-4">₹499</td></tr>
+                <tr><td class="ps-4 fw-semibold">Comprehensive Eye Examination</td><td>45 mins</td><td class="pe-4">₹799</td></tr>
+                <tr><td class="ps-4 fw-semibold">Digital Retinal Imaging</td><td>10 mins</td><td class="pe-4">₹399</td></tr>
+                <tr><td class="ps-4 fw-semibold">Contact Lens Fitting</td><td>60 mins</td><td class="pe-4">₹999</td></tr>
+                <tr><td class="ps-4 fw-semibold">Dry Eye Assessment</td><td>40 mins</td><td class="pe-4">₹699</td></tr>
                 <tr><td class="ps-4 fw-semibold">Frame Styling &amp; Fitting</td><td>30 mins</td><td class="pe-4">Free</td></tr>
-                <tr><td class="ps-4 fw-semibold">Paediatric Eye Exam</td><td>45 mins</td><td class="pe-4">$69</td></tr>
+                <tr><td class="ps-4 fw-semibold">Paediatric Eye Exam</td><td>45 mins</td><td class="pe-4">₹699</td></tr>
               </tbody>
             </table>
           </div>
         </div>
-        <p class="small text-muted text-center mt-4 mb-0">Prices in USD. Insurance accepted — we verify your coverage before your visit.</p>
+        <p class="small text-muted text-center mt-4 mb-0">Prices in INR (₹). Insurance &amp; UPI accepted — we verify your coverage before your visit.</p>
       </div>
     </section>
 
@@ -322,7 +331,7 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6 footer-col">
-          <div class="footer-brand"><a href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
+          <div class="footer-brand"><a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
           <p>Your trusted destination for professional eye care and quality eyewear.</p>
           <ul class="footer-contact">
             <li><i class="bi bi-geo-alt"></i> <span>42 Vision Park, Connaught Place, New Delhi 110001</span></li>
@@ -352,10 +361,10 @@
         <div class="col-lg-2 col-md-6 footer-col">
           <h5>Services</h5>
           <ul class="footer-links">
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
-            <li><a href="contact-lenses.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Frame Fitting</a></li>
+            <li><a href="service-eye-examination.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
+            <li><a href="service-vision-testing.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
+            <li><a href="service-contact-lens-fitting.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
+            <li><a href="service-dry-eye-clinic.html"><i class="bi bi-chevron-right"></i> Dry Eye Clinic</a></li>
             <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
             <li><a href="eye-test-booking.html"><i class="bi bi-chevron-right"></i> Book Eye Test</a></li>
           </ul>
@@ -371,19 +380,10 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="footer-bottom-inner d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="footer-bottom-inner text-center">
           <p class="mb-0">© 2026 OptiCare. All Rights Reserved.</p>
-          <div class="d-flex gap-3">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms &amp; Conditions</a>
-          </div>
-          <div class="payment-icons d-flex gap-2">
-            <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
-            <i class="bi bi-credit-card" aria-hidden="true"></i>
-            <i class="bi bi-paypal" aria-hidden="true"></i>
-            <i class="bi bi-cash-coin" aria-hidden="true"></i>
-          </div>
         </div>
+      </div>
       </div>
     </div>
   </footer>

@@ -93,9 +93,7 @@
           <i class="bi bi-moon-stars"></i>
         </button>
         <!-- RTL / LTR -->
-        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction">
-          <i class="bi bi-globe2"></i>
-        </button>
+        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction"><span class="dir-text">RTL</span></button>
         <!-- Account Dropdown -->
         <div class="dropdown nav-login-drop d-none d-md-inline-flex">
           <button type="button" class="nav-icon-btn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account">
@@ -105,7 +103,6 @@
             <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
             <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="admin/index.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
           </ul>
         </div>
         <!-- Book Eye Test -->
@@ -150,6 +147,17 @@
         <a class="nav-link" href="wishlist.html"><i class="bi bi-heart"></i> Wishlist</a>
         <a class="nav-link" href="cart.html"><i class="bi bi-bag"></i> Cart</a>
         <hr class="my-3">
+        <!-- Theme & Direction Toggles -->
+        <div class="mobile-toggles">
+          <button type="button" class="mobile-toggle-btn" data-theme-toggle aria-label="Toggle dark mode">
+            <i class="bi bi-moon-stars"></i>
+            <span class="theme-label">Dark Mode</span>
+          </button>
+          <button type="button" class="mobile-toggle-btn" data-dir-toggle aria-label="Toggle RTL direction">
+            <i class="bi bi-globe2"></i>
+            <span class="dir-label">RTL / LTR</span>
+          </button>
+        </div>
         <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
         <a class="nav-link" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
       </nav>
@@ -211,9 +219,9 @@
             <div class="widget reveal">
               <h3 class="widget-title">Max Price</h3>
               <div class="d-flex align-items-center justify-content-between mb-2">
-                <span class="small text-muted">0 – <span id="priceOutput">$1000</span></span>
+                <span class="small text-muted">0 – <span id="priceOutput">₹10,000</span></span>
               </div>
-              <input type="range" id="priceRange" class="form-range" min="0" max="1000" step="10" value="1000" aria-label="Maximum price">
+              <input type="range" id="priceRange" class="form-range" min="0" max="10000" step="10" value="10000" aria-label="Maximum price">
             </div>
             <button type="button" class="btn btn-outline-primary w-100" id="filterReset"><i class="bi bi-arrow-counterclockwise"></i> Reset Filters</button>
           </aside>
@@ -240,7 +248,7 @@
             <div class="row g-4" id="productGrid">
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Metro Round" data-category="reading" data-brand="metro" data-gender="unisex" data-rating="4.7">
-                  <span class="d-none" data-price="89"></span>
+                  <span class="d-none" data-price="899"></span>
                   <div class="product-media">
                     <div class="product-badges"><span class="badge badge-soft-success">New</span></div>
                     <img src="assets/images/frames/frame-01.jpg" alt="Metro Round reading glasses" loading="lazy">
@@ -250,7 +258,7 @@
                     <span class="product-cat">Reading</span>
                     <h4><a href="frame-details.html">Metro Round</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> 4.7</div>
-                    <div class="product-price"><span class="price">$89</span></div>
+                    <div class="product-price"><span class="price">₹899</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-01"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -260,7 +268,7 @@
               </div>
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Aviator Classic" data-category="sunglasses" data-brand="rayban" data-gender="men" data-rating="4.8">
-                  <span class="d-none" data-price="259"></span>
+                  <span class="d-none" data-price="2599"></span>
                   <div class="product-media">
                     <div class="product-badges"><span class="badge badge-soft-warning">Sale</span></div>
                     <img src="assets/images/frames/frame-02.jpg" alt="Aviator Classic sunglasses" loading="lazy">
@@ -270,7 +278,7 @@
                     <span class="product-cat">Sunglasses</span>
                     <h4><a href="frame-details.html">Aviator Classic</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span> 4.8</div>
-                    <div class="product-price"><span class="price">$259</span><span class="price-discount">$299</span><span class="price-off">-13%</span></div>
+                    <div class="product-price"><span class="price">₹2,599</span><span class="price-discount">₹2,999</span><span class="price-off">-13%</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-02"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -280,7 +288,7 @@
               </div>
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Velocity Sport" data-category="sports" data-brand="oakley" data-gender="men" data-rating="4.9">
-                  <span class="d-none" data-price="199"></span>
+                  <span class="d-none" data-price="1999"></span>
                   <div class="product-media">
                     <div class="product-badges"><span class="badge badge-soft-warning">Hot</span></div>
                     <img src="assets/images/frames/frame-03.jpg" alt="Velocity Sport sports glasses" loading="lazy">
@@ -290,7 +298,7 @@
                     <span class="product-cat">Sports</span>
                     <h4><a href="frame-details.html">Velocity Sport</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span> 4.9</div>
-                    <div class="product-price"><span class="price">$199</span></div>
+                    <div class="product-price"><span class="price">₹1,999</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-03"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -300,7 +308,7 @@
               </div>
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Kids Round" data-category="kids" data-brand="fastrack" data-gender="unisex" data-rating="4.5">
-                  <span class="d-none" data-price="59"></span>
+                  <span class="d-none" data-price="599"></span>
                   <div class="product-media">
                     <div class="product-badges"><span class="badge badge-soft-success">New</span></div>
                     <img src="assets/images/frames/frame-04.jpg" alt="Kids Round glasses" loading="lazy">
@@ -310,7 +318,7 @@
                     <span class="product-cat">Kids</span>
                     <h4><a href="frame-details.html">Kids Round</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> 4.5</div>
-                    <div class="product-price"><span class="price">$59</span></div>
+                    <div class="product-price"><span class="price">₹599</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-04"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -320,7 +328,7 @@
               </div>
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Wayfarer Lux" data-category="sunglasses" data-brand="rayban" data-gender="women" data-rating="4.7">
-                  <span class="d-none" data-price="289"></span>
+                  <span class="d-none" data-price="2899"></span>
                   <div class="product-media">
                     <div class="product-badges"><span class="badge badge-soft-warning">Sale</span></div>
                     <img src="assets/images/frames/frame-05.jpg" alt="Wayfarer Lux sunglasses" loading="lazy">
@@ -330,7 +338,7 @@
                     <span class="product-cat">Sunglasses</span>
                     <h4><a href="frame-details.html">Wayfarer Lux</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> 4.7</div>
-                    <div class="product-price"><span class="price">$289</span><span class="price-discount">$329</span></div>
+                    <div class="product-price"><span class="price">₹2,899</span><span class="price-discount">₹3,299</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-05"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -340,7 +348,7 @@
               </div>
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Retro Square" data-category="reading" data-brand="vogue" data-gender="women" data-rating="4.6">
-                  <span class="d-none" data-price="119"></span>
+                  <span class="d-none" data-price="1199"></span>
                   <div class="product-media">
                     <img src="assets/images/frames/frame-06.jpg" alt="Retro Square reading glasses" loading="lazy">
                     <button type="button" class="product-wish" data-wishlist="f-06" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
@@ -349,7 +357,7 @@
                     <span class="product-cat">Reading</span>
                     <h4><a href="frame-details.html">Retro Square</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> 4.6</div>
-                    <div class="product-price"><span class="price">$119</span></div>
+                    <div class="product-price"><span class="price">₹1,199</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-06"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -359,7 +367,7 @@
               </div>
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Rimless Light" data-category="reading" data-brand="metro" data-gender="unisex" data-rating="4.5">
-                  <span class="d-none" data-price="149"></span>
+                  <span class="d-none" data-price="1499"></span>
                   <div class="product-media">
                     <div class="product-badges"><span class="badge badge-soft-success">New</span></div>
                     <img src="assets/images/frames/frame-07.jpg" alt="Rimless Light reading glasses" loading="lazy">
@@ -369,7 +377,7 @@
                     <span class="product-cat">Reading</span>
                     <h4><a href="frame-details.html">Rimless Light</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> 4.5</div>
-                    <div class="product-price"><span class="price">$149</span></div>
+                    <div class="product-price"><span class="price">₹1,499</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-07"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -379,7 +387,7 @@
               </div>
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Shield Sport" data-category="sports" data-brand="oakley" data-gender="men" data-rating="4.8">
-                  <span class="d-none" data-price="229"></span>
+                  <span class="d-none" data-price="2299"></span>
                   <div class="product-media">
                     <div class="product-badges"><span class="badge badge-soft-warning">Hot</span></div>
                     <img src="assets/images/frames/frame-08.jpg" alt="Shield Sport sports glasses" loading="lazy">
@@ -389,7 +397,7 @@
                     <span class="product-cat">Sports</span>
                     <h4><a href="frame-details.html">Shield Sport</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span> 4.8</div>
-                    <div class="product-price"><span class="price">$229</span></div>
+                    <div class="product-price"><span class="price">₹2,299</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-08"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -399,7 +407,7 @@
               </div>
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Cat-Eye Chic" data-category="sunglasses" data-brand="vogue" data-gender="women" data-rating="4.6">
-                  <span class="d-none" data-price="179"></span>
+                  <span class="d-none" data-price="1799"></span>
                   <div class="product-media">
                     <img src="assets/images/frames/frame-09.jpg" alt="Cat-Eye Chic sunglasses" loading="lazy">
                     <button type="button" class="product-wish" data-wishlist="f-09" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
@@ -408,7 +416,7 @@
                     <span class="product-cat">Sunglasses</span>
                     <h4><a href="frame-details.html">Cat-Eye Chic</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> 4.6</div>
-                    <div class="product-price"><span class="price">$179</span></div>
+                    <div class="product-price"><span class="price">₹1,799</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-09"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -418,7 +426,7 @@
               </div>
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Kid's Flex" data-category="kids" data-brand="fastrack" data-gender="unisex" data-rating="4.4">
-                  <span class="d-none" data-price="49"></span>
+                  <span class="d-none" data-price="499"></span>
                   <div class="product-media">
                     <img src="assets/images/frames/frame-10.jpg" alt="Kid's Flex glasses" loading="lazy">
                     <button type="button" class="product-wish" data-wishlist="f-10" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
@@ -427,7 +435,7 @@
                     <span class="product-cat">Kids</span>
                     <h4><a href="frame-details.html">Kid's Flex</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> 4.4</div>
-                    <div class="product-price"><span class="price">$49</span></div>
+                    <div class="product-price"><span class="price">₹499</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-10"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -437,7 +445,7 @@
               </div>
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Polar Night" data-category="sunglasses" data-brand="rayban" data-gender="men" data-rating="4.9">
-                  <span class="d-none" data-price="319"></span>
+                  <span class="d-none" data-price="3199"></span>
                   <div class="product-media">
                     <div class="product-badges"><span class="badge badge-soft-warning">Hot</span></div>
                     <img src="assets/images/frames/frame-11.jpg" alt="Polar Night sunglasses" loading="lazy">
@@ -447,7 +455,7 @@
                     <span class="product-cat">Sunglasses</span>
                     <h4><a href="frame-details.html">Polar Night</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span> 4.9</div>
-                    <div class="product-price"><span class="price">$319</span></div>
+                    <div class="product-price"><span class="price">₹3,199</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-11"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -457,7 +465,7 @@
               </div>
               <div class="col-sm-6 col-xl-4">
                 <div class="product-card" data-name="Minimal Tan" data-category="reading" data-brand="metro" data-gender="unisex" data-rating="4.5">
-                  <span class="d-none" data-price="99"></span>
+                  <span class="d-none" data-price="999"></span>
                   <div class="product-media">
                     <img src="assets/images/frames/frame-12.jpg" alt="Minimal Tan reading glasses" loading="lazy">
                     <button type="button" class="product-wish" data-wishlist="f-12" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
@@ -466,7 +474,7 @@
                     <span class="product-cat">Reading</span>
                     <h4><a href="frame-details.html">Minimal Tan</a></h4>
                     <div class="product-rating"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span> 4.5</div>
-                    <div class="product-price"><span class="price">$99</span></div>
+                    <div class="product-price"><span class="price">₹999</span></div>
                     <div class="product-actions">
                       <a href="frame-details.html" class="btn btn-outline-primary btn-icon-only" aria-label="View details"><i class="bi bi-eye"></i></a>
                       <button type="button" class="btn btn-primary" data-add-cart="f-12"><i class="bi bi-bag-plus"></i> Add to Cart</button>
@@ -517,7 +525,7 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6 footer-col">
-          <div class="footer-brand"><a href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
+          <div class="footer-brand"><a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
           <p>Your trusted destination for professional eye care and quality eyewear.</p>
           <ul class="footer-contact">
             <li><i class="bi bi-geo-alt"></i> <span>42 Vision Park, Connaught Place, New Delhi 110001</span></li>
@@ -547,10 +555,10 @@
         <div class="col-lg-2 col-md-6 footer-col">
           <h5>Services</h5>
           <ul class="footer-links">
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
-            <li><a href="contact-lenses.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Frame Fitting</a></li>
+            <li><a href="service-eye-examination.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
+            <li><a href="service-vision-testing.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
+            <li><a href="service-contact-lens-fitting.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
+            <li><a href="service-dry-eye-clinic.html"><i class="bi bi-chevron-right"></i> Dry Eye Clinic</a></li>
             <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
             <li><a href="eye-test-booking.html"><i class="bi bi-chevron-right"></i> Book Eye Test</a></li>
           </ul>
@@ -566,19 +574,10 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="footer-bottom-inner d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="footer-bottom-inner text-center">
           <p class="mb-0">© 2026 OptiCare. All Rights Reserved.</p>
-          <div class="d-flex gap-3">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms &amp; Conditions</a>
-          </div>
-          <div class="payment-icons d-flex gap-2">
-            <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
-            <i class="bi bi-credit-card" aria-hidden="true"></i>
-            <i class="bi bi-paypal" aria-hidden="true"></i>
-            <i class="bi bi-cash-coin" aria-hidden="true"></i>
-          </div>
         </div>
+      </div>
       </div>
     </div>
   </footer>

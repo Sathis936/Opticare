@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -91,9 +91,7 @@
           <i class="bi bi-moon-stars"></i>
         </button>
         <!-- RTL / LTR -->
-        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction">
-          <i class="bi bi-globe2"></i>
-        </button>
+        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction"><span class="dir-text">RTL</span></button>
         <!-- Account Dropdown -->
         <div class="dropdown nav-login-drop d-none d-md-inline-flex">
           <button type="button" class="nav-icon-btn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account">
@@ -103,7 +101,6 @@
             <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
             <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="admin/index.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
           </ul>
         </div>
         <!-- Book Eye Test -->
@@ -147,6 +144,17 @@
         <a class="nav-link" href="wishlist.html"><i class="bi bi-heart"></i> Wishlist</a>
         <a class="nav-link" href="cart.html"><i class="bi bi-bag"></i> Cart</a>
         <hr class="my-3">
+        <!-- Theme & Direction Toggles -->
+        <div class="mobile-toggles">
+          <button type="button" class="mobile-toggle-btn" data-theme-toggle aria-label="Toggle dark mode">
+            <i class="bi bi-moon-stars"></i>
+            <span class="theme-label">Dark Mode</span>
+          </button>
+          <button type="button" class="mobile-toggle-btn" data-dir-toggle aria-label="Toggle RTL direction">
+            <i class="bi bi-globe2"></i>
+            <span class="dir-label">RTL / LTR</span>
+          </button>
+        </div>
         <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
         <a class="nav-link" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
       </nav>
@@ -175,56 +183,74 @@
         <div class="row g-4">
           <div class="col-md-6 col-lg-4 reveal">
             <div class="service-card">
-              <img src="assets/images/eye exam.jpg" alt="Eye examination with an optometrist" class="service-card-image" loading="lazy">
-              <span class="service-icon"><i class="bi bi-eye"></i></span>
-              <h3>Eye Examination</h3>
-              <article>Full clinical eye exams with digital retinal imaging for early detection and diagnosis.</article>
-              <a class="link-arrow" href="service-eye-examination.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              <div class="service-card-thumb">
+                <img src="assets/images/eye exam.jpg" alt="Eye examination with an optometrist" class="service-card-image" loading="lazy">
+              </div>
+              <div class="service-card-body">
+                <h3>Eye Examination</h3>
+                <article>Full clinical eye exams with digital retinal imaging for early detection and diagnosis.</article>
+                <a class="link-arrow" href="service-eye-examination.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 reveal">
             <div class="service-card">
-              <img src="assets/images/vision test.jpg" alt="Computerised vision testing" class="service-card-image" loading="lazy">
-              <span class="service-icon"><i class="bi bi-activity"></i></span>
-              <h3>Vision Testing</h3>
-              <article>Computerised refraction and contrast sensitivity tests for accurate prescriptions.</article>
-              <a class="link-arrow" href="service-vision-testing.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              <div class="service-card-thumb">
+                <img src="assets/images/vision test.jpg" alt="Computerised vision testing" class="service-card-image" loading="lazy">
+              </div>
+              <div class="service-card-body">
+                <h3>Vision Testing</h3>
+                <article>Computerised refraction and contrast sensitivity tests for accurate prescriptions.</article>
+                <a class="link-arrow" href="service-vision-testing.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 reveal">
             <div class="service-card">
-              <img src="assets/images/contact lens 1.jpg" alt="Contact lens fitting and trial" class="service-card-image" loading="lazy">
-              <span class="service-icon"><i class="bi bi-phone"></i></span>
-              <h3>Contact Lens Fitting</h3>
-              <article>Specialist fittings for daily, toric, multifocal and cosmetic contact lenses.</article>
-              <a class="link-arrow" href="service-contact-lens-fitting.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              <div class="service-card-thumb">
+                <img src="assets/images/contact lens 1.jpg" alt="Contact lens fitting and trial" class="service-card-image" loading="lazy">
+              </div>
+              <div class="service-card-body">
+                <h3>Contact Lens Fitting</h3>
+                <article>Specialist fittings for daily, toric, multifocal and cosmetic contact lenses.</article>
+                <a class="link-arrow" href="service-contact-lens-fitting.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 reveal">
             <div class="service-card">
-              <img src="assets/images/dry eye.jpg" alt="Dry eye clinic and tear film therapy" class="service-card-image" loading="lazy">
-              <span class="service-icon"><i class="bi bi-moisture"></i></span>
-              <h3>Dry Eye Clinic</h3>
-              <article>Personalised diagnosis and treatment for chronic dry and sensitive eyes.</article>
-              <a class="link-arrow" href="service-details.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              <div class="service-card-thumb">
+                <img src="assets/images/dry eye.jpg" alt="Dry eye clinic and tear film therapy" class="service-card-image" loading="lazy">
+              </div>
+              <div class="service-card-body">
+                <h3>Dry Eye Clinic</h3>
+                <article>Personalised diagnosis and treatment for chronic dry and sensitive eyes.</article>
+                <a class="link-arrow" href="service-dry-eye-clinic.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 reveal">
             <div class="service-card">
-              <img src="assets/images/paedriatic1.jpg" alt="Child-friendly paediatric eye exam" class="service-card-image" loading="lazy">
-              <span class="service-icon"><i class="bi bi-joystick"></i></span>
-              <h3>Paediatric Eye Care</h3>
-              <article>Gentle, child-friendly exams and myopia control for developing eyes.</article>
-              <a class="link-arrow" href="service-paediatric-eye-care.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              <div class="service-card-thumb">
+                <img src="assets/images/paedriatic1.jpg" alt="Child-friendly paediatric eye exam" class="service-card-image" loading="lazy">
+              </div>
+              <div class="service-card-body">
+                <h3>Paediatric Eye Care</h3>
+                <article>Gentle, child-friendly exams and myopia control for developing eyes.</article>
+                <a class="link-arrow" href="service-paediatric-eye-care.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 reveal">
             <div class="service-card">
-              <img src="assets/images/senior vision.jpg" alt="Senior vision care and low-vision support" class="service-card-image" loading="lazy">
-              <span class="service-icon"><i class="bi bi-person-walking"></i></span>
-              <h3>Senior Vision Care</h3>
-              <article>Cataract and age-related macular checks with low-vision support.</article>
-              <a class="link-arrow" href="service-senior-vision-care.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              <div class="service-card-thumb">
+                <img src="assets/images/senior vision.jpg" alt="Senior vision care and low-vision support" class="service-card-image" loading="lazy">
+              </div>
+              <div class="service-card-body">
+                <h3>Senior Vision Care</h3>
+                <article>Cataract and age-related macular checks with low-vision support.</article>
+                <a class="link-arrow" href="service-senior-vision-care.html">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -234,7 +260,7 @@
     <!-- ======= Showcase ======= -->
     <section class="section section--alt">
       <div class="container">
-        <div class="row align-items-center g-5 mb-5">
+        <div class="row align-items-center g-4 g-lg-5 mb-5">
           <div class="col-lg-6 reveal">
             <img src="assets/images/retinal.jpg" alt="Digital eye examination" class="section-visual rounded-4 shadow w-100" loading="lazy">
           </div>
@@ -242,44 +268,50 @@
             <span class="eyebrow"><i class="bi bi-camera2"></i> Comprehensive Exams</span>
             <h2 class="section-title">Digital Retinal Imaging</h2>
             <p>Our digital retinal cameras photograph the back of your eye, letting us spot early signs of conditions like glaucoma, diabetes and macular degeneration — often before you notice symptoms.</p>
-            <ul class="list-unstyled mb-0">
+            <ul class="list-unstyled mb-3">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Painless and takes seconds</li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Detects 200+ eye conditions early</li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Digital record to compare year on year</li>
             </ul>
-            <a href="eye-test-booking.html" class="btn btn-primary mt-3"><i class="bi bi-calendar2-check"></i> Book This Test</a>
+            <div class="mt-3">
+              <a href="eye-test-booking.html" class="btn btn-primary"><i class="bi bi-calendar2-check"></i> Book This Test</a>
+            </div>
           </div>
         </div>
-        <div class="row align-items-center g-5 flex-lg-row-reverse">
+        <div class="row align-items-center g-4 g-lg-5 flex-lg-row-reverse mb-5">
           <div class="col-lg-6 reveal">
-            <img src="assets/images/trial fit1.jpg" alt="Contact lens trial fitting and aftercare" class="rounded-4 shadow w-100" loading="lazy">
+            <img src="assets/images/trial fit1.jpg" alt="Contact lens trial fitting and aftercare" class="section-visual rounded-4 shadow w-100" loading="lazy">
           </div>
           <div class="col-lg-6 reveal">
             <span class="eyebrow"><i class="bi bi-phone"></i> Contact Lenses</span>
             <h2 class="section-title">Trial Fittings &amp; Aftercare</h2>
             <p>Comfort comes first. We trial-fit contact lenses, teach you proper handling and hygiene, and schedule follow-ups to make sure your lenses stay comfortable all day.</p>
-            <ul class="list-unstyled mb-0">
+            <ul class="list-unstyled mb-3">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Free trial lenses during consultation</li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Fitting for astigmatism &amp; presbyopia</li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Ongoing aftercare and training</li>
             </ul>
-            <a href="contact-lenses.html" class="btn btn-primary mt-3"><i class="bi bi-eyeglasses"></i> Explore Lenses</a>
+            <div class="mt-3">
+              <a href="contact-lenses.html" class="btn btn-primary"><i class="bi bi-eyeglasses"></i> Explore Lenses</a>
+            </div>
           </div>
         </div>
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-4 g-lg-5">
           <div class="col-lg-6 reveal">
-            <img src="assets/images/contact lens.jpg" alt="Contact lens consultation" class="rounded-4 shadow w-100" loading="lazy">
+            <img src="assets/images/contact lens.jpg" alt="Contact lens consultation" class="section-visual rounded-4 shadow w-100" loading="lazy">
           </div>
           <div class="col-lg-6 reveal">
             <span class="eyebrow"><i class="bi bi-chat-dots"></i> Personalised Advice</span>
             <h2 class="section-title">Contact Lens Consultation</h2>
             <p>Not sure which lens is right for you? We talk through your lifestyle, prescription and comfort goals before recommending a lens — and let you try it before you commit.</p>
-            <ul class="list-unstyled mb-0">
+            <ul class="list-unstyled mb-3">
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Lifestyle &amp; prescription review</li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Honest guidance on daily vs monthly wear</li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Free samples before you decide</li>
             </ul>
-            <a href="contact-lenses.html" class="btn btn-primary mt-3"><i class="bi bi-phone"></i> Discuss Your Lenses</a>
+            <div class="mt-3">
+              <a href="contact-lenses.html" class="btn btn-primary"><i class="bi bi-phone"></i> Discuss Your Lenses</a>
+            </div>
           </div>
         </div>
       </div>
@@ -356,7 +388,7 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6 footer-col">
-          <div class="footer-brand"><a href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
+          <div class="footer-brand"><a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
           <p>Your trusted destination for professional eye care and quality eyewear.</p>
           <ul class="footer-contact">
             <li><i class="bi bi-geo-alt"></i> <span>42 Vision Park, Connaught Place, New Delhi 110001</span></li>
@@ -386,10 +418,10 @@
         <div class="col-lg-2 col-md-6 footer-col">
           <h5>Services</h5>
           <ul class="footer-links">
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
-            <li><a href="contact-lenses.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
-            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Frame Fitting</a></li>
+            <li><a href="service-dry-eye-clinic.html"><i class="bi bi-chevron-right"></i> Eye Examination</a></li>
+            <li><a href="service-dry-eye-clinic.html"><i class="bi bi-chevron-right"></i> Vision Testing</a></li>
+            <li><a href="service-contact-lens-fitting.html"><i class="bi bi-chevron-right"></i> Contact Lenses</a></li>
+            <li><a href="service-dry-eye-clinic.html"><i class="bi bi-chevron-right"></i> Frame Fitting</a></li>
             <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
             <li><a href="eye-test-booking.html"><i class="bi bi-chevron-right"></i> Book Eye Test</a></li>
           </ul>
@@ -405,18 +437,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="footer-bottom-inner d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="footer-bottom-inner text-center">
           <p class="mb-0">© 2026 OptiCare. All Rights Reserved.</p>
-          <div class="d-flex gap-3">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms &amp; Conditions</a>
-          </div>
-          <div class="payment-icons d-flex gap-2">
-            <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
-            <i class="bi bi-credit-card" aria-hidden="true"></i>
-            <i class="bi bi-paypal" aria-hidden="true"></i>
-            <i class="bi bi-cash-coin" aria-hidden="true"></i>
-          </div>
         </div>
       </div>
     </div>

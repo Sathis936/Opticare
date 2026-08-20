@@ -65,11 +65,18 @@
 
   function updateDirLabels() {
     var isRtl = document.documentElement.getAttribute("dir") === "rtl";
+    var nextText = isRtl ? "LTR" : "RTL";
     document.querySelectorAll("[data-dir-toggle]").forEach(function (btn) {
-      var label = btn.querySelector(".dir-label");
-      if (label) {
-        label.textContent = isRtl ? "LTR" : "RTL";
+      var dirText = btn.querySelector(".dir-text");
+      var dirLabel = btn.querySelector(".dir-label");
+      if (dirText) {
+        dirText.textContent = nextText;
+      } else if (dirLabel) {
+        dirLabel.textContent = nextText;
+      } else {
+        btn.innerHTML = '<span class="dir-text">' + nextText + '</span>';
       }
+      btn.setAttribute("aria-label", isRtl ? "Switch to LTR" : "Switch to RTL");
     });
   }
 

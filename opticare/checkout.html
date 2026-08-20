@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout - OptiCare Eye Care &amp; Eyewear</title>
+  <meta name="description" content="Complete your OptiCare eyewear purchase with secure checkout, fast delivery across India, and flexible payment options.">
+  <link rel="icon" href="assets/images/logo/logo-sm.svg" type="image/svg+xml">
+
+  <!-- CSS Dependencies -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/google-fonts.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/minimal-navbar.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- =========================
+     SINGLE HEADER
+========================= -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a class="site-logo" href="index.html" aria-label="OptiCare home">
+        <img src="assets/images/logo/logo.png" alt="OptiCare logo">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav d-none d-xl-flex" aria-label="Main navigation">
+        <ul class="d-flex align-items-center gap-1 list-unstyled mb-0">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="frames.html"><i class="bi bi-eyeglasses"></i> Frames</a></li>
+              <li><a class="dropdown-item" href="lenses.html"><i class="bi bi-circle-half"></i> Lenses</a></li>
+              <li><a class="dropdown-item" href="contact-lenses.html"><i class="bi bi-eye"></i> Contact Lenses</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li><a class="nav-link" href="blog.html">Blog</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <!-- Wishlist -->
+        <a class="nav-icon-btn position-relative" href="wishlist.html" aria-label="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="count" data-wish-count style="display:none">0</span>
+        </a>
+
+        <!-- Cart -->
+        <a class="nav-icon-btn position-relative" href="cart.html" aria-label="Cart">
+          <i class="bi bi-bag"></i>
+          <span class="count" data-cart-count style="display:none">0</span>
+        </a>
+
+        <!-- Theme Toggle -->
+        <button type="button" class="nav-icon-btn" data-theme-toggle aria-label="Toggle theme">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+
+        <!-- RTL Toggle -->
+        <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction"><span class="dir-text">RTL</span></button>
+
+        <!-- User Account Dropdown -->
+        <div class="dropdown">
+          <button class="nav-icon-btn" type="button" id="userMenuBtn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="User account">
+            <i class="bi bi-person"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="userMenuBtn">
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+            <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="wishlist.html"><i class="bi bi-heart"></i> Wishlist</a></li>
+            <li><a class="dropdown-item" href="cart.html"><i class="bi bi-bag"></i> Cart</a></li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ======= Mobile Offcanvas Nav ======= -->
+<div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+  <div class="offcanvas-header">
+    <a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo"></a>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <nav class="offcanvas-nav" aria-label="Mobile navigation">
+      <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+      <a class="nav-link" href="about.html"><i class="bi bi-info-circle"></i> About</a>
+      <a class="nav-link" href="services.html"><i class="bi bi-grid"></i> Services</a>
+      <span class="offcanvas-section-label">Products</span>
+      <a class="nav-link" href="frames.html"><i class="bi bi-eyeglasses"></i> Frames</a>
+      <a class="nav-link" href="lenses.html"><i class="bi bi-circle-half"></i> Lenses</a>
+      <a class="nav-link" href="contact-lenses.html"><i class="bi bi-eye"></i> Contact Lenses</a>
+      <a class="nav-link" href="pricing.html"><i class="bi bi-tags"></i> Pricing</a>
+      <a class="nav-link" href="blog.html"><i class="bi bi-newspaper"></i> Blog</a>
+      <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+      <a class="nav-link" href="wishlist.html"><i class="bi bi-heart"></i> Wishlist</a>
+      <a class="nav-link" href="cart.html"><i class="bi bi-bag"></i> Cart</a>
+      <hr class="my-3">
+      <!-- Theme & Direction Toggles -->
+      <div class="mobile-toggles">
+        <button type="button" class="mobile-toggle-btn" data-theme-toggle aria-label="Toggle dark mode">
+          <i class="bi bi-moon-stars"></i>
+          <span class="theme-label">Dark Mode</span>
+        </button>
+        <button type="button" class="mobile-toggle-btn" data-dir-toggle aria-label="Toggle RTL direction">
+          <span class="dir-label">RTL</span>
+        </button>
+      </div>
+      <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+      <a class="nav-link" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+    </nav>
+  </div>
+</div>
+
+  <main>
+    <!-- ======= Page Hero ======= -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><i class="bi bi-shield-check"></i> Secure Checkout</span>
+        <h1 class="page-title">Checkout</h1>
+        <p class="page-lead">Complete your order with safe and instant delivery across India.</p>
+        <nav class="breadcrumb-wrap" aria-label="Breadcrumb">
+          <ol class="breadcrumb-custom">
+            <li><a href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li class="active" aria-current="page">Checkout</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ======= Checkout Section ======= -->
+    <section class="section py-5">
+      <div class="container">
+        <form id="checkoutForm" novalidate>
+          <div class="row g-4 g-lg-5">
+            <!-- Left Column: Customer & Delivery Details -->
+            <div class="col-lg-7">
+              <!-- Customer Info -->
+              <div class="card rounded-card p-4 mb-4 shadow-sm">
+                <h4 class="mb-3 d-flex align-items-center gap-2">
+                  <span class="badge bg-primary rounded-circle" style="width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:0.9rem">1</span>
+                  Contact Information
+                </h4>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="custFirstName">First Name <span class="text-danger">*</span></label>
+                    <input type="text" id="custFirstName" class="form-control" placeholder="Enter first name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="custLastName">Last Name <span class="text-danger">*</span></label>
+                    <input type="text" id="custLastName" class="form-control" placeholder="Enter last name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="custEmail">Email Address <span class="text-danger">*</span></label>
+                    <input type="email" id="custEmail" class="form-control" placeholder="name@example.com" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="custPhone">Mobile Number (India) <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text">+91</span>
+                      <input type="tel" id="custPhone" class="form-control" placeholder="98765 43210" pattern="[0-9]{10}" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Shipping Address -->
+              <div class="card rounded-card p-4 mb-4 shadow-sm">
+                <h4 class="mb-3 d-flex align-items-center gap-2">
+                  <span class="badge bg-primary rounded-circle" style="width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:0.9rem">2</span>
+                  Delivery Address
+                </h4>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label" for="shipAddress">Street Address / Flat / Building <span class="text-danger">*</span></label>
+                    <input type="text" id="shipAddress" class="form-control" placeholder="e.g. 42, Green Park Avenue, 2nd Cross" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="shipLandmark">Landmark <span class="text-muted">(optional)</span></label>
+                    <input type="text" id="shipLandmark" class="form-control" placeholder="e.g. Near Metro Station">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="shipPincode">PIN Code <span class="text-danger">*</span></label>
+                    <input type="text" id="shipPincode" class="form-control" placeholder="e.g. 600001" pattern="[0-9]{6}" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="shipCity">City <span class="text-danger">*</span></label>
+                    <input type="text" id="shipCity" class="form-control" placeholder="e.g. Chennai / Mumbai / Bengaluru" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="shipState">State <span class="text-danger">*</span></label>
+                    <select id="shipState" class="form-select" required>
+                      <option value="" selected disabled>Select State</option>
+                      <option value="Tamil Nadu">Tamil Nadu</option>
+                      <option value="Karnataka">Karnataka</option>
+                      <option value="Maharashtra">Maharashtra</option>
+                      <option value="Delhi">Delhi</option>
+                      <option value="Telangana">Telangana</option>
+                      <option value="Kerala">Kerala</option>
+                      <option value="Gujarat">Gujarat</option>
+                      <option value="Uttar Pradesh">Uttar Pradesh</option>
+                      <option value="West Bengal">West Bengal</option>
+                      <option value="Andhra Pradesh">Andhra Pradesh</option>
+                      <option value="Rajasthan">Rajasthan</option>
+                      <option value="Other">Other State</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Shipping Method -->
+              <div class="card rounded-card p-4 mb-4 shadow-sm">
+                <h4 class="mb-3 d-flex align-items-center gap-2">
+                  <span class="badge bg-primary rounded-circle" style="width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:0.9rem">3</span>
+                  Shipping Speed
+                </h4>
+                <div class="d-flex flex-column gap-2">
+                  <label class="d-flex align-items-center justify-content-between p-3 border rounded-3 cursor-pointer shipping-opt selected" style="cursor:pointer">
+                    <div class="d-flex align-items-center gap-3">
+                      <input type="radio" name="shippingMethod" value="0" class="form-check-input" checked>
+                      <div>
+                        <strong>Standard Delivery</strong>
+                        <div class="small text-muted">Estimated 3–5 business days</div>
+                      </div>
+                    </div>
+                    <span class="text-success fw-bold">FREE</span>
+                  </label>
+                  <label class="d-flex align-items-center justify-content-between p-3 border rounded-3 cursor-pointer shipping-opt" style="cursor:pointer">
+                    <div class="d-flex align-items-center gap-3">
+                      <input type="radio" name="shippingMethod" value="199" class="form-check-input">
+                      <div>
+                        <strong>Express Superfast Delivery</strong>
+                        <div class="small text-muted">Estimated 24–48 hours</div>
+                      </div>
+                    </div>
+                    <span class="fw-bold text-primary">₹199</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Payment Method -->
+              <div class="card rounded-card p-4 mb-4 shadow-sm">
+                <h4 class="mb-3 d-flex align-items-center gap-2">
+                  <span class="badge bg-primary rounded-circle" style="width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:0.9rem">4</span>
+                  Payment Method
+                </h4>
+                <div class="d-flex flex-column gap-3" id="paymentOptions">
+                  <!-- UPI -->
+                  <div class="border rounded-3 p-3 payment-card">
+                    <label class="d-flex align-items-center justify-content-between w-100 mb-0" style="cursor:pointer">
+                      <div class="d-flex align-items-center gap-3">
+                        <input type="radio" name="paymentMethod" value="upi" class="form-check-input" checked>
+                        <div>
+                          <strong>UPI / QR Code</strong>
+                          <div class="small text-muted">Google Pay, PhonePe, Paytm, BHIM</div>
+                        </div>
+                      </div>
+                      <span class="badge bg-soft-primary text-primary">Instant</span>
+                    </label>
+                    <div class="payment-details mt-3 pt-3 border-top" id="upiDetails">
+                      <div class="row g-2 align-items-center">
+                        <div class="col-md-8">
+                          <input type="text" class="form-control" id="upiId" placeholder="Enter UPI ID (e.g. mobile@upi / username@okhdfcbank)">
+                        </div>
+                        <div class="col-md-4">
+                          <button type="button" class="btn btn-outline-primary w-100" id="verifyUpiBtn">Verify UPI</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cards -->
+                  <div class="border rounded-3 p-3 payment-card">
+                    <label class="d-flex align-items-center justify-content-between w-100 mb-0" style="cursor:pointer">
+                      <div class="d-flex align-items-center gap-3">
+                        <input type="radio" name="paymentMethod" value="card" class="form-check-input">
+                        <div>
+                          <strong>Credit / Debit Card</strong>
+                          <div class="small text-muted">Visa, MasterCard, RuPay, Maestro</div>
+                        </div>
+                      </div>
+                      <i class="bi bi-credit-card fs-4 text-muted"></i>
+                    </label>
+                    <div class="payment-details mt-3 pt-3 border-top d-none" id="cardDetails">
+                      <div class="row g-2">
+                        <div class="col-12">
+                          <label class="form-label small">Card Number</label>
+                          <input type="text" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+                        <div class="col-6">
+                          <label class="form-label small">Expiry Date</label>
+                          <input type="text" class="form-control" placeholder="MM / YY" maxlength="5">
+                        </div>
+                        <div class="col-6">
+                          <label class="form-label small">CVV</label>
+                          <input type="password" class="form-control" placeholder="123" maxlength="4">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Net Banking -->
+                  <div class="border rounded-3 p-3 payment-card">
+                    <label class="d-flex align-items-center justify-content-between w-100 mb-0" style="cursor:pointer">
+                      <div class="d-flex align-items-center gap-3">
+                        <input type="radio" name="paymentMethod" value="netbanking" class="form-check-input">
+                        <div>
+                          <strong>Net Banking</strong>
+                          <div class="small text-muted">All major Indian banks supported</div>
+                        </div>
+                      </div>
+                      <i class="bi bi-bank fs-4 text-muted"></i>
+                    </label>
+                    <div class="payment-details mt-3 pt-3 border-top d-none" id="netbankingDetails">
+                      <select class="form-select">
+                        <option value="">Select your bank</option>
+                        <option value="sbi">State Bank of India (SBI)</option>
+                        <option value="hdfc">HDFC Bank</option>
+                        <option value="icici">ICICI Bank</option>
+                        <option value="axis">Axis Bank</option>
+                        <option value="kotak">Kotak Mahindra Bank</option>
+                        <option value="other">Other Nationalized Bank</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- COD -->
+                  <div class="border rounded-3 p-3 payment-card">
+                    <label class="d-flex align-items-center justify-content-between w-100 mb-0" style="cursor:pointer">
+                      <div class="d-flex align-items-center gap-3">
+                        <input type="radio" name="paymentMethod" value="cod" class="form-check-input">
+                        <div>
+                          <strong>Cash on Delivery (COD)</strong>
+                          <div class="small text-muted">Pay in cash when order is delivered</div>
+                        </div>
+                      </div>
+                      <i class="bi bi-cash-stack fs-4 text-muted"></i>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Order Summary -->
+            <div class="col-lg-5">
+              <div class="card rounded-card p-4 shadow-sm sticky-top" style="top:90px;z-index:10">
+                <h4 class="mb-3 d-flex align-items-center justify-content-between">
+                  <span>Order Summary</span>
+                  <span class="badge bg-primary rounded-pill fs-6" id="coItemCount">0 Items</span>
+                </h4>
+
+                <!-- Items List -->
+                <div class="checkout-items-list mb-3" id="coCartItems" style="max-height:280px;overflow-y:auto">
+                  <!-- Dynamically populated from OptiStore -->
+                </div>
+
+                <!-- Coupon Box -->
+                <div class="mb-3">
+                  <div class="input-group">
+                    <input type="text" class="form-control text-uppercase" id="coCouponInput" placeholder="Promo / Coupon code">
+                    <button class="btn btn-outline-primary" type="button" id="coApplyCoupon">Apply</button>
+                  </div>
+                  <div class="small mt-1" id="coCouponMsg"></div>
+                </div>
+
+                <!-- Totals -->
+                <div class="border-top pt-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Items Subtotal</span>
+                    <span id="coSubtotal" class="fw-semibold">₹0</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Delivery Charges</span>
+                    <span id="coShipping" class="text-success fw-semibold">FREE</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2 d-none" id="coDiscountRow">
+                    <span class="text-success">Coupon Discount</span>
+                    <span id="coDiscount" class="text-success fw-semibold">-₹0</span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">GST (18% included)</span>
+                    <span id="coTax" class="text-muted">₹0</span>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between mb-4">
+                    <strong class="fs-5">Total Amount</strong>
+                    <strong id="coTotal" class="fs-4 text-primary">₹0</strong>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold" id="placeOrderBtn">
+                    <i class="bi bi-shield-lock-fill me-2"></i>Place Order
+                  </button>
+                </div>
+
+                <!-- Trust Highlights -->
+                <div class="mt-4 pt-3 border-top">
+                  <div class="row g-2 text-center small text-muted">
+                    <div class="col-4">
+                      <i class="bi bi-patch-check fs-4 d-block text-primary mb-1"></i>
+                      <span>100% Genuine</span>
+                    </div>
+                    <div class="col-4">
+                      <i class="bi bi-truck fs-4 d-block text-primary mb-1"></i>
+                      <span>Fast Dispatch</span>
+                    </div>
+                    <div class="col-4">
+                      <i class="bi bi-arrow-counterclockwise fs-4 d-block text-primary mb-1"></i>
+                      <span>Easy Returns</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="orderSuccessModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-card border-0 shadow">
+          <div class="modal-body text-center p-5">
+            <div class="success-ring mx-auto mb-3" style="width:80px;height:80px;border-radius:50%;background:#d1fae5;color:#10b981;display:inline-flex;align-items:center;justify-content:center;font-size:2.5rem">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <h3 class="fw-bold mb-2">Order Confirmed!</h3>
+            <p class="text-muted mb-3">Thank you for your purchase with OptiCare. Your order has been placed successfully.</p>
+            <div class="card bg-light border-0 p-3 mb-4 text-start">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="text-muted">Order ID:</span>
+                <strong id="confirmedOrderId">#OPT-89421</strong>
+              </div>
+              <div class="d-flex justify-content-between mb-1">
+                <span class="text-muted">Payment:</span>
+                <span id="confirmedPayment" class="fw-semibold text-primary">UPI (Verified)</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span class="text-muted">Estimated Delivery:</span>
+                <span class="fw-semibold text-success">3–5 Business Days</span>
+              </div>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a href="index.html" class="btn btn-primary btn-lg w-100">Back to Home</a>
+              <a href="frames.html" class="btn btn-outline-secondary w-100">Continue Shopping</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo"></a>
+            <p class="mt-3">Professional eye care and stylish, high-quality eyewear. Helping you see clearly and look your best since 2010.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="frames.html"><i class="bi bi-chevron-right"></i> Frames</a></li>
+            <li><a href="lenses.html"><i class="bi bi-chevron-right"></i> Lenses</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5>Contact Us</h5>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt"></i> 124 Vision Boulevard, Anna Nagar, Chennai, TN 600040</li>
+            <li><i class="bi bi-telephone"></i> <a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><i class="bi bi-envelope"></i> <a href="mailto:support@opticare.com">support@opticare.com</a></li>
+            <li><i class="bi bi-clock"></i> Mon - Sat: 9:00 AM - 8:00 PM</li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Newsletter</h5>
+          <p>Get exclusive offers, vision health tips and new collection alerts.</p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" class="form-control" placeholder="Your email address" aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0 text-center w-100">&copy; 2026 OptiCare. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var shippingCost = 0;
+      var discountAmount = 0;
+
+      function renderCheckout() {
+        var cart = OptiStore.getCart();
+        var itemsContainer = document.getElementById("coCartItems");
+        var itemCountEl = document.getElementById("coItemCount");
+        var subtotalEl = document.getElementById("coSubtotal");
+        var shippingEl = document.getElementById("coShipping");
+        var taxEl = document.getElementById("coTax");
+        var totalEl = document.getElementById("coTotal");
+        var discountRow = document.getElementById("coDiscountRow");
+        var discountEl = document.getElementById("coDiscount");
+
+        if (!cart || cart.length === 0) {
+          cart = [
+            { id: "f-02", name: "Aviator Classic", category: "Sunglasses", price: 2599, image: "assets/images/frames/frame-02.jpg", quantity: 1 }
+          ];
+        }
+
+        var totalQty = 0;
+        var subtotal = 0;
+        itemsContainer.innerHTML = "";
+
+        cart.forEach(function (item) {
+          var itemTotal = item.price * item.quantity;
+          totalQty += item.quantity;
+          subtotal += itemTotal;
+
+          var itemDiv = document.createElement("div");
+          itemDiv.className = "d-flex align-items-center justify-content-between py-2 border-bottom";
+          itemDiv.innerHTML =
+            '<div class="d-flex align-items-center gap-2">' +
+              '<img src="' + item.image + '" alt="' + item.name + '" style="width:48px;height:48px;object-fit:cover;border-radius:8px">' +
+              '<div>' +
+                '<strong class="d-block text-truncate" style="max-width:180px">' + item.name + '</strong>' +
+                '<small class="text-muted">Qty: ' + item.quantity + ' &times; ₹' + item.price.toLocaleString("en-IN") + '</small>' +
+              '</div>' +
+            '</div>' +
+            '<span class="fw-bold">₹' + itemTotal.toLocaleString("en-IN") + '</span>';
+          itemsContainer.appendChild(itemDiv);
+        });
+
+        itemCountEl.textContent = totalQty + " Item" + (totalQty > 1 ? "s" : "");
+        subtotalEl.textContent = "₹" + subtotal.toLocaleString("en-IN");
+
+        // Shipping
+        if (shippingCost === 0) {
+          shippingEl.textContent = "FREE";
+          shippingEl.className = "text-success fw-semibold";
+        } else {
+          shippingEl.textContent = "₹" + shippingCost.toLocaleString("en-IN");
+          shippingEl.className = "fw-semibold text-primary";
+        }
+
+        // Discount
+        if (discountAmount > 0) {
+          discountRow.classList.remove("d-none");
+          discountEl.textContent = "-₹" + discountAmount.toLocaleString("en-IN");
+        } else {
+          discountRow.classList.add("d-none");
+        }
+
+        // Tax (18% included)
+        var tax = Math.round(subtotal * 0.18 / 1.18);
+        taxEl.textContent = "₹" + tax.toLocaleString("en-IN");
+
+        // Final total
+        var finalTotal = Math.max(0, subtotal + shippingCost - discountAmount);
+        totalEl.textContent = "₹" + finalTotal.toLocaleString("en-IN");
+      }
+
+      // Shipping option radios
+      document.querySelectorAll('input[name="shippingMethod"]').forEach(function (radio) {
+        radio.addEventListener("change", function () {
+          shippingCost = parseInt(this.value, 10) || 0;
+          document.querySelectorAll(".shipping-opt").forEach(function (opt) {
+            opt.classList.remove("selected");
+          });
+          this.closest(".shipping-opt").classList.add("selected");
+          renderCheckout();
+        });
+      });
+
+      // Payment option toggles
+      document.querySelectorAll('input[name="paymentMethod"]').forEach(function (radio) {
+        radio.addEventListener("change", function () {
+          var method = this.value;
+          document.getElementById("upiDetails").classList.toggle("d-none", method !== "upi");
+          document.getElementById("cardDetails").classList.toggle("d-none", method !== "card");
+          document.getElementById("netbankingDetails").classList.toggle("d-none", method !== "netbanking");
+        });
+      });
+
+      // Coupon application
+      var couponBtn = document.getElementById("coApplyCoupon");
+      if (couponBtn) {
+        couponBtn.addEventListener("click", function () {
+          var code = (document.getElementById("coCouponInput").value || "").trim().toUpperCase();
+          var msg = document.getElementById("coCouponMsg");
+          if (code === "OPTIC10" || code === "WELCOME10") {
+            discountAmount = 300;
+            msg.className = "small mt-1 text-success fw-semibold";
+            msg.textContent = "Coupon '" + code + "' applied! ₹300 saved.";
+          } else if (code === "FREESHIP") {
+            shippingCost = 0;
+            msg.className = "small mt-1 text-success fw-semibold";
+            msg.textContent = "Free Shipping coupon applied!";
+          } else if (code === "") {
+            msg.className = "small mt-1 text-danger";
+            msg.textContent = "Please enter a coupon code.";
+          } else {
+            msg.className = "small mt-1 text-danger";
+            msg.textContent = "Invalid or expired coupon code.";
+          }
+          renderCheckout();
+        });
+      }
+
+      // UPI verification simulation
+      var verifyUpiBtn = document.getElementById("verifyUpiBtn");
+      if (verifyUpiBtn) {
+        verifyUpiBtn.addEventListener("click", function () {
+          var val = document.getElementById("upiId").value;
+          if (val && val.includes("@")) {
+            this.className = "btn btn-success w-100";
+            this.innerHTML = '<i class="bi bi-check-circle me-1"></i> Verified';
+          } else {
+            alert("Please enter a valid UPI ID (e.g. yourname@upi)");
+          }
+        });
+      }
+
+      // Form submission
+      var form = document.getElementById("checkoutForm");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          var orderId = "#OPT-" + Math.floor(10000 + Math.random() * 90000);
+          var paymentMethodEl = document.querySelector('input[name="paymentMethod"]:checked');
+          var methodText = paymentMethodEl ? paymentMethodEl.value.toUpperCase() : "Online";
+
+          document.getElementById("confirmedOrderId").textContent = orderId;
+          document.getElementById("confirmedPayment").textContent = methodText;
+
+          // Clear cart
+          OptiStore.clearCart();
+          OptiStore.updateCartBadge();
+
+          var modal = new bootstrap.Modal(document.getElementById("orderSuccessModal"));
+          modal.show();
+        });
+      }
+
+      // Initial render
+      renderCheckout();
+      OptiStore.syncBadges();
+    })();
+  </script>
+</body>
+</html>

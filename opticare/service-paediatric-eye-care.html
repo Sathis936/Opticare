@@ -67,14 +67,13 @@
           <a href="wishlist.html" class="nav-icon-btn d-none d-md-inline-flex" aria-label="Wishlist"><i class="bi bi-heart"></i><span class="count" data-wish-count>0</span></a>
           <a href="cart.html" class="nav-icon-btn cart-btn d-none d-md-inline-flex" aria-label="Cart"><i class="bi bi-bag"></i><span class="count cart-count" data-cart-count>0</span></a>
           <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars"></i></button>
-          <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction"><i class="bi bi-globe2"></i></button>
+          <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction"><span class="dir-text">RTL</span></button>
           <div class="dropdown nav-login-drop d-none d-md-inline-flex">
             <button type="button" class="nav-icon-btn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account"><i class="bi bi-person"></i></button>
             <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
               <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="admin/index.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
             </ul>
           </div>
           <a class="btn btn-primary nav-cta d-none d-xl-inline-flex" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
@@ -111,6 +110,17 @@
         <a class="nav-link" href="wishlist.html"><i class="bi bi-heart"></i> Wishlist</a>
         <a class="nav-link" href="cart.html"><i class="bi bi-bag"></i> Cart</a>
         <hr class="my-3">
+        <!-- Theme & Direction Toggles -->
+        <div class="mobile-toggles">
+          <button type="button" class="mobile-toggle-btn" data-theme-toggle aria-label="Toggle dark mode">
+            <i class="bi bi-moon-stars"></i>
+            <span class="theme-label">Dark Mode</span>
+          </button>
+          <button type="button" class="mobile-toggle-btn" data-dir-toggle aria-label="Toggle RTL direction">
+            <i class="bi bi-globe2"></i>
+            <span class="dir-label">RTL / LTR</span>
+          </button>
+        </div>
         <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a>
         <a class="nav-link" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
       </nav>
@@ -137,14 +147,14 @@
       <div class="container">
         <div class="row g-4">
           <aside class="col-lg-4">
-            <div class="widget reveal">
+                        <div class="widget reveal">
               <h3 class="widget-title">All Services</h3>
               <ul class="list-unstyled mb-0 service-links">
                 <li><a class="d-flex align-items-center gap-2 py-2 border-bottom" href="service-eye-examination.html"><i class="bi bi-eye"></i> Eye Examination</a></li>
                 <li><a class="d-flex align-items-center gap-2 py-2 border-bottom" href="service-vision-testing.html"><i class="bi bi-activity"></i> Vision Testing</a></li>
-                <li><a class="d-flex align-items-center gap-2 py-2 border-bottom" href="service-contact-lens-fitting.html"><i class="bi bi-phone"></i> Contact Lens Fitting</a></li>
-                <li><a class="d-flex align-items-center gap-2 py-2 border-bottom" href="service-details.html"><i class="bi bi-moisture"></i> Dry Eye Clinic</a></li>
-                <li><a class="d-flex align-items-center gap-2 py-2 border-bottom active" href="service-paediatric-eye-care.html"><i class="bi bi-joystick"></i> Paediatric Eye Care</a></li>
+                <li><a class="d-flex align-items-center gap-2 py-2 border-bottom" href="service-contact-lens-fitting.html"><i class="bi bi-circle-half"></i> Contact Lens Fitting</a></li>
+                <li><a class="d-flex align-items-center gap-2 py-2 border-bottom" href="service-dry-eye-clinic.html"><i class="bi bi-moisture"></i> Dry Eye Clinic</a></li>
+                <li><a class="d-flex align-items-center gap-2 py-2 border-bottom active" href="service-paediatric-eye-care.html"><i class="bi bi-person-heart"></i> Paediatric Eye Care</a></li>
                 <li><a class="d-flex align-items-center gap-2 py-2" href="service-senior-vision-care.html"><i class="bi bi-person-walking"></i> Senior Vision Care</a></li>
               </ul>
             </div>
@@ -230,7 +240,7 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6 footer-col">
-          <div class="footer-brand"><a href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
+          <div class="footer-brand"><a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
           <p>Your trusted destination for professional eye care and quality eyewear.</p>
           <ul class="footer-contact">
             <li><i class="bi bi-geo-alt"></i> <span>42 Vision Park, Connaught Place, New Delhi 110001</span></li>
@@ -279,19 +289,10 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="footer-bottom-inner d-flex align-items-center justify-content-between flex-wrap gap-2">
-          <p class="mb-0">&copy; 2026 OptiCare. All Rights Reserved.</p>
-          <div class="d-flex gap-3">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms &amp; Conditions</a>
-          </div>
-          <div class="payment-icons d-flex gap-2">
-            <i class="bi bi-credit-card-2-front" aria-hidden="true"></i>
-            <i class="bi bi-credit-card" aria-hidden="true"></i>
-            <i class="bi bi-paypal" aria-hidden="true"></i>
-            <i class="bi bi-cash-coin" aria-hidden="true"></i>
-          </div>
+        <div class="footer-bottom-inner text-center">
+          <p class="mb-0">© 2026 OptiCare. All Rights Reserved.</p>
         </div>
+      </div>
       </div>
     </div>
   </footer>

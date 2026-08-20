@@ -194,6 +194,20 @@ iframe {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+
+  /* Testimonial cards - tablet */
+  .testimonial-card {
+    padding: 26px 24px;
+  }
+  .testimonial-card::before {
+    font-size: 4rem;
+    top: 14px;
+    inset-inline-end: 18px;
+  }
+  .testimonial-card .testimonial-text {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
 }
 
 /* ============================================================
@@ -231,6 +245,24 @@ iframe {
   .hero-floating--2 {
     inset-inline-end: 10px;
   }
+
+  /* Hero floating badges - scale down for tablets */
+  .hero-floating {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+  .hero-floating .icon-box {
+    width: 40px;
+    height: 40px;
+    font-size: 1.05rem;
+  }
+  .hero-floating strong {
+    font-size: 0.9rem;
+  }
+  .hero-floating small {
+    font-size: 0.76rem;
+  }
+
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
@@ -314,6 +346,26 @@ iframe {
   .admin-sidebar {
     margin-inline-start: 0 !important;
   }
+
+  /* Testimonial cards - tablet portrait */
+  .testimonial-card {
+    padding: 24px 22px;
+  }
+  .testimonial-card::before {
+    font-size: 3.5rem;
+    top: 12px;
+    inset-inline-end: 16px;
+  }
+  .testimonial-card .testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+  .testimonial-card .stars {
+    font-size: 0.88rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
 }
 
 /* ============================================================
@@ -357,13 +409,36 @@ iframe {
     font-size: 0.95rem;
     line-height: 1.6;
   }
+  /* Service card thumb height on tablet */
+  .service-card-thumb,
+  .service-card-thumb img,
+  .service-card-image {
+    height: 190px !important;
+    min-height: 190px !important;
+    max-height: 190px !important;
+  }
+
+  /* Section visual images */
+  .section-visual {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* About page and Services page showcase images */
+  .rounded-4.shadow {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Hero media images */
   .hero-media {
     max-width: 100%;
     margin: 36px auto 0;
   }
-  .hero-media img {
+  .hero-media .hero-img {
     width: 100%;
     height: auto;
+    border-radius: 20px;
   }
   .hero-stats {
     grid-template-columns: 1fr 1fr;
@@ -456,11 +531,24 @@ iframe {
     list-style: none;
   }
   .footer-contact li {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
-  .footer-contact li span {
-    display: inline;
+  .footer-contact li i {
+    flex-shrink: 0 !important;
+    margin-top: 1px !important;
+    width: 20px !important;
+    text-align: center !important;
+  }
+  .footer-contact li span,
+  .footer-contact li a {
+    flex: 1 1 auto !important;
+    display: block !important;
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 100%;
@@ -684,9 +772,55 @@ iframe {
     max-width: 100%;
   }
 
+  /* Service card thumb height on mobile */
+  .service-card-thumb,
+  .service-card-thumb img,
+  .service-card-image {
+    height: 180px !important;
+    min-height: 180px !important;
+    max-height: 180px !important;
+  }
+
+  /* Section visual images */
+  .section-visual {
+    aspect-ratio: 16 / 10;
+    margin-bottom: 20px;
+  }
+
+  .hero-media .hero-img {
+    border-radius: var(--radius);
+  }
+
+  /* Category card images responsive */
+  .category-card img {
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Team card photos responsive */
+  .team-card .team-photo img {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Product media images responsive */
+  .product-card .product-media img {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Blog media images responsive */
+  .blog-card .blog-media img {
+    aspect-ratio: 16 / 10;
+  }
+
+
+
+  /* Rounded images in sections */
+  .rounded-4.shadow {
+    border-radius: var(--radius) !important;
+  }
+
   /* Swiper */
   .swiper-slide {
-    width: auto !important;
+    height: auto;
   }
 
   /* Offcanvas nav width */
@@ -748,6 +882,47 @@ iframe {
     padding: 40px 0 36px;
   }
 
+  /* Service card images */
+  .service-card-image {
+    height: 150px;
+  }
+
+  /* Category card images */
+  .category-card img {
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Section images */
+  .section-visual {
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Hero floating badges */
+  .hero-floating {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+  .hero-floating .icon-box {
+    width: 38px;
+    height: 38px;
+    font-size: 1.05rem;
+  }
+
+  /* Team card images */
+  .team-card .team-photo img {
+    aspect-ratio: 4 / 5;
+  }
+
+  /* Product card images */
+  .product-card .product-media img {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Blog card images */
+  .blog-card .blog-media img {
+    aspect-ratio: 16 / 9;
+  }
+
   /* Product actions - tighter on small phones */
   .product-actions .btn {
     padding: 0.45rem 0.6rem;
@@ -766,6 +941,55 @@ iframe {
   }
   .countdown .cd-item .cd-num {
     font-size: 1.5rem;
+  }
+
+  /* Testimonial cards - mobile */
+  .testimonial-card {
+    padding: 22px 18px;
+    border-radius: var(--radius-md);
+  }
+  .testimonial-card::before {
+    font-size: 3rem;
+    top: 10px;
+    inset-inline-end: 14px;
+    opacity: 0.5;
+  }
+  .testimonial-card .testimonial-text {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+  .testimonial-card .stars {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+  }
+  .testimonial-card .testimonial-footer img {
+    width: 42px;
+    height: 42px;
+    border-width: 2px;
+  }
+  .testimonial-card .testimonial-footer strong {
+    font-size: 0.92rem;
+  }
+  .testimonial-card .testimonial-footer small {
+    font-size: 0.78rem;
+  }
+  .testimonial-card:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Testimonial rating summary */
+  .card.rounded-card {
+    padding: 20px !important;
+  }
+
+  /* Swiper testimonial spacing */
+  #testimonialSlider .swiper-slide {
+    height: auto;
+  }
+  #testimonialSlider .swiper-pagination {
+    margin-top: 16px;
   }
 }
 
@@ -845,6 +1069,62 @@ iframe {
   [class*="col-"] {
     min-width: 0;
   }
+
+  /* Testimonial cards - small mobile */
+  .testimonial-card {
+    padding: 20px 16px;
+  }
+  .testimonial-card::before {
+    font-size: 2.5rem;
+    top: 8px;
+    inset-inline-end: 12px;
+  }
+  .testimonial-card .testimonial-text {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .testimonial-card .stars {
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .testimonial-card .testimonial-footer {
+    gap: 10px;
+  }
+  .testimonial-card .testimonial-footer img {
+    width: 40px;
+    height: 40px;
+  }
+  .testimonial-card .testimonial-footer strong {
+    font-size: 0.88rem;
+  }
+  .testimonial-card .testimonial-footer small {
+    font-size: 0.75rem;
+  }
+
+  /* Rating summary - compact */
+  .card.rounded-card {
+    padding: 16px !important;
+  }
+  .card.rounded-card .row {
+    gap: 16px;
+  }
+  .stat-num {
+    font-size: 2rem;
+  }
+  .progress {
+    height: 6px !important;
+  }
+
+  /* Swiper testimonial */
+  #testimonialSlider {
+    margin: 0 -8px;
+    overflow: visible;
+  }
+  #testimonialSlider .swiper-slide {
+    padding: 0 8px;
+  }
 }
 
 /* ============================================================
@@ -865,6 +1145,9 @@ iframe {
   }
   .hero-media {
     margin: 24px auto 0;
+  }
+  .hero-media .hero-img {
+    border-radius: var(--radius-sm);
   }
   .hero-stats {
     gap: 8px;
@@ -906,6 +1189,41 @@ iframe {
     font-size: 0.9rem;
   }
 
+  /* Service card images - tighter on small phones */
+  .service-card-image {
+    height: 140px;
+  }
+
+  /* Category card images - tighter ratio */
+  .category-card img {
+    aspect-ratio: 3 / 2;
+  }
+
+  /* Product card images - tighter */
+  .product-card .product-media img {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Blog card images */
+  .blog-card .blog-media img {
+    aspect-ratio: 3 / 2;
+  }
+
+  /* Team card images */
+  .team-card .team-photo img {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Section images - tighter */
+  .section-visual {
+    aspect-ratio: 3 / 2;
+  }
+
+  /* Hero floating badges - hide on very small screens */
+  .hero-floating {
+    display: none;
+  }
+
   /* Offcanvas nav width */
   .offcanvas-nav {
     width: min(280px, 82vw) !important;
@@ -931,6 +1249,50 @@ iframe {
   }
   .footer .newsletter-form .btn {
     width: 100%;
+  }
+
+  /* Testimonial cards - very small phone */
+  .testimonial-card {
+    padding: 18px 14px;
+    border-radius: var(--radius-sm);
+  }
+  .testimonial-card::before {
+    font-size: 2.2rem;
+    top: 6px;
+    inset-inline-end: 10px;
+  }
+  .testimonial-card .testimonial-text {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin-bottom: 12px;
+    padding-right: 30px;
+  }
+  .testimonial-card .stars {
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .testimonial-card .testimonial-footer img {
+    width: 36px;
+    height: 36px;
+    border-width: 2px;
+  }
+  .testimonial-card .testimonial-footer strong {
+    font-size: 0.85rem;
+  }
+  .testimonial-card .testimonial-footer small {
+    font-size: 0.72rem;
+  }
+  .testimonial-card:hover {
+    transform: none;
+  }
+
+  /* Rating summary - extra compact */
+  .hero-stat .stat-num {
+    font-size: 1.8rem;
+  }
+  .rating-bar .small {
+    font-size: 0.75rem;
   }
 }
 
@@ -1012,6 +1374,25 @@ iframe {
   .countdown {
     gap: 6px;
   }
+
+  /* Testimonial cards - 390px */
+  .testimonial-card {
+    padding: 16px 12px;
+  }
+  .testimonial-card .testimonial-text {
+    font-size: 0.83rem;
+    line-height: 1.5;
+  }
+  .testimonial-card .testimonial-footer img {
+    width: 34px;
+    height: 34px;
+  }
+  .testimonial-card .testimonial-footer strong {
+    font-size: 0.82rem;
+  }
+  .testimonial-card .testimonial-footer small {
+    font-size: 0.7rem;
+  }
 }
 
 /* ============================================================
@@ -1046,6 +1427,27 @@ iframe {
   }
   .hero-stat .stat-label {
     font-size: 0.7rem;
+  }
+
+  /* Testimonial cards - 375px */
+  .testimonial-card {
+    padding: 14px 12px;
+  }
+  .testimonial-card::before {
+    font-size: 2rem;
+    top: 4px;
+    inset-inline-end: 8px;
+  }
+  .testimonial-card .testimonial-text {
+    font-size: 0.8rem;
+    padding-right: 26px;
+  }
+  .testimonial-card .stars {
+    font-size: 0.75rem;
+  }
+  .testimonial-card .testimonial-footer img {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -1117,16 +1519,12 @@ iframe {
    Touch device optimizations
    ============================================================ */
 @media (hover: none) and (pointer: coarse) {
-  .btn {
+  .btn:not(.navbar-toggler):not(.mobile-toggle-btn):not(.btn-close):not(.mobile-close-btn) {
     min-height: 44px;
-    min-width: 44px;
   }
-  .nav-icon-btn {
-    min-width: 40px;
-    min-height: 40px;
-  }
-  .nav-link {
-    padding: 10px 16px;
+  .header .nav-icon-btn,
+  .header .navbar-toggler {
+    touch-action: manipulation;
   }
   .dropdown-item {
     padding: 12px 16px;

@@ -7,18 +7,18 @@ window.OptiStore = (function () {
 
   /* ---------- Product Catalog ---------- */
   var CATALOG = {
-    "f-01": { id: "f-01", name: "Metro Round", category: "Reading", brand: "Metro", price: 89, image: "assets/images/frames/frame-01.jpg", rating: 4.7 },
-    "f-02": { id: "f-02", name: "Aviator Classic", category: "Sunglasses", brand: "Ray-Ban", price: 259, image: "assets/images/frames/frame-02.jpg", rating: 4.8 },
-    "f-03": { id: "f-03", name: "Velocity Sport", category: "Sports", brand: "Oakley", price: 199, image: "assets/images/frames/frame-03.jpg", rating: 4.9 },
-    "f-04": { id: "f-04", name: "Kids Round", category: "Kids", brand: "Fastrack", price: 59, image: "assets/images/frames/frame-04.jpg", rating: 4.5 },
-    "f-05": { id: "f-05", name: "Wayfarer Lux", category: "Sunglasses", brand: "Ray-Ban", price: 289, image: "assets/images/frames/frame-05.jpg", rating: 4.7 },
-    "f-06": { id: "f-06", name: "Retro Square", category: "Reading", brand: "Vogue", price: 119, image: "assets/images/frames/frame-06.jpg", rating: 4.6 },
-    "f-07": { id: "f-07", name: "Rimless Light", category: "Reading", brand: "Metro", price: 149, image: "assets/images/frames/frame-07.jpg", rating: 4.5 },
-    "f-08": { id: "f-08", name: "Shield Sport", category: "Sports", brand: "Oakley", price: 229, image: "assets/images/frames/frame-08.jpg", rating: 4.8 },
-    "f-09": { id: "f-09", name: "Cat-Eye Chic", category: "Sunglasses", brand: "Vogue", price: 179, image: "assets/images/frames/frame-09.jpg", rating: 4.6 },
-    "f-10": { id: "f-10", name: "Kid's Flex", category: "Kids", brand: "Fastrack", price: 49, image: "assets/images/frames/frame-10.jpg", rating: 4.4 },
-    "f-11": { id: "f-11", name: "Polar Night", category: "Sunglasses", brand: "Ray-Ban", price: 319, image: "assets/images/frames/frame-11.jpg", rating: 4.9 },
-    "f-12": { id: "f-12", name: "Minimal Tan", category: "Reading", brand: "Metro", price: 99, image: "assets/images/frames/frame-12.jpg", rating: 4.5 },
+    "f-01": { id: "f-01", name: "Metro Round", category: "Reading", brand: "Metro", price: 899, image: "assets/images/frames/frame-01.jpg", rating: 4.7 },
+    "f-02": { id: "f-02", name: "Aviator Classic", category: "Sunglasses", brand: "Ray-Ban", price: 2599, image: "assets/images/frames/frame-02.jpg", rating: 4.8 },
+    "f-03": { id: "f-03", name: "Velocity Sport", category: "Sports", brand: "Oakley", price: 1999, image: "assets/images/frames/frame-03.jpg", rating: 4.9 },
+    "f-04": { id: "f-04", name: "Kids Round", category: "Kids", brand: "Fastrack", price: 599, image: "assets/images/frames/frame-04.jpg", rating: 4.5 },
+    "f-05": { id: "f-05", name: "Wayfarer Lux", category: "Sunglasses", brand: "Ray-Ban", price: 2899, image: "assets/images/frames/frame-05.jpg", rating: 4.7 },
+    "f-06": { id: "f-06", name: "Retro Square", category: "Reading", brand: "Vogue", price: 1199, image: "assets/images/frames/frame-06.jpg", rating: 4.6 },
+    "f-07": { id: "f-07", name: "Rimless Light", category: "Reading", brand: "Metro", price: 1499, image: "assets/images/frames/frame-07.jpg", rating: 4.5 },
+    "f-08": { id: "f-08", name: "Shield Sport", category: "Sports", brand: "Oakley", price: 2299, image: "assets/images/frames/frame-08.jpg", rating: 4.8 },
+    "f-09": { id: "f-09", name: "Cat-Eye Chic", category: "Sunglasses", brand: "Vogue", price: 1799, image: "assets/images/frames/frame-09.jpg", rating: 4.6 },
+    "f-10": { id: "f-10", name: "Kid's Flex", category: "Kids", brand: "Fastrack", price: 499, image: "assets/images/frames/frame-10.jpg", rating: 4.4 },
+    "f-11": { id: "f-11", name: "Polar Night", category: "Sunglasses", brand: "Ray-Ban", price: 3199, image: "assets/images/frames/frame-11.jpg", rating: 4.9 },
+    "f-12": { id: "f-12", name: "Minimal Tan", category: "Reading", brand: "Metro", price: 999, image: "assets/images/frames/frame-12.jpg", rating: 4.5 },
     "frame-01": { id: "frame-01", name: "Aviator Classic", category: "Sunglasses", brand: "Ray-Ban", price: 2499, image: "assets/images/frames/frame-01.jpg", rating: 4.8 },
     "frame-02": { id: "frame-02", name: "Metro Round", category: "Reading", brand: "Metro", price: 1799, image: "assets/images/frames/frame-02.jpg", rating: 4.6 },
     "frame-03": { id: "frame-03", name: "Velocity Sport", category: "Sports", brand: "Oakley", price: 3499, image: "assets/images/frames/frame-03.jpg", rating: 4.9 },
@@ -29,6 +29,9 @@ window.OptiStore = (function () {
   var WISH_KEY = "opticare_wishlist";
 
   /* ---------- Helpers ---------- */
+  function formatPrice(num) {
+    return "₹" + Number(num || 0).toLocaleString("en-IN");
+  }
   function read(key, fallback) {
     try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch (e) { return fallback; }
   }
@@ -173,6 +176,7 @@ window.OptiStore = (function () {
     getWishlistProducts: getWishlistProducts,
     updateCartBadge: updateCartBadge,
     updateWishlistBadge: updateWishlistBadge,
-    syncBadges: syncBadges
+    syncBadges: syncBadges,
+    formatPrice: formatPrice
   };
 })();

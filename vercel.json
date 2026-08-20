@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/opticare/index.html"
+    },
+    {
+      "source": "/assets/(.*)",
+      "destination": "/opticare/assets/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/opticare/$1"
+    }
+  ]
+}

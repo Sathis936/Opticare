@@ -23,7 +23,7 @@
       category: "all",
       brand: "all",
       gender: "all",
-      priceMax: 1000,
+      priceMax: 10000,
       sort: "featured",
       page: 1,
       perPage: 9
@@ -68,8 +68,8 @@
     // price
     if (priceInput) {
       function updatePrice() {
-        state.priceMax = parseInt(priceInput.value, 10) || 1000;
-        if (priceOutput) priceOutput.textContent = "$" + state.priceMax;
+        state.priceMax = parseInt(priceInput.value, 10) || 10000;
+        if (priceOutput) priceOutput.textContent = "₹" + state.priceMax.toLocaleString("en-IN");
         state.page = 1;
         render();
       }
@@ -93,11 +93,11 @@
         state.category = "all";
         state.brand = "all";
         state.gender = "all";
-        state.priceMax = 1000;
+        state.priceMax = 10000;
         state.sort = "featured";
         state.page = 1;
         if (searchInput) searchInput.value = "";
-        if (priceInput) { priceInput.value = 1000; if (priceOutput) priceOutput.textContent = "$1000"; }
+        if (priceInput) { priceInput.value = 10000; if (priceOutput) priceOutput.textContent = "₹10,000"; }
         if (sortSelect) sortSelect.value = "featured";
         d.querySelectorAll('input[name="filter-category"], input[name="filter-brand"], input[name="filter-gender"]').forEach(function (r) {
           if (r.value === "all") r.checked = true;
