@@ -900,37 +900,44 @@ html[data-theme="dark"] .footer-social a:focus i {
   visibility: visible !important;
 }
 
+html[data-theme="dark"] .newsletter-form,
 html[data-theme="dark"] .footer .newsletter-form {
   background: rgba(15, 23, 42, 0.6) !important;
   border: 1.5px solid rgba(56, 189, 248, 0.3) !important;
 }
 
+html[data-theme="dark"] .newsletter-form:focus-within,
 html[data-theme="dark"] .footer .newsletter-form:focus-within {
   border-color: #38bdf8 !important;
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
 }
 
+html[data-theme="dark"] .newsletter-form .form-control,
 html[data-theme="dark"] .footer .newsletter-form .form-control {
   color: #ffffff !important;
   background: transparent !important;
 }
 
+html[data-theme="dark"] .newsletter-form .form-control::placeholder,
 html[data-theme="dark"] .footer .newsletter-form .form-control::placeholder {
   color: rgba(255, 255, 255, 0.55) !important;
 }
 
+html[data-theme="dark"] .newsletter-form .btn,
 html[data-theme="dark"] .footer .newsletter-form .btn {
   background: #0284c7 !important;
   border: none !important;
   color: #ffffff !important;
 }
 
+html[data-theme="dark"] .newsletter-form .btn:hover,
 html[data-theme="dark"] .footer .newsletter-form .btn:hover {
   background: #0369a1 !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(2, 132, 199, 0.45) !important;
 }
 
+html[data-theme="dark"] .newsletter-form .btn i,
 html[data-theme="dark"] .footer .newsletter-form .btn i {
   color: #ffffff !important;
 }

@@ -244,7 +244,16 @@ html[dir="rtl"] .article-content blockquote {
 }
 
 /* newsletter form */
-html[dir="rtl"] .newsletter-form .btn i {
+html[dir="rtl"] .newsletter-form,
+html[dir="rtl"] .footer .newsletter-form {
+  padding: 4px 16px 4px 4px !important;
+}
+html[dir="rtl"] .newsletter-form .form-control,
+html[dir="rtl"] .footer .newsletter-form .form-control {
+  padding: 8px 0 8px 10px !important;
+}
+html[dir="rtl"] .newsletter-form .btn i,
+html[dir="rtl"] .footer .newsletter-form .btn i {
   transform: scaleX(-1);
 }
 
