@@ -837,54 +837,204 @@
     });
   }
 
-  /* ---------- Home navigation menu (right-click only) ---------- */
+  /* ---------- Navigation Dropdowns (Home & Products) ---------- */
   function initHomeNavDropdown() {
-    /* Only target the Home dropdown (which links to index.html), not Products or other dropdowns */
-    var homeDropdown = d.querySelector('.main-nav .dropdown > .dropdown-toggle[href="index.html"]');
-    var adminHome = d.querySelector('.admin-home-menu > .admin-home-link');
-    var toggles = [];
-    if (homeDropdown) toggles.push(homeDropdown);
-    if (adminHome) toggles.push(adminHome);
-    if (!toggles.length) return;
+    var dropdownToggles = d.querySelectorAll('.main-nav .dropdown > .dropdown-toggle, .admin-home-menu > .admin-home-link');
+    if (!dropdownToggles.length) return;
 
     function closeAll() {
-      d.querySelectorAll(".main-nav .dropdown-menu.home-context-open, .admin-home-menu .dropdown-menu.home-context-open").forEach(function (menu) {
-        menu.classList.remove("home-context-open");
+      d.querySelectorAll('.main-nav .dropdown.show, .admin-home-menu.show').forEach(function (el) {
+        el.classList.remove("show");
+        var m = el.querySelector(":scope > .dropdown-menu");
+        if (m) m.classList.remove("show");
       });
-      toggles.forEach(function (toggle) {
+      dropdownToggles.forEach(function (toggle) {
         toggle.setAttribute("aria-expanded", "false");
       });
     }
 
-    toggles.forEach(function (toggle) {
-      var menu = toggle.parentElement.querySelector(":scope > .dropdown-menu");
-      if (!menu) return;
-
-      // Keep the label as a normal link to Home 1 instead of a click-to-toggle control.
-      toggle.removeAttribute("data-bs-toggle");
-
-      if (!toggle.querySelector(".home-dropdown-icon")) {
+    dropdownToggles.forEach(function (toggle) {
+      if (!toggle.querySelector(".home-dropdown-icon") && toggle.textContent.trim().startsWith("Home")) {
         var icon = d.createElement("i");
         icon.className = "bi bi-chevron-down home-dropdown-icon";
         icon.setAttribute("aria-hidden", "true");
         toggle.appendChild(icon);
       }
 
-      toggle.addEventListener("contextmenu", function (event) {
-        event.preventDefault();
-        closeAll();
-        menu.classList.add("home-context-open");
-        toggle.setAttribute("aria-expanded", "true");
+      var parent = toggle.parentElement;
+      var menu = parent ? parent.querySelector(":scope > .dropdown-menu") : null;
+      if (!menu) return;
+
+      // Ensure tablet / touch devices (e.g. 1024px) can tap to open the dropdown
+      toggle.addEventListener("click", function (e) {
+        var isTouchOrTablet = window.innerWidth <= 1199 || ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+        if (isTouchOrTablet) {
+          if (!parent.classList.contains("show")) {
+            e.preventDefault();
+            closeAll();
+            parent.classList.add("show");
+            menu.classList.add("show");
+            toggle.setAttribute("aria-expanded", "true");
+          }
+        }
       });
     });
 
     d.addEventListener("click", function (event) {
-      if (!event.target.closest(".main-nav .dropdown, .admin-home-menu")) closeAll();
+      if (!event.target.closest(".main-nav .dropdown, .admin-home-menu")) {
+        closeAll();
+      }
     });
 
     d.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") closeAll();
+      if (event.key === "Escape") {
+        closeAll();
+      }
     });
+  }
+
+  /* ---------- Auth forms submission & redirect to home ---------- */
+  function initAuthForms() {
+    // 1. Customer Login Form
+    var customerForm = d.querySelector('#customerLogin form');
+    if (customerForm) {
+      customerForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var emailInput = customerForm.querySelector('input[type="email"]');
+        var passInput = customerForm.querySelector('input[type="password"]');
+        var email = emailInput ? emailInput.value.trim() : "";
+        var pass = passInput ? passInput.value.trim() : "";
+
+        if (!email) {
+          showToast("Please enter your email address", "danger");
+          if (emailInput) emailInput.focus();
+          return;
+        }
+        if (!pass) {
+          showToast("Please enter your password", "danger");
+          if (passInput) passInput.focus();
+          return;
+        }
+
+        try {
+          localStorage.setItem("opticare_user", JSON.stringify({
+            email: email,
+            name: email.split("@")[0],
+            isLoggedIn: true,
+            loginTime: new Date().toISOString()
+          }));
+        } catch (err) {}
+
+        showToast("Signed in successfully! Redirecting...", "success");
+        setTimeout(function () {
+          window.location.href = "index.html";
+        }, 600);
+      });
+    }
+
+    // 2. Admin Login Form
+    var adminForm = d.querySelector('#adminLogin form');
+    if (adminForm) {
+      adminForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var emailInput = adminForm.querySelector('input[type="email"]');
+        var passInput = adminForm.querySelector('input[type="password"]');
+        var email = emailInput ? emailInput.value.trim() : "";
+        var pass = passInput ? passInput.value.trim() : "";
+
+        if (!email) {
+          showToast("Please enter your admin email", "danger");
+          if (emailInput) emailInput.focus();
+          return;
+        }
+        if (!pass) {
+          showToast("Please enter your password", "danger");
+          if (passInput) passInput.focus();
+          return;
+        }
+
+        try {
+          localStorage.setItem("opticare_admin", JSON.stringify({
+            email: email,
+            isLoggedIn: true,
+            role: "admin",
+            loginTime: new Date().toISOString()
+          }));
+        } catch (err) {}
+
+        showToast("Admin authenticated! Redirecting...", "success");
+        setTimeout(function () {
+          window.location.href = "index.html";
+        }, 600);
+      });
+    }
+
+    // 3. Register Form
+    if (window.location.pathname.indexOf("register") !== -1) {
+      var regForm = d.querySelector('.auth-card form');
+      if (regForm) {
+        regForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var fnameInput = regForm.querySelector('#regFname');
+          var emailInput = regForm.querySelector('#regEmail');
+          var passInput = regForm.querySelector('#regPassword');
+          var fname = fnameInput ? fnameInput.value.trim() : "";
+          var email = emailInput ? emailInput.value.trim() : "";
+          var pass = passInput ? passInput.value.trim() : "";
+
+          if (!fname) {
+            showToast("Please enter your first name", "danger");
+            if (fnameInput) fnameInput.focus();
+            return;
+          }
+          if (!email) {
+            showToast("Please enter your email address", "danger");
+            if (emailInput) emailInput.focus();
+            return;
+          }
+          if (!pass || pass.length < 6) {
+            showToast("Password must be at least 6 characters", "danger");
+            if (passInput) passInput.focus();
+            return;
+          }
+
+          try {
+            localStorage.setItem("opticare_user", JSON.stringify({
+              email: email,
+              name: fname,
+              isLoggedIn: true,
+              loginTime: new Date().toISOString()
+            }));
+          } catch (err) {}
+
+          showToast("Account created successfully! Redirecting...", "success");
+          setTimeout(function () {
+            window.location.href = "index.html";
+          }, 600);
+        });
+      }
+    }
+
+    // 4. Forgot Password Form
+    if (window.location.pathname.indexOf("forgot-password") !== -1) {
+      var fpForm = d.querySelector('.auth-card form');
+      if (fpForm) {
+        fpForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var emailInput = fpForm.querySelector('#fpEmail, input[type="email"]');
+          var email = emailInput ? emailInput.value.trim() : "";
+          if (!email) {
+            showToast("Please enter your registered email address", "danger");
+            if (emailInput) emailInput.focus();
+            return;
+          }
+          showToast("Password reset link sent to " + email + "! Redirecting...", "success");
+          setTimeout(function () {
+            window.location.href = "login.html";
+          }, 1200);
+        });
+      }
+    }
   }
 
   /* ---------- Init all ---------- */
@@ -903,6 +1053,7 @@
     initWishlist();
     initCartCount();
     initValidation();
+    initAuthForms();
     initNewsletter();
     initOptionSelectors();
     initDataTables();

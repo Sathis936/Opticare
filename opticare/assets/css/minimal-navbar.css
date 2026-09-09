@@ -13,17 +13,21 @@ body {
   padding-top: 72px !important;
 }
 
+body.auth-page,
+body:has(.auth-wrap) {
+  padding-top: 0 !important;
+}
+
 img, video, svg {
   max-width: 100%;
   height: auto;
 }
 
-/* Hide desktop search button, wishlist, and top book eye test button on minimal navbar */
+/* Hide obsolete elements on minimal navbar */
 button[data-search-open],
 .nav-actions .wishlist-btn,
 .nav-actions .wish,
-.nav-actions .header-book-btn,
-.nav-actions .nav-cta {
+.nav-actions .header-book-btn {
   display: none !important;
 }
 
@@ -31,8 +35,7 @@ button[data-search-open],
 html[data-theme="dark"] button[data-search-open],
 html[data-theme="dark"] .nav-actions .wishlist-btn,
 html[data-theme="dark"] .nav-actions .wish,
-html[data-theme="dark"] .nav-actions .header-book-btn,
-html[data-theme="dark"] .nav-actions .nav-cta {
+html[data-theme="dark"] .nav-actions .header-book-btn {
   display: none !important;
 }
 
@@ -84,15 +87,15 @@ html[data-theme="dark"] .nav-actions .nav-cta {
   border-radius: 0 !important;
   padding: 0 !important;
   width: auto !important;
-  height: 38px !important;
-  max-height: 38px !important;
-  max-width: 140px !important;
+  height: 48px !important;
+  max-height: 48px !important;
+  max-width: 175px !important;
   object-fit: contain !important;
   transition: transform 0.2s ease;
 }
 
 .site-logo:hover img {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 /* Desktop navigation */
@@ -145,6 +148,52 @@ html[data-theme="dark"] .nav-actions .nav-cta {
   background: var(--primary, #2f6bff);
 }
 
+/* Dropdowns in main navigation */
+.main-nav .dropdown {
+  position: relative;
+}
+
+.main-nav .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  inset-inline-start: 0;
+  display: none;
+  min-width: 190px;
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--border, #dfe5f1);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  padding: 6px;
+  z-index: 1050;
+  margin: 0;
+  list-style: none;
+}
+
+.main-nav .dropdown:hover > .dropdown-menu,
+.main-nav .dropdown.show > .dropdown-menu,
+.main-nav .dropdown-menu.show {
+  display: block !important;
+}
+
+.main-nav .dropdown-item {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text, #17233d);
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+}
+
+.main-nav .dropdown-item:hover,
+.main-nav .dropdown-item:focus {
+  background: var(--primary-light, #e8eeff);
+  color: var(--primary, #2f6bff);
+}
+
 /* Header Actions container */
 .nav-actions {
   display: flex;
@@ -154,6 +203,48 @@ html[data-theme="dark"] .nav-actions .nav-cta {
   margin-left: auto;
   flex-shrink: 0;
   line-height: 1;
+}
+
+/* Primary CTA Button (Book Eye Test) in Navbar */
+.nav-cta {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--heading-font, sans-serif);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: 10px;
+  background: var(--primary, #2f6bff);
+  color: #ffffff !important;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 1px solid var(--primary, #2f6bff);
+  transition: all 0.2s ease;
+}
+
+.nav-cta i,
+.nav-cta .bi {
+  font-size: 1rem;
+  color: #ffffff !important;
+}
+
+.nav-cta:hover,
+.nav-cta:focus {
+  background: var(--primary-dark, #1f52cc);
+  border-color: var(--primary-dark, #1f52cc);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(47, 107, 255, 0.35);
+}
+
+.nav-cta:hover i,
+.nav-cta:hover .bi,
+.nav-cta:focus i,
+.nav-cta:focus .bi {
+  color: #ffffff !important;
 }
 
 /* Action icon buttons (cart, dark mode, RTL, login) */
@@ -272,18 +363,18 @@ html[data-theme="dark"] .nav-actions .nav-cta {
    ============================================================ */
 @media (min-width: 1200px) {
   body {
-    padding-top: 72px !important;
+    padding-top: 76px !important;
   }
 
   .header-inner {
-    min-height: 72px;
-    height: 72px;
+    min-height: 76px;
+    height: 76px;
   }
 
   .site-logo img {
-    height: 38px !important;
-    max-height: 38px !important;
-    max-width: 140px !important;
+    height: 48px !important;
+    max-height: 48px !important;
+    max-width: 175px !important;
   }
 
   .navbar-toggler {
@@ -314,19 +405,19 @@ html[data-theme="dark"] .nav-actions .nav-cta {
    ============================================================ */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   body {
-    padding-top: 68px !important;
+    padding-top: 72px !important;
   }
 
   .header-inner {
-    min-height: 68px;
-    height: 68px;
+    min-height: 72px;
+    height: 72px;
     gap: 10px;
   }
 
   .site-logo img {
-    height: 36px !important;
-    max-height: 36px !important;
-    max-width: 130px !important;
+    height: 46px !important;
+    max-height: 46px !important;
+    max-width: 165px !important;
   }
 
   .main-nav .nav-link {
@@ -354,20 +445,20 @@ html[data-theme="dark"] .nav-actions .nav-cta {
    ============================================================ */
 @media (max-width: 991.98px) {
   body {
-    padding-top: 64px !important;
+    padding-top: 68px !important;
   }
 
   .header-inner {
-    min-height: 64px;
-    height: 64px;
+    min-height: 68px;
+    height: 68px;
     gap: 10px;
     padding: 0;
   }
 
   .site-logo img {
-    height: 34px !important;
-    max-height: 34px !important;
-    max-width: 125px !important;
+    height: 44px !important;
+    max-height: 44px !important;
+    max-width: 155px !important;
   }
 
   /* Hide desktop navigation */
@@ -419,9 +510,9 @@ html[data-theme="dark"] .nav-actions .nav-cta {
   }
 
   .site-logo img {
-    height: 32px !important;
-    max-height: 32px !important;
-    max-width: 115px !important;
+    height: 42px !important;
+    max-height: 42px !important;
+    max-width: 145px !important;
   }
 
   .nav-actions {
@@ -455,20 +546,20 @@ html[data-theme="dark"] .nav-actions .nav-cta {
    ============================================================ */
 @media (max-width: 575.98px) {
   body {
-    padding-top: 56px !important;
+    padding-top: 60px !important;
   }
 
   .header-inner {
-    min-height: 56px;
-    height: 56px;
+    min-height: 60px;
+    height: 60px;
     gap: 6px;
     padding: 0;
   }
 
   .site-logo img {
-    height: 30px !important;
-    max-height: 30px !important;
-    max-width: 105px !important;
+    height: 38px !important;
+    max-height: 38px !important;
+    max-width: 135px !important;
   }
 
   .nav-actions {
@@ -502,20 +593,20 @@ html[data-theme="dark"] .nav-actions .nav-cta {
    ============================================================ */
 @media (max-width: 389.98px) {
   body {
-    padding-top: 52px !important;
+    padding-top: 56px !important;
   }
 
   .header-inner {
-    min-height: 52px;
-    height: 52px;
+    min-height: 56px;
+    height: 56px;
     gap: 4px;
     padding: 0;
   }
 
   .site-logo img {
-    height: 26px !important;
-    max-height: 26px !important;
-    max-width: 92px !important;
+    height: 34px !important;
+    max-height: 34px !important;
+    max-width: 120px !important;
   }
 
   .nav-actions {
@@ -549,9 +640,9 @@ html[data-theme="dark"] .nav-actions .nav-cta {
    ============================================================ */
 @media (max-width: 319.98px) {
   .site-logo img {
-    height: 24px !important;
-    max-height: 24px !important;
-    max-width: 80px !important;
+    height: 30px !important;
+    max-height: 30px !important;
+    max-width: 105px !important;
   }
 
   .nav-icon-btn,
@@ -600,10 +691,10 @@ html[data-theme="dark"] .nav-actions .nav-cta {
 }
 
 .offcanvas-header .site-logo img {
-  height: 32px !important;
-  max-height: 32px !important;
+  height: 44px !important;
+  max-height: 44px !important;
   width: auto !important;
-  max-width: 120px !important;
+  max-width: 155px !important;
   background: none !important;
   border: none !important;
   padding: 0 !important;
@@ -855,23 +946,25 @@ html[data-theme="dark"] .header {
 
 html[data-theme="dark"] .site-logo {
   background: #ffffff !important;
-  padding: 4px 10px !important;
-  border-radius: 8px !important;
+  padding: 5px 12px !important;
+  border-radius: 10px !important;
   display: inline-flex !important;
   align-items: center !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
 html[data-theme="dark"] .site-logo:hover {
   transform: scale(1.03) !important;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25) !important;
 }
 
 html[data-theme="dark"] .site-logo img {
   filter: none !important;
-  height: 32px !important;
-  max-height: 32px !important;
+  height: 42px !important;
+  max-height: 42px !important;
+  width: auto !important;
+  max-width: 165px !important;
 }
 
 html[data-theme="dark"] .main-nav .nav-link,
@@ -959,7 +1052,31 @@ html[data-theme="dark"] .nav-icon-btn.show .bi,
 html[data-theme="dark"] .nav-icon-btn.show .dir-text,
 html[data-theme="dark"] .nav-icon-btn[aria-expanded="true"] i,
 html[data-theme="dark"] .nav-icon-btn[aria-expanded="true"] .bi,
-html[data-theme="dark"] .nav-icon-btn[aria-expanded="true"] .dir-text {
+html[data-theme="dark"] .nav-cta {
+  background: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .nav-cta i,
+html[data-theme="dark"] .nav-cta .bi {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+html[data-theme="dark"] .nav-cta:hover,
+html[data-theme="dark"] .nav-cta:focus {
+  background: #0369a1 !important;
+  border-color: #0369a1 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4) !important;
+}
+
+html[data-theme="dark"] .nav-cta:hover i,
+html[data-theme="dark"] .nav-cta:hover .bi,
+html[data-theme="dark"] .nav-cta:focus i,
+html[data-theme="dark"] .nav-cta:focus .bi {
   color: #ffffff !important;
   opacity: 1 !important;
   visibility: visible !important;

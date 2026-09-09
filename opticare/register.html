@@ -20,119 +20,16 @@
   <link rel="stylesheet" href="assets/css/rtl.css">
   <link rel="stylesheet" href="assets/css/flatpickr-dark.css">
 </head>
-<body>
+<body class="auth-page">
 
-  <!-- =========================
-       HEADER / NAVBAR
-  ========================= -->
-  <header class="header">
-    <div class="container">
-      <div class="header-inner">
-        <a class="site-logo" href="index.html" aria-label="OptiCare home">
-          <img src="assets/images/logo/logo.png" alt="OptiCare logo">
-        </a>
-        <nav class="main-nav" aria-label="Main navigation">
-          <ul>
-            <li class="dropdown">
-              <a class="nav-link dropdown-toggle" href="index.html" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
-                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
-              </ul>
-            </li>
-            <li><a class="nav-link" href="about.html">About</a></li>
-            <li><a class="nav-link" href="services.html">Services</a></li>
-            <li class="dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="frames.html">Frames</a></li>
-                <li><a class="dropdown-item" href="lenses.html">Lenses</a></li>
-                <li><a class="dropdown-item" href="contact-lenses.html">Contact Lenses</a></li>
-              </ul>
-            </li>
-            <li><a class="nav-link" href="blog.html">Blog</a></li>
-            <li><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="nav-actions">
-          <button type="button" class="nav-icon-btn d-none d-sm-inline-flex" data-search-open aria-label="Search">
-            <i class="bi bi-search"></i>
-          </button>
-          <a href="wishlist.html" class="nav-icon-btn d-none d-md-inline-flex" aria-label="Wishlist">
-            <i class="bi bi-heart"></i>
-            <span class="count" data-wish-count>0</span>
-          </a>
-          <a href="cart.html" class="nav-icon-btn cart-btn d-none d-md-inline-flex" aria-label="Cart">
-            <i class="bi bi-bag"></i>
-            <span class="count cart-count" data-cart-count>0</span>
-          </a>
-          <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-theme-toggle aria-label="Toggle dark mode">
-            <i class="bi bi-moon-stars"></i>
-          </button>
-          <button type="button" class="nav-icon-btn d-none d-md-inline-flex" data-dir-toggle aria-label="Toggle RTL direction"><span class="dir-text">RTL</span></button>
-          <div class="dropdown nav-login-drop d-none d-md-inline-flex">
-            <button type="button" class="nav-icon-btn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account">
-              <i class="bi bi-person"></i>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
-              <li><a class="dropdown-item active" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
-              <li><hr class="dropdown-divider"></li>
-            </ul>
-          </div>
-          <a class="btn btn-primary nav-cta d-none d-xl-inline-flex" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="#offcanvasNav" aria-label="Open menu">
-            <i class="bi bi-list"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- =========================
-       MOBILE OFFCANVAS
-  ========================= -->
-  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
-    <div class="offcanvas-header">
-      <a class="site-logo" href="index.html" aria-label="OptiCare home">
-        <img src="assets/images/logo/logo.png" alt="OptiCare logo">
-      </a>
-      <button type="button" class="mobile-close-btn" data-bs-dismiss="offcanvas" aria-label="Close menu">
-        <i class="bi bi-x-lg"></i>
-      </button>
-    </div>
-    <div class="offcanvas-body">
-      <nav class="mobile-nav" aria-label="Mobile navigation">
-        <a class="mobile-nav-link" href="index.html"><i class="bi bi-house-door"></i><span>Home 1</span></a>
-        <a class="mobile-nav-link" href="home-2.html"><i class="bi bi-house-door-fill"></i><span>Home 2</span></a>
-        <a class="mobile-nav-link" href="about.html"><i class="bi bi-info-circle"></i><span>About</span></a>
-        <a class="mobile-nav-link" href="services.html"><i class="bi bi-grid"></i><span>Services</span></a>
-        <div class="mobile-submenu">
-          <a href="service-eye-examination.html"> Eye Examination</a>
-          <a href="service-vision-testing.html"> Vision Testing</a>
-          <a href="service-contact-lens-fitting.html"> Contact Lens Consultation</a>
-        </div>
-        <a class="mobile-nav-link" href="frames.html"><i class="bi bi-eyeglasses"></i><span>Frames</span></a>
-        <a class="mobile-nav-link" href="lenses.html"><i class="bi bi-circle-half"></i><span>Lenses</span></a>
-        <a class="mobile-nav-link" href="contact-lenses.html"><i class="bi bi-eye-fill"></i><span>Contact Lenses</span></a>
-        <a class="mobile-nav-link" href="pricing.html"><i class="bi bi-tags"></i><span>Pricing</span></a>
-        <a class="mobile-nav-link" href="blog.html"><i class="bi bi-newspaper"></i><span>Blog</span></a>
-        <a class="mobile-nav-link" href="contact.html"><i class="bi bi-envelope"></i><span>Contact</span></a>
-        <a class="mobile-nav-link" href="wishlist.html"><i class="bi bi-heart"></i><span>Wishlist</span></a>
-        <a class="mobile-nav-link" href="cart.html"><i class="bi bi-bag"></i><span>Cart</span></a>
-        <hr>
-        <a class="mobile-nav-link" href="login.html"><i class="bi bi-person"></i><span>Login</span></a>
-        <a class="mobile-book-btn" href="eye-test-booking.html"><i class="bi bi-calendar2-check"></i><span>Book Eye Test</span></a>
-      </nav>
-    </div>
-  </div>
-
-  <!-- ======= Auth Layout ======= -->
+  <!-- ======= Centered Auth Layout ======= -->
   <div class="auth-wrap">
     <main class="auth-main">
       <div class="auth-card">
-        <div class="auth-logo text-center d-lg-none">
-          <a href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo"></a>
+        <div class="auth-logo text-center">
+          <a class="site-logo" href="index.html" aria-label="OptiCare home">
+            <img src="assets/images/logo/logo.png" alt="OptiCare logo">
+          </a>
         </div>
         <div class="auth-heading text-center">
           <h1>Create an Account</h1>
@@ -175,45 +72,33 @@
               </div>
             </div>
             <div class="col-12">
-              <button type="submit" class="btn btn-primary w-100">Create Account <i class="bi bi-arrow-right"></i></button>
+              <button type="submit" class="btn btn-primary w-100 py-2">Create Account <i class="bi bi-arrow-right"></i></button>
             </div>
           </div>
         </form>
         <div class="divider-text">or sign up with</div>
-        <div class="d-flex gap-3">
+        <div class="d-flex flex-column gap-3">
           <a href="https://accounts.google.com/o/oauth2/v2/auth"
-             class="social-btn"
+             class="social-btn w-100"
              id="googleSignupBtn"
              data-oauth-provider="google">
-            <i class="bi bi-google"></i> Continue with Google
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Continue with Google
           </a>
-          <a href="https://www.facebook.com/v18.0/dialog/oauth"
-             class="social-btn"
-             id="facebookSignupBtn"
-             data-oauth-provider="facebook">
-            <i class="bi bi-facebook"></i> Continue with Facebook
+          <a href="https://appleid.apple.com/auth/authorize"
+             class="social-btn w-100"
+             id="appleSignupBtn"
+             data-oauth-provider="apple">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.52-3.23 0-1.44.65-2.2.47-3.06-.4C3.79 16.17 4.36 9.02 8.98 8.76c1.32.07 2.24.74 3.03.78.98-.2 1.93-.86 2.93-.78 1.24.1 2.17.65 2.8 1.64-2.61 1.56-1.99 4.98.39 5.94-.48 1.26-1.1 2.52-2.08 3.94zM12.03 8.57c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            Continue with Apple
           </a>
         </div>
         <p class="text-center mt-4 mb-0">Already have an account? <a href="login.html" class="fw-semibold text-primary">Sign in</a></p>
-      </div>
-    </main>
-    <aside class="auth-side d-none d-lg-flex">
-      <div class="auth-side-inner">
-        <a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo"></a>
-      </div>
-      <div class="auth-side-inner">
-        <h2>Clear Vision. Better Life.</h2>
-        <p>Enjoy member perks: exclusive offers, order tracking and faster bookings.</p>
-        <div class="quote-card mt-4">
-          <p>"Members get 15% off their first order and lifetime free frame adjustments."</p>
-          <small>OptiCare Members Club</small>
+        <div class="text-center mt-4 pt-3 border-top">
+          <a href="index.html" class="small text-muted text-decoration-none"><i class="bi bi-arrow-left me-1"></i> Back to OptiCare Home</a>
         </div>
       </div>
-      <div class="auth-side-inner d-flex justify-content-between flex-wrap gap-2">
-        <span class="small text-white-50">© 2026 OptiCare</span>
-        <span class="small text-white-50">support@opticare.com</span>
-      </div>
-    </aside>
+    </main>
   </div>
 
   <!-- JS -->
