@@ -362,7 +362,7 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
    RESPONSIVE NAVBAR - Desktop >= 1200px
    ============================================================ */
 @media (min-width: 1200px) {
-  body {
+  body:not(.auth-page) {
     padding-top: 76px !important;
   }
 
@@ -404,7 +404,7 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
    RESPONSIVE NAVBAR - Tablet / Small Desktop 992px - 1199px
    ============================================================ */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  body {
+  body:not(.auth-page) {
     padding-top: 72px !important;
   }
 
@@ -444,7 +444,7 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
    Show hamburger, hide desktop nav
    ============================================================ */
 @media (max-width: 991.98px) {
-  body {
+  body:not(.auth-page) {
     padding-top: 68px !important;
   }
 
@@ -498,7 +498,7 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
    RESPONSIVE NAVBAR - Mobile < 768px
    ============================================================ */
 @media (max-width: 767.98px) {
-  body {
+  body:not(.auth-page) {
     padding-top: 60px !important;
   }
 
@@ -545,7 +545,7 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
    RESPONSIVE NAVBAR - Small Mobile < 576px
    ============================================================ */
 @media (max-width: 575.98px) {
-  body {
+  body:not(.auth-page) {
     padding-top: 60px !important;
   }
 
@@ -592,7 +592,7 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
    RESPONSIVE NAVBAR - Extra Small < 390px
    ============================================================ */
 @media (max-width: 389.98px) {
-  body {
+  body:not(.auth-page) {
     padding-top: 56px !important;
   }
 
@@ -1160,4 +1160,12 @@ html[dir="rtl"] .mobile-submenu,
 html[dir="rtl"] .offcanvas-nav .submenu {
   padding-inline-start: 34px;
   padding-inline-end: 0;
+}
+
+/* ============================================================
+   AUTH PAGES ZERO PADDING OVERRIDE (GLOBAL)
+   ============================================================ */
+html body.auth-page,
+html body:has(.auth-wrap) {
+  padding-top: 0 !important;
 }

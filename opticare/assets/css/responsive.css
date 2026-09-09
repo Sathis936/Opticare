@@ -611,10 +611,8 @@ iframe {
 
   /* Auth pages */
   .auth-main {
-    padding: 28px 20px;
-  }
-  .auth-side {
-    display: none;
+    padding: 0;
+    max-width: 100%;
   }
 
   /* Booking */
