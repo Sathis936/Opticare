@@ -46,7 +46,7 @@
     <div class="container">
       <div class="header-inner">
         <a class="site-logo" href="index.html" aria-label="OptiCare home">
-          <img src="assets/images/logo/logo.png" alt="OptiCare logo">
+          <img src="assets/images/logo/logo.png?v=3" alt="OptiCare logo">
         </a>
         <nav class="main-nav" aria-label="Main navigation">
           <ul>
@@ -102,7 +102,6 @@
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
             <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
-            <li><hr class="dropdown-divider"></li>
           </ul>
         </div>
         <!-- Book Eye Test -->
@@ -128,7 +127,7 @@
   <!-- ======= Mobile Offcanvas Nav ======= -->
   <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
     <div class="offcanvas-header">
-      <a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo"></a>
+      <a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png?v=3" alt="OptiCare logo"></a>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -180,17 +179,31 @@
         <div class="d-lg-none mb-4">
           <div class="widget mb-0 p-3">
             <h3 class="widget-title mb-2">Search Articles</h3>
-            <div class="position-relative">
-              <input type="search" class="form-control" placeholder="Search articles..." aria-label="Search articles">
-              <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted" aria-hidden="true"></i>
-            </div>
+            <form class="blog-search-form position-relative" role="search" onsubmit="return false;">
+              <input type="search" class="form-control blog-search-input" placeholder="Search articles..." aria-label="Search articles" autocomplete="off">
+              <button type="button" class="blog-search-clear" aria-label="Clear search">
+                <i class="bi bi-x-circle-fill"></i>
+              </button>
+              <button type="submit" class="blog-search-btn" aria-label="Search">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
           </div>
         </div>
 
-        <div class="row g-4">
+        <!-- Search Status Bar -->
+        <div id="searchStatusBar" class="mb-4 d-none align-items-center justify-content-between p-3 rounded-4 bg-body-tertiary">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-funnel-fill text-primary"></i>
+            <span id="searchStatusText" class="small fw-semibold"></span>
+          </div>
+          <button type="button" id="searchResetBtn" class="btn btn-sm btn-outline-secondary rounded-pill py-1 px-3" style="font-size: 0.82rem;">Clear Filter</button>
+        </div>
+
+        <div class="row g-4 blog-detail-row">
           <div class="col-lg-8">
-            <div class="row g-4">
-              <div class="col-md-6 reveal">
+            <div class="row g-4" id="blogGrid">
+              <div class="col-md-6 reveal" data-blog-card data-blog-category="Eye Health">
                 <article class="blog-card">
                   <a href="blog-digital-eye-strain.html" class="blog-media"><img src="assets/images/blog/blog-1.jpg" alt="Digital eye strain tips" loading="lazy"><span class="blog-cat">Eye Health</span></a>
                   <div class="blog-body">
@@ -201,7 +214,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-md-6 reveal">
+              <div class="col-md-6 reveal" data-blog-card data-blog-category="Style Guide">
                 <article class="blog-card">
                   <a href="blog-face-shape-guide.html" class="blog-media"><img src="assets/images/blog/blog-2.jpg" alt="Choosing glasses frames" loading="lazy"><span class="blog-cat">Style Guide</span></a>
                   <div class="blog-body">
@@ -212,7 +225,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-md-6 reveal">
+              <div class="col-md-6 reveal" data-blog-card data-blog-category="Contact Lenses">
                 <article class="blog-card">
                   <a href="blog-contact-lens-mistakes.html" class="blog-media"><img src="assets/images/blog/blog-3.jpg" alt="Contact lens care" loading="lazy"><span class="blog-cat">Contact Lenses</span></a>
                   <div class="blog-body">
@@ -223,7 +236,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-md-6 reveal">
+              <div class="col-md-6 reveal" data-blog-card data-blog-category="Children">
                 <article class="blog-card">
                   <a href="blog-kids-eye-exam.html" class="blog-media"><img src="assets/images/blog/blog-4.jpg" alt="Children eye health" loading="lazy"><span class="blog-cat">Children</span></a>
                   <div class="blog-body">
@@ -234,7 +247,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-md-6 reveal">
+              <div class="col-md-6 reveal" data-blog-card data-blog-category="Eye Health">
                 <article class="blog-card">
                   <a href="blog-blue-light-glasses.html" class="blog-media"><img src="assets/images/blog/blog-5.jpg" alt="Blue light glasses" loading="lazy"><span class="blog-cat">Eye Health</span></a>
                   <div class="blog-body">
@@ -245,9 +258,9 @@
                   </div>
                 </article>
               </div>
-              <div class="col-md-6 reveal">
+              <div class="col-md-6 reveal" data-blog-card data-blog-category="Sunglasses">
                 <article class="blog-card">
-                  <a href="blog-uv-protection-guide.html" class="blog-media"><img src="assets/images/blog/blog-6.jpg" alt="Sunglasses UV protection" loading="lazy"><span class="blog-cat">Sunglasses</span></a>
+                  <a href="blog-uv-protection-guide.html" class="blog-media"><img src="assets/images/blog/blog-6.jpg?v=2" alt="Sunglasses UV protection" loading="lazy"><span class="blog-cat">Sunglasses</span></a>
                   <div class="blog-body">
                     <div class="blog-meta"><span><i class="bi bi-calendar3"></i> Jul 03, 2026</span><span><i class="bi bi-person"></i> Aarav Sharma</span></div>
                     <h4><a href="blog-uv-protection-guide.html">The Complete Guide to UV Protection in Sunglasses</a></h4>
@@ -255,6 +268,18 @@
                     <a href="blog-uv-protection-guide.html" class="link-arrow">Read More <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </article>
+              </div>
+
+              <!-- Blog Empty State -->
+              <div id="blogEmptyState" class="col-12 py-5 d-none">
+                <div class="p-5 text-center rounded-4 bg-body-tertiary border border-dashed">
+                  <div class="display-6 text-primary mb-3"><i class="bi bi-search"></i></div>
+                  <h4 class="h5 fw-bold mb-2">No matching articles found</h4>
+                  <p class="text-muted small mb-4" id="blogEmptyQueryText">We couldn't find any articles matching your search. Try different keywords or browse our categories.</p>
+                  <button type="button" class="btn btn-primary rounded-pill px-4 py-2" id="blogEmptyResetBtn">
+                    <i class="bi bi-arrow-clockwise me-1"></i> View All Articles
+                  </button>
+                </div>
               </div>
             </div>
             <nav class="pagination-custom mt-5" aria-label="Blog pagination">
@@ -272,19 +297,24 @@
             <div class="position-sticky" style="top:110px">
               <div class="widget mb-4">
                 <h3 class="widget-title">Search</h3>
-                <div class="position-relative">
-                  <input type="search" class="form-control" placeholder="Search articles..." aria-label="Search articles">
-                  <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted" aria-hidden="true"></i>
-                </div>
+                <form class="blog-search-form position-relative" role="search" onsubmit="return false;">
+                  <input type="search" class="form-control blog-search-input" placeholder="Search articles..." aria-label="Search articles" autocomplete="off">
+                  <button type="button" class="blog-search-clear" aria-label="Clear search">
+                    <i class="bi bi-x-circle-fill"></i>
+                  </button>
+                  <button type="submit" class="blog-search-btn" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
               </div>
               <div class="widget mb-4">
                 <h3 class="widget-title">Categories</h3>
                 <ul class="blog-sidebar-cat list-unstyled mb-0">
-                  <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Eye Health <span class="count">(12)</span></a></li>
-                  <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Sunglasses <span class="count">(8)</span></a></li>
-                  <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Contact Lenses <span class="count">(6)</span></a></li>
-                  <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Children <span class="count">(5)</span></a></li>
-                  <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Style Guide <span class="count">(7)</span></a></li>
+                  <li><a href="javascript:void(0)" class="blog-cat-link" data-category="Eye Health"><i class="bi bi-chevron-right"></i> Eye Health <span class="count">(12)</span></a></li>
+                  <li><a href="javascript:void(0)" class="blog-cat-link" data-category="Sunglasses"><i class="bi bi-chevron-right"></i> Sunglasses <span class="count">(8)</span></a></li>
+                  <li><a href="javascript:void(0)" class="blog-cat-link" data-category="Contact Lenses"><i class="bi bi-chevron-right"></i> Contact Lenses <span class="count">(6)</span></a></li>
+                  <li><a href="javascript:void(0)" class="blog-cat-link" data-category="Children"><i class="bi bi-chevron-right"></i> Children <span class="count">(5)</span></a></li>
+                  <li><a href="javascript:void(0)" class="blog-cat-link" data-category="Style Guide"><i class="bi bi-chevron-right"></i> Style Guide <span class="count">(7)</span></a></li>
                 </ul>
               </div>
               <div class="widget mb-4">
@@ -296,14 +326,14 @@
               </div>
               <div class="widget mb-4">
                 <h3 class="widget-title">Tags</h3>
-                <div class="d-flex flex-wrap gap-2">
-                  <span class="badge badge-soft-primary">Eye Health</span>
-                  <span class="badge badge-soft-neutral">Glasses</span>
-                  <span class="badge badge-soft-primary">Contact Lenses</span>
-                  <span class="badge badge-soft-neutral">Sunglasses</span>
-                  <span class="badge badge-soft-primary">Blue Light</span>
-                  <span class="badge badge-soft-neutral">Kids</span>
-                  <span class="badge badge-soft-primary">Tips</span>
+                <div class="d-flex flex-wrap gap-2 blog-tags-list">
+                  <span class="badge badge-soft-primary blog-tag-pill" role="button" style="cursor:pointer;" data-tag="Eye Health">Eye Health</span>
+                  <span class="badge badge-soft-neutral blog-tag-pill" role="button" style="cursor:pointer;" data-tag="Glasses">Glasses</span>
+                  <span class="badge badge-soft-primary blog-tag-pill" role="button" style="cursor:pointer;" data-tag="Contact Lenses">Contact Lenses</span>
+                  <span class="badge badge-soft-neutral blog-tag-pill" role="button" style="cursor:pointer;" data-tag="Sunglasses">Sunglasses</span>
+                  <span class="badge badge-soft-primary blog-tag-pill" role="button" style="cursor:pointer;" data-tag="Blue Light">Blue Light</span>
+                  <span class="badge badge-soft-neutral blog-tag-pill" role="button" style="cursor:pointer;" data-tag="Kids">Kids</span>
+                  <span class="badge badge-soft-primary blog-tag-pill" role="button" style="cursor:pointer;" data-tag="Tips">Tips</span>
                 </div>
               </div>
             </div>
@@ -318,7 +348,7 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6 footer-col">
-          <div class="footer-brand"><a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
+          <div class="footer-brand"><a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png?v=3" alt="OptiCare logo" loading="lazy"></a></div>
           <p>Your trusted destination for professional eye care and quality eyewear.</p>
           <ul class="footer-contact">
             <li><i class="bi bi-geo-alt"></i> <span>42 Vision Park, Connaught Place, New Delhi 110001</span></li>

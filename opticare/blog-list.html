@@ -46,7 +46,7 @@
     <div class="container">
       <div class="header-inner">
         <a class="site-logo" href="index.html" aria-label="OptiCare home">
-          <img src="assets/images/logo/logo.png" alt="OptiCare logo">
+          <img src="assets/images/logo/logo.png?v=3" alt="OptiCare logo">
         </a>
         <nav class="main-nav" aria-label="Main navigation">
           <ul>
@@ -102,7 +102,6 @@
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Log In</a></li>
             <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Sign Up</a></li>
-            <li><hr class="dropdown-divider"></li>
           </ul>
         </div>
         <!-- Book Eye Test -->
@@ -128,7 +127,7 @@
   <!-- ======= Mobile Offcanvas Nav ======= -->
   <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
     <div class="offcanvas-header">
-      <a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo"></a>
+      <a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png?v=3" alt="OptiCare logo"></a>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -180,10 +179,12 @@
         <div class="d-lg-none mb-4">
           <div class="widget mb-0 p-3">
             <h3 class="widget-title mb-2">Search Articles</h3>
-            <div class="position-relative">
-              <input type="search" class="form-control" placeholder="Search articles..." aria-label="Search articles">
-              <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted" aria-hidden="true"></i>
-            </div>
+            <form class="blog-sidebar-search position-relative" action="blog.html" method="GET">
+              <input type="search" name="q" class="form-control blog-search-input" placeholder="Search articles..." aria-label="Search articles" autocomplete="off">
+              <button type="submit" class="blog-search-btn position-absolute top-50 end-0 translate-middle-y border-0 bg-transparent pe-3 text-muted" aria-label="Search">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
           </div>
         </div>
 
@@ -233,10 +234,12 @@
             <div class="position-sticky" style="top:110px">
               <div class="widget mb-4">
                 <h3 class="widget-title">Search</h3>
-                <div class="position-relative">
-                  <input type="search" class="form-control" placeholder="Search articles..." aria-label="Search articles">
-                  <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted" aria-hidden="true"></i>
-                </div>
+                <form class="blog-sidebar-search position-relative" action="blog.html" method="GET">
+                  <input type="search" name="q" class="form-control blog-search-input" placeholder="Search articles..." aria-label="Search articles" autocomplete="off">
+                  <button type="submit" class="blog-search-btn position-absolute top-50 end-0 translate-middle-y border-0 bg-transparent pe-3 text-muted" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
               </div>
               <div class="widget mb-4">
                 <h3 class="widget-title">Categories</h3>
@@ -279,7 +282,7 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6 footer-col">
-          <div class="footer-brand"><a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png" alt="OptiCare logo" loading="lazy"></a></div>
+          <div class="footer-brand"><a class="site-logo" href="index.html"><img src="assets/images/logo/logo.png?v=3" alt="OptiCare logo" loading="lazy"></a></div>
           <p>Your trusted destination for professional eye care and quality eyewear.</p>
           <ul class="footer-contact">
             <li><i class="bi bi-geo-alt"></i> <span>42 Vision Park, Connaught Place, New Delhi 110001</span></li>

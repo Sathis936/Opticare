@@ -81,6 +81,17 @@
     d.addEventListener("keydown", function (e) {
       if (e.key === "Escape") pop.classList.remove("show");
     });
+    var popForm = pop.querySelector("form");
+    if (popForm) {
+      popForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var input = popForm.querySelector("input");
+        var q = input ? input.value.trim() : "";
+        if (q) {
+          window.location.href = "blog.html?q=" + encodeURIComponent(q);
+        }
+      });
+    }
   }
 
   /* ---------- Password visibility toggle ---------- */
@@ -721,6 +732,274 @@
     });
   }
 
+  /* ---------- Blog Search & Real-time Filtering ---------- */
+  function initBlogSearch() {
+    // 1. Cross-page sidebar search forms (e.g. blog-list.html or blog-*.html)
+    var crossForms = d.querySelectorAll(".blog-sidebar-search");
+    crossForms.forEach(function (f) {
+      f.addEventListener("submit", function (e) {
+        var input = f.querySelector('input[name="q"], input[type="search"]');
+        var val = input ? input.value.trim() : "";
+        if (val) {
+          window.location.href = "blog.html?q=" + encodeURIComponent(val);
+          e.preventDefault();
+        }
+      });
+    });
+
+    // 2. Active blog catalog page (blog.html)
+    var blogGrid = d.getElementById("blogGrid");
+    if (!blogGrid) return;
+
+    var blogCards = d.querySelectorAll("[data-blog-card]");
+    if (!blogCards.length) return;
+
+    var searchForms = d.querySelectorAll(".blog-search-form");
+    var searchInputs = d.querySelectorAll(".blog-search-input");
+    var clearBtns = d.querySelectorAll(".blog-search-clear");
+    var statusBar = d.getElementById("searchStatusBar");
+    var statusText = d.getElementById("searchStatusText");
+    var resetBtn = d.getElementById("searchResetBtn");
+    var emptyState = d.getElementById("blogEmptyState");
+    var emptyResetBtn = d.getElementById("blogEmptyResetBtn");
+    var emptyQueryText = d.getElementById("blogEmptyQueryText");
+    var paginationNav = d.querySelector(".pagination-custom");
+    var catLinks = d.querySelectorAll(".blog-cat-link");
+    var tagPills = d.querySelectorAll(".blog-tag-pill");
+
+    var currentQuery = "";
+    var activeCategory = null;
+    var activeTag = null;
+    var debounceTimer = null;
+
+    function applyFilters() {
+      var query = currentQuery.toLowerCase().trim();
+      var terms = query ? query.split(/\s+/).filter(Boolean) : [];
+      var matchCount = 0;
+
+      blogCards.forEach(function (card) {
+        var titleEl = card.querySelector("h4");
+        var excerptEl = card.querySelector(".blog-excerpt");
+        var catEl = card.querySelector(".blog-cat");
+        var metaEl = card.querySelector(".blog-meta");
+
+        var titleText = titleEl ? titleEl.textContent.toLowerCase() : "";
+        var excerptText = excerptEl ? excerptEl.textContent.toLowerCase() : "";
+        var catText = catEl ? catEl.textContent.toLowerCase() : "";
+        var metaText = metaEl ? metaEl.textContent.toLowerCase() : "";
+        var allText = titleText + " " + excerptText + " " + catText + " " + metaText;
+
+        // Check search query terms
+        var matchesQuery = terms.length === 0 || terms.every(function (term) {
+          return allText.indexOf(term) !== -1;
+        });
+
+        // Check category filter
+        var cardCat = (card.getAttribute("data-blog-category") || catText).toLowerCase();
+        var matchesCat = !activeCategory || cardCat === activeCategory.toLowerCase();
+
+        // Check tag filter
+        var matchesTag = !activeTag || allText.indexOf(activeTag.toLowerCase()) !== -1;
+
+        var isMatch = matchesQuery && matchesCat && matchesTag;
+
+        if (isMatch) {
+          card.classList.remove("d-none");
+          card.style.display = "";
+          matchCount++;
+        } else {
+          card.classList.add("d-none");
+          card.style.display = "none";
+        }
+      });
+
+      // Update clear buttons
+      clearBtns.forEach(function (btn) {
+        btn.style.display = currentQuery ? "block" : "none";
+      });
+
+      // Empty State
+      if (emptyState) {
+        if (matchCount === 0) {
+          emptyState.classList.remove("d-none");
+          if (emptyQueryText) {
+            if (currentQuery) {
+              emptyQueryText.textContent = 'We couldn\'t find any articles matching "' + currentQuery + '".';
+            } else if (activeCategory) {
+              emptyQueryText.textContent = 'No articles found in category "' + activeCategory + '".';
+            } else {
+              emptyQueryText.textContent = 'No articles found matching the current filter.';
+            }
+          }
+        } else {
+          emptyState.classList.add("d-none");
+        }
+      }
+
+      // Status Bar & Pagination
+      var isFiltered = Boolean(currentQuery || activeCategory || activeTag);
+      if (statusBar) {
+        if (isFiltered) {
+          statusBar.classList.remove("d-none");
+          statusBar.classList.add("d-flex");
+          var msg = "Showing " + matchCount + " of " + blogCards.length + " articles";
+          if (currentQuery) {
+            msg += ' matching "' + currentQuery + '"';
+          }
+          if (activeCategory) {
+            msg += ' in ' + activeCategory;
+          }
+          if (activeTag) {
+            msg += ' tagged #' + activeTag;
+          }
+          if (statusText) statusText.textContent = msg;
+        } else {
+          statusBar.classList.add("d-none");
+          statusBar.classList.remove("d-flex");
+        }
+      }
+
+      if (paginationNav) {
+        paginationNav.style.display = isFiltered ? "none" : "";
+      }
+
+      // Sync URL parameter
+      try {
+        var url = new URL(window.location.href);
+        if (currentQuery) {
+          url.searchParams.set("q", currentQuery);
+        } else {
+          url.searchParams.delete("q");
+          url.searchParams.delete("search");
+        }
+        if (activeCategory) {
+          url.searchParams.set("cat", activeCategory);
+        } else {
+          url.searchParams.delete("cat");
+        }
+        window.history.replaceState({}, "", url.toString());
+      } catch (err) {}
+    }
+
+    function resetFilters() {
+      currentQuery = "";
+      activeCategory = null;
+      activeTag = null;
+      searchInputs.forEach(function (input) {
+        input.value = "";
+      });
+      catLinks.forEach(function (l) {
+        l.classList.remove("active");
+      });
+      tagPills.forEach(function (p) {
+        p.classList.remove("active");
+      });
+      applyFilters();
+    }
+
+    // Input typing & sync
+    searchInputs.forEach(function (input) {
+      input.addEventListener("input", function () {
+        currentQuery = input.value;
+        searchInputs.forEach(function (other) {
+          if (other !== input) other.value = currentQuery;
+        });
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(applyFilters, 120);
+      });
+    });
+
+    // Form submission
+    searchForms.forEach(function (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var input = form.querySelector(".blog-search-input");
+        if (input) {
+          currentQuery = input.value;
+          searchInputs.forEach(function (other) {
+            other.value = currentQuery;
+          });
+          applyFilters();
+        }
+      });
+    });
+
+    // Clear buttons
+    clearBtns.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        currentQuery = "";
+        searchInputs.forEach(function (input) {
+          input.value = "";
+        });
+        applyFilters();
+        var mainInput = d.querySelector(".col-lg-4 .blog-search-input") || searchInputs[0];
+        if (mainInput && window.innerWidth >= 992) {
+          mainInput.focus();
+        }
+      });
+    });
+
+    // Reset buttons
+    if (resetBtn) resetBtn.addEventListener("click", resetFilters);
+    if (emptyResetBtn) emptyResetBtn.addEventListener("click", resetFilters);
+
+    // Categories
+    catLinks.forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        var cat = link.getAttribute("data-category");
+        if (activeCategory === cat) {
+          activeCategory = null;
+          link.classList.remove("active");
+        } else {
+          catLinks.forEach(function (l) { l.classList.remove("active"); });
+          link.classList.add("active");
+          activeCategory = cat;
+        }
+        applyFilters();
+      });
+    });
+
+    // Tags
+    tagPills.forEach(function (pill) {
+      pill.addEventListener("click", function () {
+        var tag = pill.getAttribute("data-tag");
+        if (activeTag === tag) {
+          activeTag = null;
+          pill.classList.remove("active");
+        } else {
+          tagPills.forEach(function (p) { p.classList.remove("active"); });
+          pill.classList.add("active");
+          activeTag = tag;
+        }
+        applyFilters();
+      });
+    });
+
+    // Check URL parameters on page load
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var q = params.get("q") || params.get("search") || "";
+      var cat = params.get("cat") || "";
+      if (q) {
+        currentQuery = q;
+        searchInputs.forEach(function (input) { input.value = q; });
+      }
+      if (cat) {
+        activeCategory = cat;
+        catLinks.forEach(function (link) {
+          if (link.getAttribute("data-category") && link.getAttribute("data-category").toLowerCase() === cat.toLowerCase()) {
+            link.classList.add("active");
+          }
+        });
+      }
+      if (q || cat) {
+        applyFilters();
+      }
+    } catch (err) {}
+  }
+
   /* ---------- Context Menu Dropdown (Right-click & Hover) ---------- */
   function initContextDropdown() {
     var triggers = d.querySelectorAll(".dropdown-trigger");
@@ -1062,6 +1341,7 @@
     initAdminSidebar();
     initAdminThemeSync();
     initBlogFilters();
+    initBlogSearch();
     initContextDropdown();
     // initPublicHeaderActions();
     initAdminHomeShortcut();
