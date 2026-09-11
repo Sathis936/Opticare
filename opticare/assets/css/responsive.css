@@ -145,10 +145,6 @@ iframe {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .footer-col {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
 }
 
 /* ============================================================
@@ -175,13 +171,6 @@ iframe {
   }
   .cta-band h2 {
     font-size: 1.7rem;
-  }
-  .footer-col {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .footer .footer-col {
-    margin-bottom: 24px;
   }
   .blog-grid {
     gap: 20px;

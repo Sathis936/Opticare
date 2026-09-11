@@ -56,16 +56,23 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
+.header .container {
+  max-width: 1440px !important;
+  width: 100% !important;
+  padding-left: clamp(16px, 2.5vw, 32px) !important;
+  padding-right: clamp(16px, 2.5vw, 32px) !important;
+}
+
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: 80px;
-  height: 80px;
+  min-height: 76px;
+  height: 76px;
   padding: 0;
   margin: 0;
-  gap: 1.5rem;
+  gap: clamp(10px, 1.6vw, 22px);
 }
 
 /* Logo resets - remove box background / border from style.css */
@@ -87,9 +94,9 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
   border-radius: 0 !important;
   padding: 0 !important;
   width: auto !important;
-  height: 58px !important;
-  max-height: 58px !important;
-  max-width: 300px !important;
+  height: 44px !important;
+  max-height: 44px !important;
+  max-width: 215px !important;
   object-fit: contain !important;
   transition: transform 0.2s ease;
 }
@@ -100,31 +107,39 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
 
 /* Desktop navigation */
 .main-nav {
-  flex: 1;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin: 0 6px;
 }
 
 .main-nav ul {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  justify-content: center;
+  gap: clamp(2px, 0.4vw, 6px);
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: nowrap;
 }
 
 .main-nav .nav-link {
   font-family: var(--heading-font, sans-serif);
   font-weight: 600;
-  font-size: 0.94rem;
+  font-size: 0.88rem;
   color: var(--text, #17233d);
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 7px 11px;
+  border-radius: 8px;
   position: relative;
   white-space: nowrap;
   text-decoration: none;
   transition: color 0.2s ease, background-color 0.2s ease;
   display: inline-flex;
   align-items: center;
+  gap: 3px;
 }
 
 .main-nav .nav-link:hover {
@@ -134,16 +149,16 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
 
 .main-nav .nav-link.active {
   color: var(--primary, #2f6bff);
-  background: rgba(47, 107, 255, 0.12);
+  background: rgba(47, 107, 255, 0.1);
 }
 
 .main-nav .nav-link.active::after {
   content: "";
   position: absolute;
-  inset-inline-start: 14px;
-  inset-inline-end: 14px;
-  bottom: 2px;
-  height: 2px;
+  inset-inline-start: 10px;
+  inset-inline-end: 10px;
+  bottom: 0px;
+  height: 2.5px;
   border-radius: 2px;
   background: var(--primary, #2f6bff);
 }
@@ -363,18 +378,18 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
    ============================================================ */
 @media (min-width: 1200px) {
   body:not(.auth-page) {
-    padding-top: 80px !important;
+    padding-top: 76px !important;
   }
 
   .header-inner {
-    min-height: 80px;
-    height: 80px;
+    min-height: 76px;
+    height: 76px;
   }
 
   .site-logo img {
-    height: 58px !important;
-    max-height: 58px !important;
-    max-width: 300px !important;
+    height: 44px !important;
+    max-height: 44px !important;
+    max-width: 220px !important;
   }
 
   .navbar-toggler {
@@ -387,16 +402,16 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
    ============================================================ */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .header-inner {
-    gap: 14px;
+    gap: 12px;
   }
 
   .main-nav .nav-link {
-    padding: 8px 12px;
-    font-size: 0.88rem;
+    padding: 6px 10px;
+    font-size: 0.86rem;
   }
 
   .nav-actions {
-    gap: 6px;
+    gap: 5px;
   }
 }
 
@@ -405,33 +420,54 @@ html[data-theme="dark"] .nav-actions .header-book-btn {
    ============================================================ */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   body:not(.auth-page) {
-    padding-top: 74px !important;
+    padding-top: 72px !important;
   }
 
   .header-inner {
-    min-height: 74px;
-    height: 74px;
-    gap: 10px;
+    min-height: 72px;
+    height: 72px;
+    gap: 8px;
   }
 
   .site-logo img {
-    height: 52px !important;
-    max-height: 52px !important;
-    max-width: 270px !important;
+    height: 38px !important;
+    max-height: 38px !important;
+    max-width: 190px !important;
+  }
+
+  .main-nav {
+    margin: 0 4px;
+  }
+
+  .main-nav ul {
+    gap: 2px;
   }
 
   .main-nav .nav-link {
-    padding: 8px 10px;
-    font-size: 0.84rem;
+    padding: 5px 7px;
+    font-size: 0.80rem;
   }
 
   .main-nav .nav-link.active::after {
-    inset-inline-start: 10px;
-    inset-inline-end: 10px;
+    inset-inline-start: 7px;
+    inset-inline-end: 7px;
   }
 
   .nav-actions {
-    gap: 6px;
+    gap: 4px;
+  }
+
+  .nav-actions .nav-icon-btn {
+    width: 33px;
+    height: 33px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+  }
+
+  .nav-actions .nav-cta {
+    padding: 6px 11px !important;
+    font-size: 0.78rem !important;
+    border-radius: 8px !important;
   }
 
   .navbar-toggler {

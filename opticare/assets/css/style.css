@@ -3058,38 +3058,43 @@ ul.pagination-custom {
   color: #ffffff;
 }
 
+.footer .row {
+  align-items: flex-start;
+}
+
 .footer .footer-brand {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .footer .footer-brand a,
 .footer .footer-brand .site-logo,
 .footer .site-logo {
   background: #ffffff !important;
-  padding: 10px 24px !important;
-  border-radius: 14px !important;
+  padding: 8px 16px !important;
+  border-radius: 12px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
   text-decoration: none !important;
-  margin-bottom: 14px !important;
+  margin-bottom: 16px !important;
+  max-width: 100% !important;
 }
 
 .footer .footer-brand a:hover,
 .footer .footer-brand .site-logo:hover,
 .footer .site-logo:hover {
-  transform: scale(1.03) !important;
+  transform: scale(1.02) !important;
   box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25) !important;
 }
 
 .footer .footer-brand img,
 .footer .site-logo img {
-  height: 64px !important;
-  max-height: 64px !important;
+  height: 38px !important;
+  max-height: 38px !important;
   width: auto !important;
-  max-width: 320px !important;
+  max-width: 200px !important;
   display: block !important;
   object-fit: contain !important;
   background: transparent !important;
@@ -6162,9 +6167,9 @@ article .d-flex > img.rounded-circle {
 .site-logo img {
   display: block;
   width: auto;
-  height: 54px;
-  max-height: 54px;
-  max-width: 320px;
+  height: 44px;
+  max-height: 44px;
+  max-width: 220px;
   object-fit: contain;
 }
 
@@ -6175,22 +6180,19 @@ article .d-flex > img.rounded-circle {
 
 .main-nav {
   flex: 1 1 auto;
-
   min-width: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 8px;
 }
 
 .main-nav ul {
-  width: 100%;
-
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  gap: 0;
+  gap: 4px;
 
   margin: 0;
   padding: 0;
