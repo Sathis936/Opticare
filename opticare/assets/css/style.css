@@ -1884,6 +1884,8 @@ ul, ol {
   border-radius: var(--radius-lg);
   padding: 30px 26px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   transition: all var(--transition);
   position: relative;
   overflow: hidden;
@@ -1906,6 +1908,7 @@ ul, ol {
   color: var(--secondary-dark);
   font-size: 1.6rem;
   margin-bottom: 18px;
+  flex-shrink: 0;
 }
 
 .lens-card .lens-icon--alt {
@@ -1918,11 +1921,21 @@ ul, ol {
   margin-bottom: 10px;
 }
 
+.lens-card p,
+.lens-card article {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--muted);
+  flex: 1 1 auto;
+  margin-bottom: 16px;
+}
+
 .lens-card .lens-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 14px 0 16px;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .lens-card .lens-tags span {
@@ -1932,6 +1945,24 @@ ul, ol {
   border-radius: var(--radius-pill);
   background: var(--surface-2);
   color: var(--muted);
+}
+
+.lens-card .link-arrow {
+  margin-top: 14px;
+  align-self: flex-start;
+}
+
+.rounded-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.rounded-card p.small {
+  flex: 1 1 auto;
+}
+
+.rounded-card .badge {
+  margin-top: auto;
 }
 
 /* ------------------------------------------------------------

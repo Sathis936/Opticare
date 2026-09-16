@@ -176,8 +176,9 @@ iframe {
     gap: 20px;
   }
   .service-card,
-  .product-card {
-    padding: 24px;
+  .product-card,
+  .lens-card {
+    padding: 24px 20px;
   }
   .table-responsive {
     overflow-x: auto;
